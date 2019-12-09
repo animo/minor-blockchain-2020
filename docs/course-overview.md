@@ -23,15 +23,12 @@ Introduction to Decentralized Applications.
 
 ### Week 4
 
-
-
 ### Week 5
 
 #### Basic
 
 1. Smart contract security
    1. DAO hack
-
 
 
 ### Week 6 - Testing smart contracts
@@ -82,6 +79,15 @@ For joining this course a basic knowledge about blockchain is assumed. Programmi
 ## Final Assignment
 
 Each student needs to hand in a final assignment. The final assignment will show that the student has achieved the learning goals described above. The final assignment for the advanced track will build upon the base final assigment.
+
+**Basic**
+Create a betting factory contact that allows multiple people to bet on something. This project should involve a minimum of two contracts and should have a test coverage of 80%.
+
+**Advanded**
+The advanced assignment is free to choose, but should at least have the following:
+- a minimum of two contracts
+- a front-end hosted on IPFS/SWARM
+- 80% test coverage
 
 ## Course Material
 
