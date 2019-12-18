@@ -1,5 +1,7 @@
 # Course Overview
 
+## Lesson structure
+
 ## Week Overview
 
 ### Week 1 - Course Introduction
