@@ -11,8 +11,7 @@
 
 # Truffle Suite <!-- omit in toc -->
 
-> [Truffle Suite] explanation
-
+- [Truffle Suite](#truffle-suite)
 - [Ganache](#ganache)
 - [Truffle](#truffle)
   - [Truffle Setup](#truffle-setup)
@@ -23,9 +22,21 @@
     - [Config](#config)
 - [Sources](#sources)
 
+## Truffle Suite
+This week you will start to work with the Truffle Suite. The Truffle Suite is a set of tools that make Ethereum smart contract development easier and more robust. 
+
+The suite contains three main components:
+- Truffle 
+  - a development environment that helps developers write, test and deploy smart contracts.
+- Ganache
+  - a tool to easily setup a local development blockchain that we'll use to develop and test our contracts.
+- Drizzle
+  - a set of Redux based front-end libraries that helps us interact with our contracts.
+
+
 ## Ganache
 
-Ganache is part of the truffle suite and described as a 'one click blockchain'. It allows you to quickly fire up a personal Ethereum blockchain which you can use during development. To get started, download the latest version of [Ganache]. Open the downloaded executable and follow the installation instructions appropiate to your operating system.
+Ganache is part of the truffle suite and described as a 'one click blockchain'. It allows you to quickly fire up a personal Ethereum blockchain which you can use during development. To get started, download the latest version of [Ganache]. Open the downloaded executable and follow the installation instructions appropriate to your operating system.
 
 <img src="./assets/truffle-startup.png" width="400">
 <img src="./assets/truffle-workspace.png" width="400">
@@ -82,7 +93,7 @@ See [Truffle - Compiling Contracts] for more information.
 
 Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time. As your project evolves, you'll create new migration scripts to further this evolution on the blockchain. A history of previously run migrations is recorded on-chain through the Migrations contract, described before.
 
-Migrations are placed in the `migrations/` directory. On initialization only a `1_initial_migration.js` is created to deploy deploy the `Migration` contract. In upcomming lessons we will dive deeper into migrations and create one ourself.
+Migrations are placed in the `migrations/` directory. On initialization only a `1_initial_migration.js` is created to deploy deploy the `Migration` contract. In upcoming lessons we will dive deeper into migrations and create one ourself.
 
 See [Truffle - Running Migrations] for more information.
 
