@@ -13,10 +13,14 @@
 - [Functions](#functions)
   - [Parameters](#parameters)
   - [Visibility](#visibility)
+    - [Public](#public)
+    - [Private](#private)
+    - [Internal](#internal)
+    - [External](#external)
   - [Function Types](#function-types)
   - [Modifiers](#modifiers)
   - [Return Variables](#return-variables)
-- [Sources](#sources)
+- [Resources](#resources)
 
 ## Basic contract structure
 
@@ -50,7 +54,7 @@ This line **must** be included at the very top of every contract we'll be writin
 pragma solidity ^0.4.0;
 ```
 
-[Solidity Docs - Version Pragma]
+- [Solidity Docs - Version Pragma]
 
 ### Contract Declaration
 
@@ -94,24 +98,24 @@ As mentioned before, we need to specify a type whenever we are declaring a varia
 
 Let's go over a few common types.
 
-[Solidity Docs - Types]
+- [Solidity Docs - Types]
 
 #### Boolean
 
-The boolean type can be used to store exactly two kind of values, `true` and `false`.
+The boolean type can be used to store exactly two kind of values, `true` and `false`. A boolean is indicated by the `bool` keyword.
 
 ```solidity
 bool isOldEnough = true;
 bool isChild = false;
 ```
 
-[Solidity Docs - Boolean]
+- [Solidity Docs - Boolean]
 
 #### Integer
 
 An integer is a 'whole' number that has no decimal point. There are multiple types of integers, but for now we focus on `signed` and `unsigned` integers. The most important difference between these is that `signed` integer types can hold positive and negative integer values, whereas `unsigned` integers can only hold positive integer values.
 
-If we want to declare a variable for age it is logical to take make it an unsigned integer as an age can never be below 0.
+If we want to declare a variable for age it is logical to take make it an `unsigned` integer as an age can never be below 0.
 
 **Example**
 
@@ -123,7 +127,7 @@ int negativeAge = -10;
 uint age = 10;
 ```
 
-[Solidity Docs - Integer]
+- [Solidity Docs - Integer]
 
 #### String
 
@@ -133,28 +137,23 @@ The string type is used to store a piece of text. It can contain any value you l
 string myText = "Hello World!";
 ```
 
-[Solidity Docs - String]
+- [Solidity Docs - String]
 
 #### Address
 
 The address type is used to store an ethereum account addresses. Ethereum has two types of accounts:
 
-- Normal accounts, externally controlled accounts
+- Normal externally controlled accounts
 - Contract accounts
-
-We can make an address `payable` by adding the `payable` keyword after `address`. This allows us send ether (TODO: transfer / send difference) to the account.
 
 **Example**
 
 ```solidity
 address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
-
-// We can send ether to this account
-address payable myPayableAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
 ```
 
-[Solidity Docs - Address] <!--  -->
-[Ethereum Account Types]
+- [Solidity Docs - Address]
+- [Ethereum Account Types]
 
 ## Comments
 
@@ -179,11 +178,13 @@ uint age = 10;
 */
 ```
 
-[Solidity Docs - Comments]
+- [Solidity Docs - Comments]
 
 ## Functions
 
-Functions are the executable units of code within a contract. A function is declared with the following syntax:
+Functions are the executable units of code within a contract. Functions can be executed after which the code inside it will be run.
+
+A function is declared with the following syntax:
 
 ```solidity
 function <functionName>(<parameters>) <visibility> <function type> <modifiers> <return variables> {
@@ -234,30 +235,117 @@ So what do the `parameters`, `visibility`, `function type`, `modifiers` and `ret
 
 > By convention a function name is written in camelCase. This means you capitalize every first letter of a word, except for the first word.
 
-[Solidity Docs - Functions]
+- [Solidity Docs - Functions]
 
 ### Parameters
 
-[Solidity Docs - Function Parameters]
+Parameters are the input values of a function. Let's say we want to create a function that calculates the sum of two integer values. Parameters allow us to pass the two integer values to the function so the sum can be calculated.
+
+In the example below two parameters, `val1` and `val2` are declared as parameters for the `sum` function. Parameters are declared the same way as variables, so every parameter should have a type. In this case `uint`.
+
+Now whenever we want to execute the `sum` function, which we are going to do in later lessons, we are required to pass the two parameters to the `sum` function.
+
+```solidity
+function sum(uint val1, uint val2) public pure returns (uint) {
+    return val1 + val2;
+}
+```
+
+- [Solidity Docs - Function Parameters]
 
 ### Visibility
 
-[Solidity Docs - Visibility]
+The visibility of a function specifies the accessibility of the function when you or another function wants to interact with it.
+
+There are four types of visibility:
+
+- `public`
+- `external`
+- `internal`
+- `private`
+
+Besides for functions, visibility is also used for state variables. TODO: STATE VARIABLES.
+
+- [Solidity Docs - Visibility]
+
+#### Public
+
+Public functions and state variables are the most open visibility type. The function and variable can be accessed from inside and outside of the contract.
+
+For public state variables, an automatic getter function is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below a `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
+
+**Example**
+
+```solidity
+contract AgeStorage {
+    uint public age;
+
+    function set(uint newAge) public {
+        age = newAge;
+    }
+}
+```
+
+![Visibility Public](./assets/visibility-public.gif)
+
+#### Private
+
+Private functions and state variables are the most closed visibility type.
+
+```solidity
+contract AgeStorage {
+    uint private age;
+
+    function set(uint newAge) private {
+        age = newAge;
+    }
+}
+```
+
+![Visibility Private](./assets/visibility-private.png)
+
+#### Internal
+
+```solidity
+contract AgeStorage {
+    uint internal age;
+
+    function set(uint newAge) internal {
+        age = newAge;
+    }
+}
+```
+
+![Visibility Internal](./assets/visibility-internal.png)
+
+#### External
+
+```solidity
+contract AgeStorage {
+    // Not allowed
+    // uint external age;
+
+    function set(uint newAge) external {
+    }
+}
+```
+
+![Visibility External](./assets/visibility-external.gif)
 
 ### Function Types
 
-[Solidity Docs - View Functions] <!--  -->
-[Solidity Docs - Pure Functions]
+- [Solidity Docs - View Functions]
+- [Solidity Docs - Pure Functions]
 
 ### Modifiers
 
-[Solidity Docs - Function Modifiers]
+- [Solidity Docs - Function Modifiers]
 
 ### Return Variables
 
-[Solidity Docs - Return Variables]
+- [Solidity Docs - Return Variables]
 
-## Sources
+## Resources
 
 - [Solidity Documentation]
 - [Solidity Docs - Version Pragma]

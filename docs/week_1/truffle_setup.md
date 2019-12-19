@@ -20,19 +20,18 @@
     - [Migrations](#migrations)
     - [Tests](#tests)
     - [Config](#config)
+- [Code Editor](#code-editor)
 - [Sources](#sources)
 
 ## Truffle Suite
-This week you will start to work with the Truffle Suite. The Truffle Suite is a set of tools that make Ethereum smart contract development easier and more robust. 
+
+This week you will start to work with the Truffle Suite. The Truffle Suite is a set of tools that make Ethereum smart contract development easier and more robust.
 
 The suite contains three main components:
-- Truffle 
-  - a development environment that helps developers write, test and deploy smart contracts.
-- Ganache
-  - a tool to easily setup a local development blockchain that we'll use to develop and test our contracts.
-- Drizzle
-  - a set of Redux based front-end libraries that helps us interact with our contracts.
 
+- **[Truffle]**: a development environment that helps developers write, test and deploy smart contracts.
+- **[Ganache]**: a tool to easily setup a local development blockchain that we'll use to develop and test our smart contracts.
+- **[Drizzle]**: a set of front-end libraries that helps us interact with smart contracts.
 
 ## Ganache
 
@@ -116,6 +115,10 @@ When we are going to deploy our written contracts to a live Ethereum test networ
 
 See [Truffle - Configuration] for more information.
 
+## Code Editor
+
+> TODO: Recommend Visual Studio Code
+
 ## Sources
 
 - [Truffle Suite]
@@ -123,6 +126,7 @@ See [Truffle - Configuration] for more information.
 - [Ganache Docs]
 - [Truffle]
 - [Truffle Docs]
+- [Drizzle]
 - [NodeJS]
 - [Solidity Docs]
 - [Truffle - Compiling Contracts]
@@ -137,6 +141,7 @@ See [Truffle - Configuration] for more information.
 [ganache docs]: https://www.trufflesuite.com/docs/ganache/overview
 [truffle]: https://www.trufflesuite.com/truffle
 [truffle docs]: https://www.trufflesuite.com/docs/truffle/overview
+[drizzle]: https://www.trufflesuite.com/drizzle
 [nodejs]: https://nodejs.org/en/
 [solidity docs]: https://solidity.readthedocs.io/en/latest/
 [truffle - compiling contracts]: https://www.trufflesuite.com/docs/truffle/getting-started/compiling-contracts
