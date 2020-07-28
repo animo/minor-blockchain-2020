@@ -1,18 +1,118 @@
 # Course Overview
 
+This Repo contains everything surrounding the educational material for the course in the HU blockchain minor.
+
+## Goals
+
+Practical goal: students can write a simple smart contract in solidity.
+
+Overarching goal: students have gained insight into the potential of smart contracts and several related blockchain subjects. They know about the application and the why of blockchain.
+
+## Practical details
+
+Actual deadline for educational material: 15-08-2020
+Proposed deadline: 08-08-2020
+
+Deliverables:
+
+- 7 lessons
+- Final assignment
+- Grading matrix
+
+Lessons will be 2 hours long, 1 hour of which will be providing a theoretical framework and context surrounding different blockchain topics. The other hour will be practical, based on the [cryptozombies](https://cryptozombies.io/) lessons.
+
+At the end of the course we'll do a feedback session to improve material, improve it and make it open source.
+
 ## Lesson structure
 
-## Week Overview
-
-### Week 1 - Course Introduction
+### Week 1: Getting started and the basics of Smart Contracts
 
 1. Course Introduction
-   - What to expect / learning goals.
-   - Introduction to the two-track system.
-   - Where to find course materials.
-   - Explanation final assignment / examination.
-   - Setting up the development environment.
 
+   - What to expect / learning goals.
+   - Where to find course materials.
+   - Environment, what do and don't we expect
+   - Explanation final assignment / examination.
+
+2. Smart Contracts: the basics
+
+   - What are smart contracts & how do they relate to blockchain
+   - How do Smart Contracts work
+   - Solidity: the basics and a cheat sheet
+     - operators (include modulo)
+     - uint & int & string & typecasting
+     - variables
+     - structs & arrays (include public, getters)
+     - hash function
+     - function declarations
+       - Memory storage
+       - public / private
+       - return values
+       - modifiers (view/pure)
+     - events
+   - Show a smart contract on remix ide
+
+3. Making the Zombie Factory
+   - Cryptozombies lesson 1
+
+### Week 2: Expanding the world by interacting with other contracts and blockchains
+
+1. Smart Contracts in the real world
+
+   - Benefits
+   - Use cases / industries
+
+2. Ethereum: accounts & ether
+
+3. Solidity: interaction w other contracts and blockchains
+   <!-- A contract will just sit on the blockchain doing nothing until someone calls one of its functions. So there will always be a msg.sender. -->
+
+   - Mappings & addresses (addition to structs and arrays)
+   - functions 2: return of the functions
+     - if statement (+else)
+     - global variables -> msg.sender
+     - require
+     - storage and memory (structs and arrays in functions)
+     - internal & external visibility
+   - Imports
+   - Inheritance
+   - Interface: looks, use, purpose
+
+4. Zombies attack their victims
+   - Cryptozombies lesson 2
+
+### 3: Security and financing transactions
+
+1. Immutability
+2. Gas & gas cost & saving gas (view functions, structs, storage)
+3. Using other contracts
+4. Backdoors
+5. Functions 3: functions revenge
+
+   - modifiers (also with arguments)
+   - structs as arguments
+
+6. Time
+7. For loops
+8. Advanced Solidity Concepts
+   - Cryptozombies lesson 3
+
+### 4: Money money money
+
+1. payable -> require money for functionality and withdraw
+2. random nums
+
+Zombie battle system
+
+- Cryptozombies lesson 4
+
+### 5: ... and 'ERC721 & Crypto-Collectibles'
+
+### 6: ... and 'App Front-ends & Web3.js'
+
+### 7: ...
+
+---
 
 ### Week 2 - Decentralized Applications, Remix IDE and Smart Contracts
 
@@ -32,14 +132,13 @@ Introduction to Decentralized Applications.
 1. Smart contract security
    1. DAO hack
 
-
 ### Week 6 - Testing smart contracts
 
 #### Basic
 
 1. Testing smart contracts with Solidity in Remix IDE
 
-#### Advanced 
+#### Advanced
 
 1. Testing smart contracts in JavaScript with Truffle Suite
 
@@ -87,6 +186,7 @@ Create a betting factory contact that allows multiple people to bet on something
 
 **Advanded**
 The advanced assignment is free to choose, but should at least have the following:
+
 - a minimum of two contracts
 - a front-end hosted on IPFS/SWARM
 - 80% test coverage
@@ -96,6 +196,7 @@ The advanced assignment is free to choose, but should at least have the followin
 There will be a document available for each week with explanations and assignments. Slides will also be made available toghether with a cheatsheet. The cheatsheet will give an overview of difficult topics and will provide some dutch translations to make it easier to understand.
 
 ## Resources
+
 - Remix IDE - [https://remix.ethereum.org/](https://remix.ethereum.org/)
 - Remix IDE Documentation - [https://remix-ide.readthedocs.io/en/latest/](https://remix-ide.readthedocs.io/en/latest/)
 - MetaMask - [https://metamask.io/](https://metamask.io/)
