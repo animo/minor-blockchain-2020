@@ -102,11 +102,19 @@ At the end of the course we'll do a feedback session to improve material, improv
 1. payable -> require money for functionality and withdraw
 2. random nums
 
-Zombie battle system
+3. Zombie battle system
 
 - Cryptozombies lesson 4
 
-### 5: ... and 'ERC721 & Crypto-Collectibles'
+### 5: Tokens
+
+1. ERC721
+2. Multiple inheritance
+3.
+
+ERC721 & Crypto-Collectibles
+
+- Cryptozombies lesson 5
 
 ### 6: ... and 'App Front-ends & Web3.js'
 
