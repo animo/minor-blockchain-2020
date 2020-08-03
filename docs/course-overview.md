@@ -1,12 +1,38 @@
 # Course Overview
 
-This Repo contains everything surrounding the educational material for the course in the HU blockchain minor.
+This repo contains everything surrounding the educational material for the decentralised development course in the HU blockchain minor.
+
+## Prerequisites
+
+For joining this course a basic knowledge about blockchain is assumed. Programming experience is not required.
 
 ## Goals
 
 Practical goal: students can write a simple smart contract in solidity.
 
 Overarching goal: students have gained insight into the potential of smart contracts and several related blockchain subjects. They know about the application and the why of blockchain.
+
+After this course:
+
+- The student is able to work with the Remix IDE. This includes writing, testing and deploying smart contracts from within Remix.
+- The student is able to write and deploy Solidity smart contracts on the Ethereum (test) network. For example smart contracts for coins, voting and bets
+- The student is able to connect the Remix IDE to Metamask and manage transactions via Metamask.
+- The student is able to describe what Ethereum, Solidity, Remix IDE, MetaMask, InterPlanetary File System (IPFS), Swarm and Self-Sovereign Identity (SSI) are.
+
+## Course Material
+
+During the course the student will follow [CryptoZombies](https://cryptozombies.io/en/solidity) lessons 'Solidity Path: Beginner to Intermediate Smart Contracts'. Each week relevant concepts to the CryptoZobies lesson will be explained using live coding examples. In addition to this material several important decentralized technologies and concepts will be explained.
+
+## Final Assignment
+
+Each student needs to hand in a final assignment. The final assignment will show that the student has achieved the learning goals described above. The assignment will be graded according to the provided matrix.
+
+<!-- TODO Add matrix -->
+
+Assignment
+Create a betting factory contact that allows multiple people to bet on something. This project should involve a minimum of two contracts.
+
+<!-- There will be a document available for each week with explanations and assignments. Slides will also be made available toghether with a cheatsheet. The cheatsheet will give an overview of difficult topics and will provide some dutch translations to make it easier to understand. -->
 
 ## Practical details
 
@@ -19,13 +45,13 @@ Deliverables:
 - Final assignment
 - Grading matrix
 
-Lessons will be 2 hours long, 1 hour of which will be providing a theoretical framework and context surrounding different blockchain topics. The other hour will be practical, based on the [cryptozombies](https://cryptozombies.io/) lessons.
+Lessons will be 2 hours long.
 
 At the end of the course we'll do a feedback session to improve material, improve it and make it open source.
 
 ## Lesson structure
 
-### Week 1: Getting started and the basics of Smart Contracts
+### Week 1: Getting started and the basics of smart contracts
 
 1. Course Introduction
 
@@ -38,6 +64,7 @@ At the end of the course we'll do a feedback session to improve material, improv
 
    - What are smart contracts & how do they relate to blockchain
    - How do Smart Contracts work
+   - Ethereum: the basics
    - Solidity: the basics and a cheat sheet
      - operators (include modulo)
      - uint & int & string & typecasting
@@ -103,8 +130,7 @@ At the end of the course we'll do a feedback session to improve material, improv
 2. random nums
 
 3. Zombie battle system
-
-- Cryptozombies lesson 4
+   - Cryptozombies lesson 4
 
 ### 5: Tokens
 
@@ -135,22 +161,10 @@ Introduction to Decentralized Applications.
 
 ### Week 5
 
-#### Basic
+<!-- #### Basic
 
 1. Smart contract security
    1. DAO hack
-
-### Week 6 - Testing smart contracts
-
-#### Basic
-
-1. Testing smart contracts with Solidity in Remix IDE
-
-#### Advanced
-
-1. Testing smart contracts in JavaScript with Truffle Suite
-
-### Week 7 - Decentralized Storage
 
 Decentralized File Storage with InterPlanetary File System (IPFS) and Swarm
 
@@ -162,48 +176,9 @@ Decentralized File Storage with InterPlanetary File System (IPFS) and Swarm
       2. integrity, files match the hash...
       3. ...
 2. Download and explore IPFS Desktop
-3. Publishing files on IPFS
+3. Publishing files on IPFS -->
 
-#### Advanced
-
-1. Make your front-end interface available via IPFS
-
-## Prerequisites
-
-For joining this course a basic knowledge about blockchain is assumed. Programming experience is not required. For the people who have programming experience there is an advanced track.
-
-## Learning Goals
-
-- The student is able to work with the Remix IDE. This includes writing, testing and deploying smart contracts from within Remix.
-- The student is able to write and deploy Solidity smart contracts on the Ethereum (test) network. For example smart contracts for coins, voting and bets
-- The student is able to connect the Remix IDE to Metamask and manage transactions via Metamask.
-- The student is able to describe what Ethereum, Solidity, Remix IDE, MetaMask, InterPlanetary File System (IPFS), Swarm and Self-Sovereign Identity (SSI) are.
-
-### Advanced Learning Goals
-
-- The student is able to work with Truffle Suite. This includes writing, testing and deploying smart conrtracts with Truffle Suite.
-- The student is able to create a simple front-end interface that interacts with ethereum smart contracts via Web3.js.
-- The student is able to deploy files on IPFS or Swarm. This includes a simple front-end interface that interacts with Ethereum.
-
-## Final Assignment
-
-Each student needs to hand in a final assignment. The final assignment will show that the student has achieved the learning goals described above. The final assignment for the advanced track will build upon the base final assigment.
-
-**Basic**
-Create a betting factory contact that allows multiple people to bet on something. This project should involve a minimum of two contracts and should have a test coverage of 80%.
-
-**Advanded**
-The advanced assignment is free to choose, but should at least have the following:
-
-- a minimum of two contracts
-- a front-end hosted on IPFS/SWARM
-- 80% test coverage
-
-## Course Material
-
-There will be a document available for each week with explanations and assignments. Slides will also be made available toghether with a cheatsheet. The cheatsheet will give an overview of difficult topics and will provide some dutch translations to make it easier to understand.
-
-## Resources
+<!-- ## Resources
 
 - Remix IDE - [https://remix.ethereum.org/](https://remix.ethereum.org/)
 - Remix IDE Documentation - [https://remix-ide.readthedocs.io/en/latest/](https://remix-ide.readthedocs.io/en/latest/)
@@ -213,4 +188,4 @@ There will be a document available for each week with explanations and assignmen
 - Swarm Documentation - [https://swarm-guide.readthedocs.io/en/latest/introduction.html](https://swarm-guide.readthedocs.io/en/latest/introduction.html)
 - IPFS - [https://ipfs.io/](https://ipfs.io/)
 - IPFS Desktop - [https://docs.ipfs.io/](https://docs.ipfs.io/)
-- EthPM Documentation - [https://ethpm.github.io/ethpm-spec/](https://ethpm.github.io/ethpm-spec/)
+- EthPM Documentation - [https://ethpm.github.io/ethpm-spec/](https://ethpm.github.io/ethpm-spec/) -->
