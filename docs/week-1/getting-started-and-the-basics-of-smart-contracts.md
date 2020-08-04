@@ -1,65 +1,53 @@
-# Week 1: Getting started and the basics of smart contracts
+# Week 1: Getting Started With The Basics Of Smart Contracts
 
-## Course Introduction
+<!-- TODO:
+- fix visibility part, gifs don't really add anything, functions and variables are explained together as one. Getter setter not well explained.
+       - Memory storage
+       - return values
+     - events -->
 
-    - Who are we
-
-- What to expect / learning goals.
-- Where to find course materials.
-
-Manual, slides, cheatsheet,
-
-- Environment, what do and don't we expect
-
-* Explanation final assignment / examination.
-
-Your grade for this course will be determined by an assignment which you can find, including the grading matrix, in Appendix 1. TODO. The assignment deadline is **deadline** and **insert handing in method**.
-
-## Decentralized development
+## Decentralized Development
 
 Development of applications generally consists of two parts, front-end development and back-end development. The front-end is what the user sees and interacts with, the back-end contains all the business logic and data storage.
+
+> When you login to a website, the username/password form and the button with the function that sends the login information would be classified as 'front-end'. The website's logic of how to validate the information once it's received and what to send back is classified as 'back-end'. How the information that is send back is then presented (think succes or error messaging) is part of the front-end.
 
 Decentralized applications (or **dApps**) are applications whos back-end code runs on a decentralized network instead of centralized servers. These apps are not dependant on or controlled by a single entity. There is no single point of failure and trust can be generated through technology instead of middlemen or authority.
 
 Although the term dApp is now almost always used to describe applications that make use of a blockchain network, this is not a necessity. Apps that use the BitTorrent protocol like Popcorn Time or uTorrent are also dApps, as they run on a decentralized p2p network.
 
-Blockchain-based dApps are applications that communicate with a blockchain. The front-end works (largely) the same as with a centralized application but the business logic is stored in the form of **smart contracts** on a blockchain. In this course we'll discuss the specifics that come with developing these types of decentralized applications and learn how to write smart contracts.
+Blockchain-based dApps are applications that communicate with a blockchain. The front-end works (largely) the same as with a centralized application but the business logic about what needs to happen with sent information is stored in the form of **smart contracts** on a blockchain. In this course we'll discuss the specifics that come with developing these types of decentralized applications and learn how to write smart contracts for real world use cases.
 
-## Smart contracts: the basics
+## Smart Contracts: The Basics
 
 Smart contracts are basically digital contracts that automatically enforce their content. They can be used to replace complicated structures that we currently use to guarantee that an agreement is upheld.
 
-Because of this the middleman is no longer required.
+Imagine you and a friend decide to bet on the outcome of a sports match. You think team A will win, your friend thinks team B will win. The loser has to pay up €100,-. If you and your friend completely trust each other you might just shake on it and leave it at that. However, what happens if you do not trust your friend to actually follow through and pay up the €100,- once team B (in your mind inevitably) loses? You might ask an impartial friend to function as a **trusted third party**. You could both give him €100,- to hand over €200,- to the winner once the match is over. Trust problem solved! Except it isn't. The trusted third party could turn out not to be as trustworthy as you hoped, be robbed or simply lose the money. Once you start worrying about this you might escalate the contstruction further, by involving a lawyer or a bank. Smart contracts fix the ever growing complexity of trust problems when agreements are made.
 
-Why trust smart contract: immutable, distributed
+In a smart contract the rules for the agreement are written in executable code. Once the triggers for the agreement are activated, the consequenses are immediately and automatically carried out. Because the smart contract is written in code that is publically available on the blockchain there is **transparancy** while the individuals involved can be **anonymous**. Because the smart contract cannot be changed once on the blockchain there is **immutability**. These factors combined with the fact that the blockchain itself cannot be altered by a central authority but is **distributed** eliminate the need for a trusted third party or middleman.
 
-I
+> In the example of your sports bet, you and your friend could write your agreement in the form of a smart contract on the Ethereum network. This smart contract could (for example) require €100,- from both of you to check the outcome online and route €200,- directly to the winner. Trust problem solved! This time for real.
 
-Normal contracts.
+Smart contracts have many practical uses. They can be made for any agreement that follows if-this-then-that logic. The more incentive anyone has to commit fraud, the more useful the smart contract becomes. For example think about the consequences implementing smart contracts would have for voting, financial services, renting a house, insurance cases, digital identity, trading etc. Because smart contracts can be used to create a transparent, immutable, decentralized and automated proces they can also be very cost-effective as a result of their efficiency.
 
-self executing contracts.
+So smart contracts are pieces of executable code on a blockchain network. What does that mean? In the next section we'll examine where the code 'lives' and how the actual proces of triggering the smart contract works.
 
-On chain.
-Adress of a smart contract
-send your transaction to the adress.
-transaction includes gas and function / data.
-contract receives transaction, uses gas to execute the function you sent.
+## Ethereum: The Basics
 
-It does not cost gas to read information. Only to change the chain.
+Next time you and that friend you don't trust decide on a bet, you might want to try using a smart contract to handle the execution. But you would need a blockchain network to put it to ensure it has all those great immutable, decentralized and transparent qualities you want. There are different options for what blockchain to use, including setting up your own, however currently for dApps the most widely used network is Ethereum.
 
-Look at blockexplorer.
+If you visit ethereum.org you will find that _"Ethereum is a global, open-source platform for decentralized applications."_ You can use the established Ethereum network to put your smart contract and use existing nodes to validate and update information. Because a blockchain depends on the computational power of the network these nodes are rewarded for participating through digital currency. In the Ethereum network this currency is called Ether. In next weeks material we will go into more detail about how this actually works.
 
-## Ethereum: the basics
+Smart contracts, once put on the Ethereum network have an address. This address is used to find the correct smart contract and send the required information. Just like an e-mail address (or regular address) is used to find the person you sent information to. The information that is sent to the smart contract is called a transaction.
 
-Ethereum is....
+## Solidity
 
-Because of this it is the most used blockchain-based dApps platform.
-
-## Solidity: the basics
-
-Solidity is a programming language for writing smart contracts on Ethereum and other blockchain platforms.
+Solidity is a programming language for writing smart contracts on Ethereum and other blockchain platforms. It is what we'll be learning during this course. We'll start with the basics and work our way up. If at any point you want to try out some code at home or in class you can navigate to https://remix.ethereum.org/ to create a contract file and compile it.
 
 If you have never programmed before it can be intimidating to get started. Solidity has excellent [documentation](https://solidity.readthedocs.io/) but the documentation assumes you have some basic programming experience. In this course manual the main concepts will be explained for people completely new to programming, with references to the original documentation for additional information.
+
+> Do: Go back and forward between this material and the CryptoZombies lesson, occasionally adding Google if something is unclear. \
+> Do Not: Read through all of the documentation and expect to understand it completely and all at once before starting the CryptoZombies material.
 
 ### Basic contract structure
 
@@ -87,10 +75,8 @@ The first line `pragma solidity ^0.4.0;` tells the compiler what version of the 
 
 This line **must** be included at the very top of every contract we'll be writing. Solidity is a relatively new language and is being developed heavily. This means the language changes quite a lot and the differences between versions are substantial. Therefore, please make sure the version you specify is the same as shown on the bottom left corner of the [Solidity Documentation]
 
-**Example**
-
 ```solidity
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.2;
 ```
 
 - [Solidity Docs - Version Pragma]
@@ -98,8 +84,6 @@ pragma solidity ^0.4.0;
 #### Contract Declaration
 
 To declare a contract we use the `contract` keyword followed by the name of the contract followed by two curly braces (`{}`). This name can be anything you wish.
-
-**Example**
 
 ```solidity
 contract AgeStorage {
@@ -111,25 +95,25 @@ contract AgeStorage {
 
 ### Variables
 
-In smart contracts we use variables to store and retrieve values. Take the `AgeStorage` contract above for example. It declares a variable called `age` and uses the functions `set()` and `get()` to store and retrieve the age (more on functions later [TODO: LINK TO FUNCTIONS]).
+In smart contracts we use variables to store and retrieve values. Take the `AgeStorage` contract above for example. It declares a variable called `age` and uses the functions `set()` and `get()` to store and retrieve the age (more on functions later).
 
 Variables must be declared along with their 'type'. A type tells the EVM what kind of value we want to store and how much memory it should allocate. This could be an integer (a number without a decimal point), a string (a piece of text), an address (belonging to a human or contract) and more.
 
-Variables are declared with the following structure: `<variable type> <variable name> = <variable value>`. See the example below, it tells the EVM we want to store an integer (`int`) that we will call `age` and give it a value of `10`.
+Variables are declared with the following structure: `<variable type> <variable name> = <variable value>`. See the example below, it tells the EVM we want to store an integer (`int`) that we will call `age` and give it a value of `17`.
 
 ```solidity
-int age = 10;
+int age = 17;
 ```
 
-It is not required for values to be assigned a value on initialization. You can set the value at a later moment. This can be useful if you don't know the value at the moment of declaration. [TODO: LINK TO WHERE VARIABLE GETS DECLARED BUT ON ASSIGNED]
+It is not required for values to be assigned a value on initialization. You can set the value at a later moment. This can be useful if you don't know the value at the moment of declaration.
 
 ```solidity
 int age;
 
-age = 10;
+age = 17;
 ```
 
-> By convention a variable is written in camelCase. This means you capitalize every first letter of a word, except for the first word.
+> By convention a variable is written in camelCase. This means you capitalize every first letter of a word, except for the first word. Programmers use this to increase readability of variables. It is also recommended to keep your variable names short and descriptive. It might be tempting to name your variables x and y but other people won't be able to understand what's going on (and neither will you if you return to your code in a few months).
 
 #### Types
 
@@ -144,8 +128,8 @@ Let's go over a few common types.
 The boolean type can be used to store exactly two kind of values, `true` and `false`. A boolean is indicated by the `bool` keyword.
 
 ```solidity
-bool isOldEnough = true;
-bool isChild = false;
+bool canBuyAlcohol = false;
+bool canBuyPlants = true;
 ```
 
 - [Solidity Docs - Boolean]
@@ -156,14 +140,12 @@ An integer is a 'whole' number that has no decimal point. There are multiple typ
 
 If we want to declare a variable for age it is logical to take make it an `unsigned` integer as an age can never be below 0.
 
-**Example**
-
 ```solidity
 // Signed integer, can be positive and negative
-int negativeAge = -10;
+int negativeAge = -17;
 
 // Unsigned Integer, can only be positive
-uint age = 10;
+uint age = 17;
 ```
 
 - [Solidity Docs - Integer]
@@ -185,8 +167,6 @@ The address type is used to store an ethereum account addresses. Ethereum has tw
 - Normal externally controlled accounts
 - Contract accounts
 
-**Example**
-
 ```solidity
 address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
 ```
@@ -194,11 +174,93 @@ address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
 - [Solidity Docs - Address]
 - [Ethereum Account Types]
 
+##### Structs
+
+Structs are for when you need to make your own type that groups multiple variables.
+
+```solidity
+// example with assigned variables
+struct Gift {
+    uint price = 30.99;
+    uint grams = 500;
+    string birthdayGreeting = "Enjoy this gift, happy birthday dad!";
+}
+
+// example with unassigned variables
+struct Gift {
+    uint price;
+    uint grams;
+    string birthdayGreeting;
+
+}
+```
+
+- [Solidity Docs - Structs]
+
+#### Operators
+
+Operators are a way to manipulate variables. You know most of these already. They are the regular math operators:
+
+- x + y
+- x - y
+- x \* y
+- x / y
+
+Two operators you might not know are **exponential** and **modulo**.
+
+##### Exponential
+
+The exponential operator calculates X to the power of Y. Although this is often written as X^Y in mathematics, the operator when coding is actually \*\*.
+
+```solidity
+// Using the exponential operator to calculate bacterial growth
+uint startingBacteria = 100
+uint hours = 3;
+
+int bacteriaPopulation = startingBacteria ** hours
+// the variable bacteriaPopulation has now been assigned the value of 100^3 = 1000000
+```
+
+##### Modulo
+
+Modulo is the operator that calculates the remainder of a devision. When you devide 14 by 12, the 12 fits once with 2 left over. 14 % 12 = 2. This operator is often used to determine if the result of a division is even.
+
+```solidity
+33 % 3 = 0 // no remainder
+33 % 5 = 3 // some remainder
+```
+
+#### Arrays
+
+Variables can be stored in arrays. An array is a collection of things.
+
+```solidity
+// struct
+struct Gift {
+    uint price;
+    uint grams;
+    string birthdayGreeting;
+}
+
+// array of structs;
+Gift[] public gifts;
+
+// create a new Gift
+Gift christmasGift = Gift(90, 1100, "Merry Christmas");
+
+// adding to the array of structs
+gifts.push(christmasGift)
+
+// array of ints
+int[] arrayOfInts;
+
+// adding to the arrayOfInts
+arrayOfInts.push(16)
+```
+
 ### Comments
 
 Comments are a great way to describe the meaning of code. In the examples before we already used some comments. The compiler will remove any comments during compilation, so it doesn't add anything to the code itself. It just helps the next person that is going to work on the contract, which probably will be you.
-
-**Example**
 
 ```solidity
 // Single-line comment, everything on this line is a comment.
@@ -209,11 +271,11 @@ everything is a comment
 until you end the comment
 */
 
-uint age = 10; // Comments can also be written on lines with code
+uint age = 17; // Comments can also be written on lines with code
 
 /*
 This next line is also a comment, so no variable is declared
-uint age = 10;
+uint age = 17;
 */
 ```
 
@@ -233,7 +295,6 @@ function <functionName>(<parameters>) <visibility> <function type> <modifiers> <
 
 A function **must** always be declared inside a contract. It is not possible to declare a function outside of a contract. So the function should be defined between the curly brackets (`{}`) of the contract.
 
-**Example**
 If we take the `AgeStorage` contract as an example.
 
 ```solidity
@@ -299,25 +360,25 @@ The visibility of a function specifies the accessibility of the function when yo
 There are four types of visibility:
 
 - `public`
+- `private`
 - `external`
 - `internal`
-- `private`
 
-Besides for functions, visibility is also used for state variables. TODO: STATE VARIABLES.
+At the moment we'll handle public and private visibility. Internal and external visibility can be found in the next chapter.
 
 - [Solidity Docs - Visibility]
 
 ##### Public
 
-Public functions and state variables are the most open visibility type. The function and variable can be accessed from inside and outside of the contract.
+Public functions and state variables are the most open visibility type. The function and variable can be accessed from inside and outside of the contract. It is important to be careful with public functions, as they allow anyone to call the function.
 
-For public state variables, an automatic getter function is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below a `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
-
-**Example**
+For public state variables, an automatic getter function is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below an `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
 
 ```solidity
 contract AgeStorage {
     uint public age;
+
+    // We dont have to define a function get because it is automatically generated.
 
     function set(uint newAge) public {
         age = newAge;
@@ -327,9 +388,19 @@ contract AgeStorage {
 
 ![Visibility Public](./assets/visibility-public.gif)
 
+#### Return Variables
+
+TODO
+
+- [Solidity Docs - Return Variables]
+
+#### Memory
+
+TODO
+
 ##### Private
 
-Private functions and state variables are the most closed visibility type.
+Private functions and state variables are the most closed visibility type. They can only be accessed from other functions inside of the contract.
 
 ```solidity
 contract AgeStorage {
@@ -343,46 +414,41 @@ contract AgeStorage {
 
 ![Visibility Private](./assets/visibility-private.png)
 
-##### Internal
-
-```solidity
-contract AgeStorage {
-    uint internal age;
-
-    function set(uint newAge) internal {
-        age = newAge;
-    }
-}
-```
-
-![Visibility Internal](./assets/visibility-internal.png)
-
-##### External
-
-```solidity
-contract AgeStorage {
-    // Not allowed
-    // uint external age;
-
-    function set(uint newAge) external {
-    }
-}
-```
-
-![Visibility External](./assets/visibility-external.gif)
-
-#### Function Types
-
-- [Solidity Docs - View Functions]
-- [Solidity Docs - Pure Functions]
-
 #### Modifiers
+
+Functions can serve many different goals in Solidity. We use function modifiers if these goals need to be clarified.
 
 - [Solidity Docs - Function Modifiers]
 
-#### Return Variables
+##### Pure
 
-- [Solidity Docs - Return Variables]
+Sometimes a function does not change any data or even use any data from the contract. For example if you have written a function to add two numbers that you give it as parameters and return the result. This is called a **pure** function.
+
+```solidity
+function sum(uint val1, uint val2) public pure returns (uint) {
+    return val1 + val2;
+}
+```
+
+- [Solidity Docs - Pure Functions]
+
+##### View
+
+If the function does not change anything, but does read data from the contract, it is a **view** function.
+
+```solidity
+uint age = 17;
+
+function doubleTheAge(uint memory age) public view returns (uint) {
+    return age * 2
+}
+```
+
+- [Solidity Docs - View Functions]
+
+### Events
+
+TODO
 
 ### Resources
 
@@ -395,6 +461,7 @@ contract AgeStorage {
 - [Solidity Docs - Address]
 - [Ethereum Account Types]
 - [Solidity Docs - Comments]
+- [Solidity Docs - Structs]
 - [Solidity Docs - Functions]
 - [Solidity Docs - Function Parameters]
 - [Solidity Docs - Return Variables]
@@ -414,6 +481,7 @@ contract AgeStorage {
 [solidity docs - address]: https://solidity.readthedocs.io/en/latest/types.html#address
 [ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
 [solidity docs - comments]: https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#comments
+[solidity docs - structs]: https://solidity.readthedocs.io/en/v0.5.3/structure-of-a-contract.html#struct-types
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
 [solidity docs - function parameters]: https://solidity.readthedocs.io/en/latest/contracts.html#function-parameters
 [solidity docs - return variables]: https://solidity.readthedocs.io/en/latest/contracts.html#return-variables
@@ -421,23 +489,3 @@ contract AgeStorage {
 [solidity docs - function modifiers]: https://solidity.readthedocs.io/en/latest/contracts.html#function-modifiers
 [solidity docs - view functions]: https://solidity.readthedocs.io/en/latest/contracts.html#view-functions
 [solidity docs - pure functions]: https://solidity.readthedocs.io/en/latest/contracts.html#pure-functions
-
-<!--
-* How do Smart Contracts work
-* Ethereum: the basics
-* Solidity: the basics and a cheat sheet
-  - operators (include modulo)
-  - uint & int & string & typecasting
-  - variables
-  - structs & arrays (include public, getters)
-  - hash function
-  - function declarations
-    - Memory storage
-    - public / private
-    - return values
-    - modifiers (view/pure)
-  - events
-* Show a smart contract on remix ide
-
-1. Making the Zombie Factory
-   - Cryptozombies lesson 1 -->

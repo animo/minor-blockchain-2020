@@ -4,5 +4,10 @@
     "Ganache",
     "QUICKSTART",
     "Setup"
+  ],
+  "spellright.language": [],
+  "spellright.documentTypes": [
+    "latex",
+    "plaintext"
   ]
 }
