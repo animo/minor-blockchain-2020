@@ -160,20 +160,6 @@ string myText = "Hello World!";
 
 - [Solidity Docs - String]
 
-##### Address
-
-The address type is used to store an ethereum account addresses. Ethereum has two types of accounts:
-
-- Normal externally controlled accounts
-- Contract accounts
-
-```solidity
-address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
-```
-
-- [Solidity Docs - Address]
-- [Ethereum Account Types]
-
 ##### Structs
 
 Structs are for when you need to make your own type that groups multiple variables.
@@ -357,6 +343,16 @@ function sum(uint val1, uint val2) public pure returns (uint) {
 
 The visibility of a function specifies the accessibility of the function when you or another function wants to interact with it.
 
+```solidity
+contract MyContract {
+
+    function myFunction () [visibility-here] {
+        // do something
+    }
+
+}
+```
+
 There are four types of visibility:
 
 - `public`
@@ -388,16 +384,6 @@ contract AgeStorage {
 
 ![Visibility Public](./assets/visibility-public.gif)
 
-#### Return Variables
-
-TODO
-
-- [Solidity Docs - Return Variables]
-
-#### Memory
-
-TODO
-
 ##### Private
 
 Private functions and state variables are the most closed visibility type. They can only be accessed from other functions inside of the contract.
@@ -413,6 +399,16 @@ contract AgeStorage {
 ```
 
 ![Visibility Private](./assets/visibility-private.png)
+
+#### Return Variables
+
+TODO
+
+- [Solidity Docs - Return Variables]
+
+#### Memory and storage
+
+TODO
 
 #### Modifiers
 
@@ -478,8 +474,6 @@ TODO
 [solidity docs - boolean]: https://solidity.readthedocs.io/en/latest/types.html#booleans
 [solidity docs - integer]: https://solidity.readthedocs.io/en/latest/types.html#integers
 [solidity docs - string]: https://solidity.readthedocs.io/en/latest/types.html#bytes-and-strings-as-arrays
-[solidity docs - address]: https://solidity.readthedocs.io/en/latest/types.html#address
-[ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
 [solidity docs - comments]: https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#comments
 [solidity docs - structs]: https://solidity.readthedocs.io/en/v0.5.3/structure-of-a-contract.html#struct-types
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
