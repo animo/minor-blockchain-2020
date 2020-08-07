@@ -1,7 +1,5 @@
 # Week 2: Expanding By Interacting With Other Contracts And Blockchains
 
-<!-- TODO add storage and memory somewhere -->
-
 ## Smart Contracts: Usability
 
 Last week we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss several use cases.
@@ -36,9 +34,7 @@ There are some simple contracts that can fit all their logic into one contract. 
 
 ## Solidity: Interaction With Other Contracts And Blockchains
 
-There exists a world outside of your smart contract code. This week we'll discuss how to interact with it.
-
-<!-- variables, types, functions (visibility), events -->
+There exists a world outside of your smart contracts code. This week we'll discuss several ways to interact with it.
 
 ### Special variables
 
@@ -90,15 +86,27 @@ address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
 
 #### Mapping
 
-<!-- TODO -->
+Mappings create a mapping beween a **key** and a **value**. They are often used to associate an ethereum address with a value that needs to be stored.
+
+```solidity
+contract SomeGame {
+    // creating the mapping
+    mapping(address => uint) public userLevel
+
+    function currentLevel(address userAddress) public constant returns (uint) {
+    returning the user level that belongs to the given user address parameter
+     return userLevel[userAddress];
+}
+}
+```
 
 ### Functions
 
-The code of a smart contract is, once deployed, immutable. It is therefore important that it does not allow for situations outside of the pre-determinded goals and scope of the smart contract. There are several ways to do this in solidity.
+The code of a smart contract is, once deployed, immutable. Therefore it's important that it does not allow for situations outside of the pre-determinded goals and scope of the smart contract. There are several ways to do this in solidity.
 
 #### If-Else statements
 
-An if-else statement is a general coding principle that is used to implement conditional logic.
+An if-else statement is a general coding principle that is used to implement conditional logic. It can also be used without the else statement or chain multiple if-else conditions.
 
 ```solidity
 function serveDrink(int memory age) public {
@@ -112,16 +120,16 @@ function serveDrink(int memory age) public {
 
 #### Require
 
-The require function is a function that checks certain requirements to be met before allowing the code to execute. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Using require, the function will not execute further if the requirement doesn't pass.
+The require function is a function that checks certain global requirements to be met before allowing the code to execute. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Using require, the function will not execute further if the requirement doesn't pass.
 
 ```solidity
-// in function that can only be activated by the owner address
+// in function that should only be activated by the owner address
 
 require(msg.sender == owner)
 ```
 
 ```solidity
-// in function that can only be activated by participants
+// in function that should only be activated by participants
 
 require(bettingParticipants[msg.sender]);
 ```
@@ -130,7 +138,7 @@ require(bettingParticipants[msg.sender]);
 
 Why reinvent the wheel? It is good practice to reuse code instead of retyping it in every contract. One of the ways you can do this is through inheritance.
 
-Inheritance is a coding principle that is not specific to blockchain, ethereum or solidity, however in this section we will discuss it in the context of solidity smart contracts. First a parent contract is created with variables and functions. Then a child contract is created which can inherit aspects of the parent contract.The child can access the functionality of the parent without having to redefine the same functions.
+Inheritance is a coding principle that is not specific to blockchain, ethereum or solidity, however in this section we will discuss it in the context of solidity smart contracts. First a parent contract is created with variables and functions. Then a child contract is created which can inherit aspects of the parent contract.The child can access the functionality of the parent without having to redefine the same functions. Inheritance can help you with keeping the code organized and legible.
 
 ``solidity
 
@@ -151,9 +159,7 @@ contract Cow is Animal {
 }
 ````
 
-Inheritance can also help you with keeping the code organized and legible.
-
-There are now multiple smart contracts (the parent and the child). These each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./animal.sol";` line does in the previous example.
+When there are multiple smart contracts (like the parent and the child) these each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./animal.sol";` line does in the previous example.
 
 [Solidity Docs - Inheritance]
 
@@ -203,8 +209,13 @@ contract AgeStorage {
 
 ### Interface
 
-Through inheritance and importing the seperate .sol contract files can interact with each other. However, there are certainly cases when interaction with contracts that are not your own is needed.
+One place the external visibility is relevant is in interfaces. An interface looks like a smart contract with no details, just the basic structure. There are no implemented functions and no defined variables.
 
+```solidity
+
+```
+
+An interface needs a seperate contract to actually implement the functions. This sounds like unnecessary extra work but it actually....
 TODO
 
 <!-- Internal links -->
@@ -213,7 +224,3 @@ TODO
 [ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
 [solidity docs - special variables]: https://solidity.readthedocs.io/en/v0.4.24/units-and-global-variables.html#special-variables-and-functions
 [solidity docs - inheritance]: https://solidity.readthedocs.io/en/develop/contracts.html#inheritance
-
-```
-
-```

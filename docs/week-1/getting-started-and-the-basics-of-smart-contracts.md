@@ -386,7 +386,7 @@ contract AgeStorage {
 
 ##### Private
 
-Private functions and state variables are the most closed visibility type. They can only be accessed from other functions inside of the contract.
+Private is the most closed visibility type. Functions or variables with this visibility can only be accessed from other functions inside of the contract. It is generally reccomended to keep functions private unless more visibiltiy is needed.
 
 ```solidity
 contract AgeStorage {
@@ -402,7 +402,21 @@ contract AgeStorage {
 
 #### Return Variables
 
+Functions are often used to return certain information.
+
+```solidity
+contract MyContract {
+
+    function doubleTheAge(int age) private {
+        returns age * 2
+    }
+
+}
+```
+
 TODO
+
+In solidity a function can also return multiple values.
 
 - [Solidity Docs - Return Variables]
 
