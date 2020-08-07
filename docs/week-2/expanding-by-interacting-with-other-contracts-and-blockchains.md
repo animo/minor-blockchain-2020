@@ -102,11 +102,17 @@ contract SomeGame {
 
 ### Functions
 
-The code of a smart contract is, once deployed, immutable. Therefore it's important that it does not allow for situations outside of the pre-determinded goals and scope of the smart contract. There are several ways to do this in solidity.
+In week one the basic components of functions were explained. In this week some new concepts surrounding functions are explored.
+
+#### Multiple return variables
+
+A function can execute an operation and optionally return a value when called through using the **returns** keyword. In Solidity a function can also have multiple return variables.
+
+// TODO expand or maybe just remove (not too important)
 
 #### If-Else statements
 
-An if-else statement is a general coding principle that is used to implement conditional logic. It can also be used without the else statement or chain multiple if-else conditions.
+An if-else statement is a general coding principle that is used to implement conditional logic. It is used most often within functions. It can also be used without the else statement or chain multiple if-else conditions.
 
 ```solidity
 function serveDrink(int memory age) public {
@@ -120,7 +126,7 @@ function serveDrink(int memory age) public {
 
 #### Require
 
-The require function is a function that checks certain global requirements to be met before allowing the code to execute. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Using require, the function will not execute further if the requirement doesn't pass.
+The require function is a function that checks certain global requirements to be met before allowing the code to execute. It is used often within functions. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Using require, the function will not execute further if the requirement doesn't pass.
 
 ```solidity
 // in function that should only be activated by the owner address
