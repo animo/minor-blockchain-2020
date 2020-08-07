@@ -2,8 +2,6 @@
 
 <!-- TODO:
 - fix visibility part, gifs don't really add anything, functions and variables are explained together as one. Getter setter not well explained.
-       - Memory storage
-       - return values
      - events -->
 
 ## Decentralized Development
@@ -34,7 +32,7 @@ So smart contracts are pieces of executable code on a blockchain network. What d
 
 ## Ethereum: The Basics
 
-Next time you and that friend you don't trust decide on a bet, you might want to try using a smart contract to handle the execution. But you would need a blockchain network to put it to ensure it has all those great immutable, decentralized and transparent qualities you want. There are different options for what blockchain to use, including setting up your own, however currently for dApps the most widely used network is Ethereum.
+Next time you and that friend you don't trust decide on a bet, you might want to try using a smart contract to handle the execution. But you would need a blockchain network to put it, to ensure it has all those great immutable, decentralized and transparent qualities you want. There are different options for what blockchain to use, including setting up your own, however currently for dApps the most widely used network is Ethereum.
 
 If you visit ethereum.org you will find that _"Ethereum is a global, open-source platform for decentralized applications."_ You can use the established Ethereum network to put your smart contract and use existing nodes to validate and update information. Because a blockchain depends on the computational power of the network these nodes are rewarded for participating through digital currency. In the Ethereum network this currency is called Ether. In next weeks material we will go into more detail about how this actually works.
 
@@ -42,7 +40,7 @@ Smart contracts, once put on the Ethereum network have an address. This address 
 
 ## Solidity
 
-Solidity is a programming language for writing smart contracts on Ethereum and other blockchain platforms. It is what we'll be learning during this course. We'll start with the basics and work our way up. If at any point you want to try out some code at home or in class you can navigate to https://remix.ethereum.org/ to create a contract file and compile it.
+Solidity is a programming language for writing smart contracts on Ethereum and other blockchain platforms. It is what we'll be learning during this course. This material starts with the basics and works it way up. If at any point you want to try out some code at home or in class you can navigate to https://remix.ethereum.org/ to create a contract file and compile it.
 
 If you have never programmed before it can be intimidating to get started. Solidity has excellent [documentation](https://solidity.readthedocs.io/) but the documentation assumes you have some basic programming experience. In this course manual the main concepts will be explained for people completely new to programming, with references to the original documentation for additional information.
 
@@ -96,6 +94,8 @@ contract AgeStorage {
 ### Variables
 
 In smart contracts we use variables to store and retrieve values. Take the `AgeStorage` contract above for example. It declares a variable called `age` and uses the functions `set()` and `get()` to store and retrieve the age (more on functions later).
+
+> Variables can be stored in **storage** or in **memory**. In storage the variables are stored permanently on the blockchain, in memory the variables are temporary and are erased after use.
 
 Variables must be declared along with their 'type'. A type tells the EVM what kind of value we want to store and how much memory it should allocate. This could be an integer (a number without a decimal point), a string (a piece of text), an address (belonging to a human or contract) and more.
 
@@ -402,7 +402,7 @@ contract AgeStorage {
 
 #### Return Variables
 
-Functions are often used to return certain information.
+Functions can be used to execute an operation without changing anything. However functions are often used to return some information through return variables. The function will return what comes after the **returns** keyword.
 
 ```solidity
 contract MyContract {
@@ -414,15 +414,7 @@ contract MyContract {
 }
 ```
 
-TODO
-
-In solidity a function can also return multiple values.
-
 - [Solidity Docs - Return Variables]
-
-#### Memory and storage
-
-TODO
 
 #### Modifiers
 
