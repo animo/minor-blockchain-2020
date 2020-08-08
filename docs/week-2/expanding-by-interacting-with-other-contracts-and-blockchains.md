@@ -108,8 +108,6 @@ In week one the basic components of functions were explained. In this week some 
 
 A function can execute an operation and optionally return a value when called through using the **returns** keyword. In Solidity a function can also have multiple return variables.
 
-// TODO expand or maybe just remove (not too important)
-
 #### If-Else statements
 
 An if-else statement is a general coding principle that is used to implement conditional logic. It is used most often within functions. It can also be used without the else statement or chain multiple if-else conditions.
@@ -121,6 +119,23 @@ function serveDrink(int memory age) public {
     }else {
         serveNonAlcoholic();
     }
+}
+```
+
+#### For loops
+
+For loops are another general coding principle. They are used to execute something in a loop. They can be very simple or complex depending on desired functionality.
+
+```solidity
+// array of ages
+uint[] public ages;
+
+// length of the array
+uint arrayLength = addressIndices.length;
+
+// the information behind the for is the counter
+for (uint i=0; i<arrayLength, i++){
+    // dosomething
 }
 ```
 
@@ -166,6 +181,8 @@ contract Cow is Animal {
 ````
 
 When there are multiple smart contracts (like the parent and the child) these each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./animal.sol";` line does in the previous example.
+
+> Inheritance can be at its most useful when inheriting from contracts previously defined by other programmers. There are a lot of contracts out there that already offer functions you want in your code.
 
 [Solidity Docs - Inheritance]
 

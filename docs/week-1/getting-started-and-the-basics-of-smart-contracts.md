@@ -1,9 +1,5 @@
 # Week 1: Getting Started With The Basics Of Smart Contracts
 
-<!-- TODO:
-- fix visibility part, gifs don't really add anything, functions and variables are explained together as one. Getter setter not well explained.
-     - events -->
-
 ## Decentralized Development
 
 Development of applications generally consists of two parts, front-end development and back-end development. The front-end is what the user sees and interacts with, the back-end contains all the business logic and data storage.
@@ -360,7 +356,7 @@ There are four types of visibility:
 - `external`
 - `internal`
 
-At the moment we'll handle public and private visibility. Internal and external visibility can be found in the next chapter.
+At the moment we'll handle public and private visibility. Internal and external visibility can be found in next weeks material.
 
 - [Solidity Docs - Visibility]
 
@@ -368,13 +364,15 @@ At the moment we'll handle public and private visibility. Internal and external 
 
 Public functions and state variables are the most open visibility type. The function and variable can be accessed from inside and outside of the contract. It is important to be careful with public functions, as they allow anyone to call the function.
 
-For public state variables, an automatic getter function is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below an `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
+TODO
+
+For public state variables, an automatic **getter function** is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below an `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
 
 ```solidity
 contract AgeStorage {
     uint public age;
 
-    // We dont have to define a function get because it is automatically generated.
+    // We dont have to define a function get because it is automatically generated. We know its name is age()
 
     function set(uint newAge) public {
         age = newAge;
@@ -387,6 +385,8 @@ contract AgeStorage {
 ##### Private
 
 Private is the most closed visibility type. Functions or variables with this visibility can only be accessed from other functions inside of the contract. It is generally reccomended to keep functions private unless more visibiltiy is needed.
+
+TODO
 
 ```solidity
 contract AgeStorage {
@@ -418,7 +418,7 @@ contract MyContract {
 
 #### Modifiers
 
-Functions can serve many different goals in Solidity. We use function modifiers if these goals need to be clarified.
+Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function.
 
 - [Solidity Docs - Function Modifiers]
 
@@ -436,7 +436,7 @@ function sum(uint val1, uint val2) public pure returns (uint) {
 
 ##### View
 
-If the function does not change anything, but does read data from the contract, it is a **view** function.
+If the function does not change anything, but does read data from the contract, it is a **view** function. The function is read only.
 
 ```solidity
 uint age = 17;
@@ -450,7 +450,25 @@ function doubleTheAge(uint memory age) public view returns (uint) {
 
 ### Events
 
-TODO
+Everything that we have been coding so far in solidity has been 'back-end' material. The smart contract lives on the blockchain and that is where all the code is executed and stored. However, if you are building an app for people to use it will need to have a frontend.
+
+Events are the way the frontend is notified for things that are happening in the smart contract. Events are 'fired' in the back-end code and can be 'listened' for in the front-end code. This is how communication between the two works.
+
+```solidity
+contract Result {
+   // create the event
+   event WinnerKnown(address winner, uint amount);
+
+   function determineWinner(address[] memory participants) public  {
+       // code to determine the winner from the participants
+
+      // fire the event
+      emit Deposit(winner, 100000);
+   }
+}
+```
+
+- [Solidity Docs - Events]
 
 ### Resources
 
@@ -489,3 +507,4 @@ TODO
 [solidity docs - function modifiers]: https://solidity.readthedocs.io/en/latest/contracts.html#function-modifiers
 [solidity docs - view functions]: https://solidity.readthedocs.io/en/latest/contracts.html#view-functions
 [solidity docs - pure functions]: https://solidity.readthedocs.io/en/latest/contracts.html#pure-functions
+[solidity docs - events]: https://solidity.readthedocs.io/en/develop/contracts.html#events

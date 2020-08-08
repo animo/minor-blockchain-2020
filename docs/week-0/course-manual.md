@@ -9,11 +9,13 @@ Manual, slides, cheatsheet,
 
 - Environment, what do and don't we expect
 
-## Grading
+## Structure and Grading
 
+- verplicht niet verplict
+- CryptoZombies hoe en wat
 - Explanation final assignment / examination.
 
-Your grade for this course will be determined by an assignment which you can find, including the grading matrix, in Appendix 1. TODO. The assignment deadline is **deadline** and **insert handing in method**.
+Your grade for this course will be determined by an assignment which you can find XX, including the grading matrix, in Appendix 1. TODO. The assignment deadline is **deadline** and **insert handing in method**.
 
 ## Additional reading or watching
 
