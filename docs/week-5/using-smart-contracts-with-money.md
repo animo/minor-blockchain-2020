@@ -29,32 +29,13 @@ TODO: Keys and wallets, restoring, etc.
 
 ## Solidity
 
-### Functions
+To move around money using smart contracts the smart contracts themselves need to be created for this purpose. There need to be functions to pay, check and withdraw money from a contract. There are default aspects of solidity to assist with this.
 
-To move around money using smart contracts there need to be functions to pay, check and withdraw money from a contract. EOA wallets with a user interface already have these functions implemented. There are default aspects of solidity to assist with this.
+### Payable Modifier
 
-#### address.transfer(amount)
+The payable modifier allows functions or addresses to receive Ether.
 
-The .transfer() function allows you to send an amount to an address of your choosing.
-
-```solidity
-// transfer to address
-customer.transfer(0.100);
-
-// withdraw money yourself
-function withdraw() external onlyOwner {
-    msg.sender.transfer(0.100);
-}
-
-// allow others to withdraw money
-function withdraw() external {
-    msg.sender.transfer(0.100);
-}
-```
-
-#### Payable Modifier
-
-The payable modifier allows functions to receive Ether.
+#### Payable Functions
 
 If we think back to the betting example, a payable function could be used to collect a certain amount of money for participants to be allowed to participate.
 
@@ -71,3 +52,52 @@ contract BettingContract {
     }
 }
 ```
+
+#### Payable Addresses
+
+An address with the payable modifier is the same as the address type we learned about earlier. The only difference is that a payable address can be sent Ether, and a regular address cannot. A regular address can be converted to a payable address.
+
+To enable Ether payment, the payable address has extra functions available.
+
+[Solidity Docs - Address](https://solidity.readthedocs.io/en/develop/types.html#address)
+
+##### address.transfer(amount)
+
+The .transfer() function allows you to send an amount to an address of your choosing. The amount is in Wei.
+
+> Remember, Wei is the smallest amount of Ether. 1 Ether = 10^18 Wei. Wei is stored in type uint256
+
+```solidity
+// transfer to address
+customer.transfer(0.100);
+
+// withdraw money yourself
+function withdraw() external onlyOwner {
+    msg.sender.transfer(0.100);
+}
+
+// allow others to withdraw money
+function withdraw() external {
+    msg.sender.transfer(0.100);
+}
+```
+
+##### address.balance
+
+To see the balance of an account every account has a .balance member. This member returns the balance in Wei of the address.
+
+```solidity
+
+address payable anAddress = address(.....)
+
+uint256 amountOfWei = anAddress.balance
+
+```
+
+#### Using patterns
+
+Implementing code to send money yourself can be a risk. That is why money transfer is often done using the 'withdrawal' pattern.
+
+A pattern is an often reused way of doing something in code. In the Withdrawal pattern. With this pattern you don't use the transfer function directly.
+
+// TODO expand

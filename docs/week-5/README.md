@@ -12,8 +12,9 @@
 
 ## Solidity
 
-- .transfer
-- payable modifier
+- payable functions
+- payable addresses
+- .transfer and .balance
+- withdrawal pattern // TODO
 
 CryptoZombie lesson 4
-(in lesson hours)

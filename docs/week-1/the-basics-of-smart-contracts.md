@@ -34,7 +34,7 @@ If you visit ethereum.org you will find that _"Ethereum is a global, open-source
 
 Smart contracts, once put on the Ethereum network have an address. This address is used to find the correct smart contract and send the required information. Just like an e-mail address (or regular address) is used to find the person you sent information to. The information that is sent to the smart contract is called a transaction.
 
-## Solidity: The Basics (variables)
+## Solidity: The Basics
 
 <!-- TODO rewrite ground up with arrays in the main contract and functions through adding and getting from arrays. -->
 
@@ -177,6 +177,8 @@ int negativeAge = -17;
 // Unsigned Integer, can only be positive
 uint age = 17;
 ```
+
+> Integers can also have specific sizes. The type uint256 is an unsigned integer that is 256 bits in size
 
 - [Solidity Docs - Integer]
 

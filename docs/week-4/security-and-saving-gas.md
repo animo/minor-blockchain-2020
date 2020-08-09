@@ -4,9 +4,17 @@
 
 It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent. To change a smart contract a new smart contract needs to be created. This means that the code needs to be foolproof before it is deployed to the blockchain.
 
-TODO DAO Hack
+//TODO extend
 
 ## Ethereum
+
+### Security
+
+The Ethereum network learned why security is important in smart contracts the hard way.
+
+//TODO DAO Hack
+
+### Saving Gas
 
 The previous week we learned that executing smart contracts is not free. Every operation involved in the process has some amount of computational effort involves (measured in Gas). To make this effort miners need to be payed in Ether. Because every operation costs money, it is important to be aware of cost efficient strategies when making smart contracts.
 

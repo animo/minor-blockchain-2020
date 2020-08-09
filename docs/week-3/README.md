@@ -7,7 +7,7 @@
 ## Ethereum
 
 - accounts
-- gas vs. ether
+- gas vs. ether + wei
 
 ## Solidity
 

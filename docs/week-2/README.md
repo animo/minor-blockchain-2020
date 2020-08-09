@@ -1,11 +1,8 @@
 # Week 2
 
-## Smart Contracts
-
-- ?
-
 ## Solidity
 
+- storage and memory //TODO
 - basic contract structure
 - functions
 - getters and setters
