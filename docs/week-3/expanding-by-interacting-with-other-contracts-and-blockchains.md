@@ -1,10 +1,15 @@
-# Week 2: Expanding By Interacting With Other Contracts And Blockchains
+# Week 3: Expanding By Interacting With Other Contracts And Blockchains
 
-## Smart Contracts: Usability
+## Decentralized Development: Examples
 
-Last week we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss several use cases.
+Some popular dApps....
 
-TODO
+Previously we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss several use cases.
+
+TODO: Add some real world use cases
+
+- ethereia?
+- gnosis?
 
 ## Ethereum: Accounts, Gas And Ether
 
@@ -235,11 +240,15 @@ contract AgeStorage {
 One place the external visibility is relevant is in interfaces. An interface looks like a smart contract with no details, just the basic structure. There are no implemented functions and no defined variables.
 
 ```solidity
+TODO Add code example
 
 ```
 
-An interface needs a seperate contract to actually implement the functions. This sounds like unnecessary extra work but it actually....
-TODO
+All functions in an interface can only be of type external, so they can only be accessed from a seperate contract.
+
+TODO EXPLAIN WHY INTERFACES
+
+- [Solidity Docs - Interfaces]
 
 <!-- Internal links -->
 
@@ -247,3 +256,4 @@ TODO
 [ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
 [solidity docs - special variables]: https://solidity.readthedocs.io/en/v0.4.24/units-and-global-variables.html#special-variables-and-functions
 [solidity docs - inheritance]: https://solidity.readthedocs.io/en/develop/contracts.html#inheritance
+[solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces

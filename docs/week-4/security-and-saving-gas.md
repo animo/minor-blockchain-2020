@@ -10,6 +10,10 @@ TODO DAO Hack
 
 The previous week we learned that executing smart contracts is not free. Every operation involved in the process has some amount of computational effort involves (measured in Gas). To make this effort miners need to be payed in Ether. Because every operation costs money, it is important to be aware of cost efficient strategies when making smart contracts.
 
+<!-- what costs a lot, what doesnt -->
+
+There are multiple strategies to save on operation costs, using uint subtypes inside of structs, ...., .....
+
 <!-- 2. Gas & gas cost & saving gas (view functions, structs, storage) -->
 
 "As mentioned previously, it is important to remember that a contract’s code cannot be changed. However, a contract can be “deleted,” removing the code and its internal state (storage) from its address, leaving a blank account. Any transactions sent to that account address after the contract has been deleted do not result in any code execution, because there is no longer any code there to execute. To delete a contract, you execute an EVM opcode called SELFDESTRUCT (previously called SUICIDE). That operation costs “negative gas,” a gas refund, thereby incentivizing the release of network client resources from the deletion of stored state. Deleting a contract in this way does not remove the transaction history (past) of the contract, since the blockchain itself is immutable. It is also important to note that the SELFDESTRUCT capability will only be available if the contract author programmed the smart contract to have that functionality. If the contract’s code does not have a SELFDESTRUCT opcode, or it is inaccessible, the smart contract cannot be deleted."
@@ -19,7 +23,7 @@ https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-soli
 
 A lot of the concepts from the last lessons are relevant to security. Visibility types determine who gets to call a function, addresses and the require function allow conditional code execution etc.
 
-When writing smart contract code in Solidity it is important to be aware of the consequences of using these different types and functions. Examine public and external functions and think about if they can be used in a way that contradicts how you want the smart contract to function.
+When writing smart contract code in Solidity it is important to be aware of the consequences of using these different types and functions. Look at all public and external functions and ask yourself if they can be used in a way that contradicts how you want the smart contract to function.
 
 ### Owning a contract
 
@@ -45,11 +49,23 @@ contract MemberList is Ownable {
 }
 ```
 
+It has come up a lot that the code of a smart contract cannot change (remember immutablity). It _is_ possible however for smart contract to contain functions that, when called, change certain information within the contract.
+
+An example for this is the owner of a contract. If you want to change the owner, you do not want to make and deploy a new smart contract. Instead you can create a function that can change who the owner is.
+
+```solidity
+    // very simple transfer function
+    // note that only the current owner can call this function with the 'onlyOwner' modifier
+    function transferOwnership(address newOwner) public onlyOwner {
+        owner = newOwner;
+    }
+```
+
 ### Functions
 
-#### Modifiers
+#### Custom Modifiers
 
-Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. In week 1 the **view** and **pure** modifiers where discussed. It is also possible to define a new modifier.
+Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. Visibility modifiers and state modifiers have been discussed already. It is also possible to define a custom modifier with custom logic.
 
 In the previouw 'owning a contract' section, the 'onlyOwner' modifier was used. This modifier is created to enforce the restriction that the person who calls the function needs to be the owner of the contract.
 
@@ -60,7 +76,7 @@ modifier onlyOwner () {
 }
 ```
 
-The underscore is the placeholder for the function that uses the modifier. The placement of the underscore determines if the modifier is executed before or after the original function.
+The underscore (\_) is the placeholder for the function that uses the modifier. The placement of the underscore determines if the modifier is executed before or after the original function.
 
 Modifiers can be simple (like onlyOwner) or complex depending on what you need them to do. They can also take arguments.
 
@@ -73,20 +89,20 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
     }
 ```
 
+### Time
+
+TODO: Optional.... lesson 3 chapter 5, 6
+
+### Storage pointers
+
+<!-- Storage pointers? Memory and storage, calldata -->
+
+In previous lessons memory and storage where mentioned briefly. Any variable saved in storage is saved permanently on the blockchain, while anything saved in memory is saved temporarily and forgotten after the action that needs it is finished.
+
+The way we can mostly tell the difference is that storage variables are defined outside of functions, while memory variables are defined within functions.
+
+Whether a variable should be saved in storage or memory can also be explicitely mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
+
+// TODO expand
+
 <!-- variables, types, functions (visibility), events --
-
-#### For loops
-
-#### Time
-
-
-
-
-3. Using other contracts
-4. Backdoors
-5. Functions 3: functions revenge
-
-   - structs as arguments
-
-6. Time
-7. For loops
