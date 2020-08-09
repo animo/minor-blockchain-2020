@@ -1,11 +1,3 @@
-# Course Overview
-
-This repo contains everything surrounding the educational material for the decentralised development course in the HU blockchain minor.
-
-## Prerequisites
-
-For joining this course a basic knowledge about blockchain is assumed. Programming experience is not required.
-
 ## Goals
 
 Practical goal: students can write a simple smart contract in solidity.
@@ -18,36 +10,6 @@ After this course:
 - The student is able to write and deploy Solidity smart contracts on the Ethereum (test) network. For example smart contracts for coins, voting and bets
 - The student is able to connect the Remix IDE to Metamask and manage transactions via Metamask.
 - The student is able to describe what Ethereum, Solidity, Remix IDE, MetaMask, InterPlanetary File System (IPFS), Swarm and Self-Sovereign Identity (SSI) are.
-
-## Course Material
-
-During the course the student will follow [CryptoZombies](https://cryptozombies.io/en/solidity) lessons 'Solidity Path: Beginner to Intermediate Smart Contracts'. Each week relevant concepts to the CryptoZobies lesson will be explained using live coding examples. In addition to this material several important decentralized technologies and concepts will be explained.
-
-## Final Assignment
-
-Each student needs to hand in a final assignment. The final assignment will show that the student has achieved the learning goals described above. The assignment will be graded according to the provided matrix.
-
-<!-- TODO Add matrix -->
-
-Assignment
-Create a betting factory contact that allows multiple people to bet on something. This project should involve a minimum of two contracts.
-
-<!-- There will be a document available for each week with explanations and assignments. Slides will also be made available toghether with a cheatsheet. The cheatsheet will give an overview of difficult topics and will provide some dutch translations to make it easier to understand. -->
-
-## Practical details
-
-Actual deadline for educational material: 15-08-2020
-Proposed deadline: 08-08-2020
-
-Deliverables:
-
-- 7 lessons
-- Final assignment
-- Grading matrix
-
-Lessons will be 2 hours long.
-
-At the end of the course we'll do a feedback session to improve material, improve it and make it open source.
 
 ## Lesson structure
 

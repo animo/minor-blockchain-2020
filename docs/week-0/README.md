@@ -9,8 +9,6 @@
 - Where to find course materials.
 - Crypto Zombie lessons: when to do and how to do them
 - Environment, what do and don't we expect you to know/learn
--
--
 
 ## Final Assignment
 

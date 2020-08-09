@@ -2,29 +2,20 @@
 
 ## Course Introduction
 
-- What to expect / learning goals.
-- Where to find course materials.
+In this course you will learn about decentralized development hands on. Through a combination of theory and practical application you will learn how to program code that is deployed on a blockchain through smart contracts.
 
-Manual, slides, cheatsheet,
+A basic knowledge about blockchain is assumed. Programming experience is not required.
 
-- Environment, what do and don't we expect
+At the end of this course you will have gained insight into the potential of smart contracts and several related blockchain subjects. You will be able to program smart contracts in Solidity and know about key concepts to make them work.
 
-## Structure and Grading
+During the course we will use [CryptoZombies](https://cryptozombies.io/en/solidity) lessons 'Solidity Path: Beginner to Intermediate Smart Contracts'. Each week (with exception of week 1) we will discuss relevant concepts to the CryptoZobies lesson in class. These coding concepts will be explained using live coding examples in remix ide. In class more general concepts surrounding smart contracts will also be discussed.
 
-- verplicht niet verplict
-- CryptoZombies hoe en wat
-- Explanation final assignment / examination.
+All materials can be found on canvas. They include this course manual with a chapter for every week, the final assignment and the powerpoint slides.
 
-Your grade for this course will be determined by an assignment which you can find XX, including the grading matrix, in Appendix 1. TODO. The assignment deadline is **deadline** and **insert handing in method**.
+## Grading
 
-## Additional reading or watching
+Your grade for this course will be determined by an assignment which you can find on canvas.
 
-[Smart contracts - Simply explained](https://www.youtube.com/watch?v=ZE2HxTmxfrI)
+The assignment deadline is **deadline** and **insert handing in method**.
 
-https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract
-https://ethereum.org/en/learn/
-https://solidity.readthedocs.io/
-https://medium.com/sunnya97/understanding-ether-vs-gas-82ce2f1dc560#:~:text=Ether%20is%20a%20currency.&text=with%20oil%20arises.-,Ethereum%20could%20have%20implemented%20Gas%20as%20a%20separate%20token%20from,or%20anything%20else)%20for%20gas.
-https://blockgeeks.com/guides/ethereum-gas/
-
-<!-- ## glossary -->
+Whether you keep up with the CryptoZombie material will not be checked. CryptoZobie has a hit-system and you can check all the answers yourself. However we do strongly recommend following along with the Crypto lessons. Most of what you need to learn for your final assignment can be learned in those lessons.

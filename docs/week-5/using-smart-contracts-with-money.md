@@ -2,12 +2,9 @@
 
 ## Smart Contracts
 
-A lot of the use cases for smart contracts involve money. An automatic money transfer.......
-
-- Insurance
-- Banking
-
-Crytocurrency
+- Cryptocurrencies //TODO
+- Metamask //TODO
+- Metamask setup
 
 ## Ethereum
 

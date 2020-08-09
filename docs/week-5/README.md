@@ -2,9 +2,9 @@
 
 ## Smart Contracts
 
-- smart contracts in finance // TODO
-- money transfers // TODO
 - cryptocurrency // TODO
+- wallet applications //TODO
+- setup MetaMask wallet // TODO
 
 ## Ethereum
 
