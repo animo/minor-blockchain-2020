@@ -12,9 +12,43 @@ Smart contracts are pieces of code that are deployed on a blockchain network and
 
 ## Solidity: The Basics
 
+Lets take another look at the CookieStorage contract example.
+
+```solidity
+// compiler version
+pragma solidity ^0.4.0;
+
+// contract declaration
+contract CookieStorage {
+    // state variable
+    struct Cookie{
+        string flavor;
+        uint price;
+        bool available;
+    }
+
+    // array
+    Cookie[] public trayOfCookies;
+
+
+    // function to add a cookie to the array
+    function addCookie(string _flavor, uint _price, bool _available) public {
+        Cookie memory c = Cookie(_flavor, _price, _available);
+        trayOfCookies.push(c);
+    }
+
+    // function to get how many cookies are on the tray
+    function getCookieCount() public view returns (uint _cookieCount){
+        return trayOfCookies.length;
+    }
+}
+```
+
+In week one we discussed the structure of the contract and we discussed variables, types and arrays. This week we're diving a bit deeper into actually making some changes, using **functions**.
+
 ### Functions
 
-Functions are the executable units of code within a contract. Functions can be executed after which the code inside it will be run.
+Functions are the executable units of code within a contract. Functions can be executed (or _called_) after which the code inside it will run.
 
 A function is declared with the following syntax:
 
@@ -26,7 +60,7 @@ function <functionName>(<parameters>) <visibility> <function type> <modifiers> <
 
 A function **must** always be declared inside a contract. It is not possible to declare a function outside of a contract. So the function should be defined between the curly brackets (`{}`) of the contract.
 
-If we take the `AgeStorage` contract as an example.
+If we take the `CookieStorage` contract as an example.
 
 ```solidity
 contract AgeStorage {
@@ -41,6 +75,8 @@ contract AgeStorage {
     }
 }
 ```
+
+<!-- In week 1 we shortly mentioned that reference types, when used in functions, need to explicitely say where they are stored. Storage (), memory (), or calldata. This is where Cookie memory c = -->
 
 for the `set()` function:
 
