@@ -26,6 +26,9 @@ Smart contracts have many practical uses. They can be made for any agreement tha
 
 So smart contracts are pieces of executable code on a blockchain network. What does that mean? In the next section we'll examine where the code 'lives' and how the actual proces of triggering the smart contract works.
 
+![Smart Contracts Explained](./assets/smart-contracts-explained.png)
+[Smart Contract Explained]
+
 ## Ethereum: The Basics
 
 Next time you and that friend you don't trust decide on a bet, you might want to try using a smart contract to handle the execution. But you would need a blockchain network to put it, to ensure it has all those great immutable, decentralized and transparent qualities you want. There are different options for what blockchain to use, including setting up your own, however currently for dApps the most widely used network is Ethereum.
@@ -443,3 +446,4 @@ contract CookieStorage {
 [solidity docs - array]: https://solidity.readthedocs.io/en/v0.5.3/types.html#arrays
 [smart contracts by simply explained on youtube]: https://www.youtube.com/watch?v=ZE2HxTmxfrI
 [get started with ethereum]: https://ethereum.org/en/what-is-ethereum/
+[smart contract explained]: https://quantummile.com/service/smart-contracts/
