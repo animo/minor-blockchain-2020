@@ -1,10 +1,9 @@
-# Week 5: Using Smart Contracts With Money
+# Week 5: Wallets And Financial Transactions
 
 ## Smart Contracts
 
 - Cryptocurrencies //TODO
 - Metamask //TODO
-- Metamask setup
 
 ## Ethereum
 
@@ -23,6 +22,22 @@ A wallet works largely the same for EOAs as it does for smart contracts. Althoug
 TODO: Software, hardware wallet https://blog.gnosis.pm/breaking-down-ethereum-wallets-options-2162b41477d7
 
 TODO: Keys and wallets, restoring, etc.
+
+## MetaMask
+
+MetaMask is a browser extension wallet that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It is easy to use and convenient for testing, as it is able to connect to a variety of Ethereum nodes and test blockchains. MetaMask is a web-based wallet. Eventually we are going to use MetaMask to deploy and call our contracts (in week 7), it is our gateway to the Ethereum network. For now however, we are setting up a wallet.
+
+> During the setup you will be presented with a "Secret Backup Phrase". This phrase consists of twelve words and allows you to recover your account when you lost your password or want to use the same account on a different computer. Your secret backup phrase makes it easy to back up and restore your account. Be sure to write it down and store it in a secure place. If your backup phrase gets compromised your account is compromised forever, no way back.
+
+### Getting started with MetaMask
+
+Download and install the MetaMask extension from the Chrome webstore [here](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) and follow the installation steps.
+
+Once you are done with all the steps you’ll be able to see the details of your Ethereum account, as shown in the image below. Congratulations! You have set up your first Ethereum wallet.
+
+![New Account](assets/new-account.png)
+
+> Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example).
 
 ## Solidity
 

@@ -1,10 +1,6 @@
-# Week 6: Tokens
+# Week 7:
 
 ## Smart Contracts
-
-- gameification
-- tokens
-- non fungible tokens
 
 ## Ethereum
 
