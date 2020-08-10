@@ -2,9 +2,11 @@
 
 ## Smart Contracts
 
-It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent. To change a smart contract a new smart contract needs to be created. This means that if there is a security weakness it is very difficult to fix, especially because everyone can see the code and can therefore take advantage of the weakness before it is fixed. This means that the code needs to be foolproof before it is deployed to the blockchain.
+It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent.
 
-//TODO extend
+To change a smart contract a new smart contract needs to be created. This means that if there is a security weakness it is very difficult to fix, especially because everyone can see the code (**transparency**) and can therefore take advantage of the weakness before it is fixed. This means that the code needs to be foolproof before it is deployed to the blockchain.
+
+Another thing that makes smart contracts vulnerable is that they are in many cases so undeniably linked to money. It is visible to the world where this money is stored. Not even really the world. It is visible to a group of people who are often very technologically capable, who value anonymity and who enjoy the challenge of finding errors in code. It will be interesting to see in the coming years how security (and legal processes) will evolve for smart contracts.
 
 ## Ethereum
 
@@ -25,6 +27,10 @@ Two fixes were proposed. The 'soft fork' fix proposed to make a change in the ne
 As a result of this plan the Ethereum network was split, the original blockchain was named Ethereum Classic and Ethereum continued.
 
 The weakness that allowed the DAO hack to happen was **not** an Ethereum weakness. It was a weakness in the smart contract code written for The DAO application. This is one way in which the immutability of blockchain and smart contract code can work against usability.
+
+February 2020 the IOTA network was shut down because of a hack that exploited a vulnerability in their app to steal around 1.6 million dollars from users (this amount was suggested by open-source reportings, it is unconfirmed by IOTA). IOTA is not blockchain, it is a distributed ledger technology that uses a non-linear 'tangle' instead of blockchain. Because of this the IOTA Foundation was able to just shut down the entire network. IOTA received a lot of negative press for this action as it goes against some core philosophies of these types of network.
+
+Blockchain offers pro's and con's in terms of its immutability vs. flexibility. These security cases show that there is not necessarily one right answer. But most of all they show that when writing smart contract code you better double and triple check for vulnerabilities before deploying to the network.
 
 ### Saving Gas
 
