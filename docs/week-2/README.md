@@ -1,8 +1,16 @@
 # Week 2
 
+## Smart contracts
+
+- immutability
+
+## Ethereum: Storage
+
+- storage
+
 ## Solidity
 
-- storage and memory //TODO
+- storage and memory
 - basic contract structure
 - functions
 - getters and setters

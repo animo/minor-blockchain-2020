@@ -55,7 +55,7 @@ Below an example is given of a simple Solidity smart contract. Although this con
 
 ```solidity
 // compiler version
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.2;
 
 // contract declaration
 contract CookieStorage {
@@ -71,7 +71,7 @@ contract CookieStorage {
 
 
     // function to add a cookie to the array
-    function addCookie(string _flavor, uint _price, bool _available) public {
+    function addCookie(string memory _flavor, uint _price, bool _available) public {
         Cookie memory c = Cookie(_flavor, _price, _available);
         trayOfCookies.push(c);
     }
@@ -392,7 +392,7 @@ Look at the `CookieStorage` contract again. Hopefully you can understand what is
 
 ```solidity
 // compiler version
-pragma solidity ^0.4.0;
+pragma solidity ^0.5.2;
 
 // contract declaration
 contract CookieStorage {
@@ -408,7 +408,7 @@ contract CookieStorage {
 
 
     // function to add a cookie to the array
-    function addCookie(string _flavor, uint _price, bool _available) public {
+    function addCookie(string memory _flavor, uint _price, bool _available) public {
 
         // a new struct
         Cookie memory c = Cookie(_flavor, _price, _available);
