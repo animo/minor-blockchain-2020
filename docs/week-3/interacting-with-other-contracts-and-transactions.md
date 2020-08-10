@@ -19,15 +19,15 @@ Once on the blockchain network the contract has an address. When the smart contr
 
 > Smart contracts are not controlled by anyone, they control themselves.
 
-Everytime someone wants to use a smart contract they need to use their address to send a message with what they want to do to the address of the smart contract. This is called a **transaction**. The smart contract does not run unless it is called by a transaction from a user. A smart contract is never 'running in the background' like other appplications sometimes are. They are activated either by a transaction or by another smart contract, execute their purpose and are finished until activated again.
+Every time someone wants to use a smart contract they need to use their address to send a message with what they want to do to the address of the smart contract. This is called a **transaction**. The smart contract does not run unless it is called by a transaction from a user. A smart contract is never 'running in the background' like other applications sometimes are. They are activated either by a transaction or by another smart contract, execute their purpose and are finished until activated again.
 
 Every operation in Ethereum has some amount of computational cost/effort. Storing a value in a variable, adding a Zombie to your Zombie array etc. The effort to execute the operation is made by miners. Miners verify the transactions and make sure they are stored on the blockchain. The security and speed of a blockchain is dependent on the amount of miners that are willing to make the computational effort to secure it. This amount of effort is measured in **Gas**. Gas is a unit for the amount of computational effort that it will take to execute a desired operation. The bigger the operation, the more Gas it will take. Just like a car needs a certain amount of gas to get from point A to point B. The amount of Gas an operation takes can be found in gas pricing tables online.
 
-Miners do not make the effort (measured in amount of Gas) just to participate in the fun of blockchain. Just like you do not constanly fill up your friends cars with gas just because you want to help them go on trips. Miners get rewarded for the gas they use up on operations in Ether. Ether is the cryptocurrency of the Ethereum network. The relation between Gas and Ether actually gets a bit more complicated (Ether can be turned into Gas directly) we advise you to consult the web if you want to know more specifics. Ether is also sometimes measured in Wei. One Ether is the same as 1,000,000,000,000,000,000 Wei. Some functions use Wei as a unit instead of Ether.
+Miners do not make the effort (measured in amount of Gas) just to participate in the fun of blockchain. Just like you do not constantly fill up your friends cars with gas just because you want to help them go on trips. Miners get rewarded for the gas they use up on operations in Ether. Ether is the cryptocurrency of the Ethereum network. The relation between Gas and Ether actually gets a bit more complicated (Ether can be turned into Gas directly) we advise you to consult the web if you want to know more specifics. Ether is also sometimes measured in Wei. One Ether is the same as 1,000,000,000,000,000,000 Wei. Some functions use Wei as a unit instead of Ether.
 
-> Gas is the amount of effort that it will take to execute an operation, it is the cost of operations. Ether is a currency, it has value seperate from the Ethereum network, it can pay the cost of operations. Wei is the smallest unit of Ether (10^18 Wei = 1 Ether) and is sometimes used in functions.
+> Gas is the amount of effort that it will take to execute an operation, it is the cost of operations. Ether is a currency, it has value separate from the Ethereum network, it can pay the cost of operations. Wei is the smallest unit of Ether (10^18 Wei = 1 Ether) and is sometimes used in functions.
 
-So to execute a smart contract, or a part of it, there needs to be a **transaction** that is sent to the smart contract's address to start it, and there needs to be payment included in this transaction. Externaly owned accounts (EOAs) have their own ether balance and are able to send transactions. The transaction needs to specify what it wants to happen. So if you want to set the age variable from 17 to 21 the transaction needs to include that it wants the smart contract on adress X to execute the setAge function with the data variable 21 and it needs to include the gas that the smart contract will need to execute that specific operation. The smart contract then receives the transaction and uses the gas to activate the specific function.
+So to execute a smart contract, or a part of it, there needs to be a **transaction** that is sent to the smart contract's address to start it, and there needs to be payment included in this transaction. Externally owned accounts (EOAs) have their own ether balance and are able to send transactions. The transaction needs to specify what it wants to happen. So if you want to set the age variable from 17 to 21 the transaction needs to include that it wants the smart contract on address X to execute the setAge function with the data variable 21 and it needs to include the gas that the smart contract will need to execute that specific operation. The smart contract then receives the transaction and uses the gas to activate the specific function.
 
 ![Transaction example](./assets/transaction-example.png)
 
@@ -37,69 +37,66 @@ This is how interaction happens with smart contracts. If there is no activation,
 
 There are some simple contracts that can fit all their logic into one contract. To make more complex constructions however, while keeping the code clear and legible, the code is often split up into multiple contracts that interact with each other in some way.
 
-## Solidity: Interaction With Other Contracts And Blockchains
+## Solidity: Interaction With Other Contracts And Blockchain
 
 There exists a world outside of your smart contracts code. This week we'll discuss several ways to interact with it.
 
 ### Special variables
 
-In the smart contract code it is sometimes necessary to know information about the blockchain or the activating call. This information can be retrieved through special variables that are always available (global) to the smart contract.
+[Solidity Docs - Special Variables]
 
-- [Solidity Docs - Special Variables]
+In the smart contract code it is sometimes necessary to know information about the blockchain or the activating call. This information can be retrieved through special variables that are always available (global) to the smart contract.
 
 #### msg.data
 
 The special variable msg.data returns the complete data of the call that activated the function. It returns the data as type bytes.
 
-TODO add example code
-
 #### msg.sender
 
 The special variable msg.sender returns the address of the EOA or smart contract that called the current function. It returns the address as type address.
-
-TODO add example code
 
 #### tx.gasprice
 
 The special variable tx.gasprice returns the gas price of the transaction that activated the function. It returns the gas price as type uint.
 
-TODO add example code
-
 #### gasleft
 
-The special variable gasleft() returns the remaining gas. It returns the remaining gas as type uint.
-
-TODO add example code
+The special variable gasleft returns the remaining gas. It returns the remaining gas as type uint.
 
 ### Types
 
-Last week we discussed how to use the Boolean, Integer, String and Struct types. This week we're adding address and mapping types.
+Last week we discussed how to use the Boolean, Integer, String, Struct and Array types. This week we're adding address and mapping types.
 
 #### Address
 
-The address type is used to store an ethereum account addresses. Ethereum has two types of accounts:
+[Solidity Docs - Address]
 
-- Normal externally controlled accounts
-- Contract accounts
+The address type is used to store an ethereum account address. Although Ethereum has two types of accounts (EOA's and smart contract accounts) the addresses are both type address. Address is a value type, like boolean, string or int.
+
+The size of an Ethereum address is 20 byte.
 
 ```solidity
 address myAddress = 0x2bE37643B3Ecb05c4C2Ec646534b3f053565716A;
 ```
 
-- [Solidity Docs - Address]
-- [Ethereum Account Types]
-
 #### Mapping
 
-Mappings create a mapping beween a **key** and a **value**. They are often used to associate an ethereum address with a value that needs to be stored.
+[Solidity Docs - Mapping]
+
+Mappings create a mapping between a **key** and a **value**. They are often used to associate an ethereum address with a value that needs to be stored. Mappings can _only_ be saved in **storage** never in **memory**.
+
+Just like with public state variables, declaring a public mapping automatically creates a **getter** function that can be used to retrieve from the mapping.
 
 ```solidity
-contract SomeGame {
-    // creating the mapping
-    mapping(address => uint) public userLevel
+pragma solidity ^0.5.0;
 
-    function currentLevel(address userAddress) public constant returns (uint) {
-    returning the user level that belongs to the given user address parameter
+contract SomeGame {
+    // creating a mapping between user address and user level
+    mapping(address => uint) public userLevel;
+
+    function currentLevel(address userAddress) public view returns (uint) {
+    // returning the user level that belongs to the given user address
+    // using the generated getter for the mapping
      return userLevel[userAddress];
 }
 }
@@ -107,7 +104,7 @@ contract SomeGame {
 
 ### Functions
 
-In week one the basic components of functions were explained. In this week some new concepts surrounding functions are explored.
+In previous material the basic components of functions were explained. In this week some new concepts surrounding functions are explored.
 
 #### Multiple return variables
 
@@ -118,14 +115,47 @@ A function can execute an operation and optionally return a value when called th
 An if-else statement is a general coding principle that is used to implement conditional logic. It is used most often within functions. It can also be used without the else statement or chain multiple if-else conditions.
 
 ```solidity
-function serveDrink(int memory age) public {
-    if (age > 17) {
-        serveAlcohol();
+function buyDessert(int memory age) public {
+    if (age < 12) {
+        buyCupcake();
     }else {
-        serveNonAlcoholic();
+        buyCake();
     }
 }
 ```
+
+Between the hooks `()` the if statement is made. If this statement is true, the action will execute. If it is not true, the else action will execute. The code execute top to bottom, so it tries the first option and then continues. If one of the statements is true, the function will not try the other options.
+
+```solidity
+pragma solidity ^0.5.0;
+
+contract CookieStorage {
+    // define state variable string
+    string chosenFlavor;
+
+    // define struct Cookie
+    struct Cookie{
+        string flavor;
+        uint price;
+        bool available;
+    }
+
+    // create specific cookies
+    Cookie c1 = Cookie("oat", 2, true);
+    Cookie c2 = Cookie("double chocolate chip", 4, false);
+
+    function chooseCookie() public {
+        // use the available attribute to check availability (if statement)
+        if (c1.available == true){ // c1 is available so this is true
+            chosenFlavor = c1.flavor; // this code executes
+        }else {
+            chosenFlavor = c1.flavor; // this code never happens
+        }
+    }
+}
+```
+
+> The difference between = and ==. A single equals sign **assigns** a value. A double equals sign **checks** if the statement is true.
 
 #### For loops
 
@@ -146,7 +176,7 @@ for (uint i=0; i<arrayLength, i++){
 
 #### Require
 
-The require function is a function that checks certain global requirements to be met before allowing the code to execute. It is used often within functions. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Using require, the function will not execute further if the requirement doesn't pass.
+The require function is a function that checks certain requirements to be met before allowing the code to execute. It is used often within functions. In the case of a betting contract for example there might be a requirement that all participants are part of an agreed upon array of participants. Or that everyone has enough money to bet. Using require, the function will not execute further if the requirement doesn't pass.
 
 ```solidity
 // in function that should only be activated by the owner address
@@ -162,11 +192,13 @@ require(bettingParticipants[msg.sender]);
 
 ### Inheritance
 
+[Solidity Docs - Inheritance]
+
 Why reinvent the wheel? It is good practice to reuse code instead of retyping it in every contract. One of the ways you can do this is through inheritance.
 
 Inheritance is a coding principle that is not specific to blockchain, ethereum or solidity, however in this section we will discuss it in the context of solidity smart contracts. First a parent contract is created with variables and functions. Then a child contract is created which can inherit aspects of the parent contract.The child can access the functionality of the parent without having to redefine the same functions. Inheritance can help you with keeping the code organized and legible.
 
-``solidity
+```solidity
 
 contract Animal {
 
@@ -174,7 +206,7 @@ contract Animal {
 
 }
 
-````
+```
 
 ```solidity
 import "./animal.sol";
@@ -183,13 +215,11 @@ contract Cow is Animal {
     //TODO add something
 
 }
-````
+```
 
 When there are multiple smart contracts (like the parent and the child) these each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./animal.sol";` line does in the previous example.
 
 > Inheritance can be at its most useful when inheriting from contracts previously defined by other programmers. There are a lot of contracts out there that already offer functions you want in your code.
-
-[Solidity Docs - Inheritance]
 
 #### Visibility
 
@@ -197,7 +227,7 @@ We already discussed private and public visibility. Once we are using inheritanc
 
 ##### Internal
 
-With private visability, a function or variable can only be called from within the contract it is defined in. With internal visibility it can be called from the contract it is defined in **and** contracts that inherit it.
+With private visibility, a function or variable can only be called from within the contract it is defined in. With internal visibility it can be called from the contract it is defined in **and** contracts that inherit it.
 
 ```solidity
 
@@ -244,7 +274,7 @@ TODO Add code example
 
 ```
 
-All functions in an interface can only be of type external, so they can only be accessed from a seperate contract.
+All functions in an interface can only be of type external, so they can only be accessed from a separate contract.
 
 TODO EXPLAIN WHY INTERFACES
 
@@ -257,3 +287,4 @@ TODO EXPLAIN WHY INTERFACES
 [solidity docs - special variables]: https://solidity.readthedocs.io/en/v0.4.24/units-and-global-variables.html#special-variables-and-functions
 [solidity docs - inheritance]: https://solidity.readthedocs.io/en/develop/contracts.html#inheritance
 [solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces
+[solidity docs - mapping]: https://solidity.readthedocs.io/en/v0.5.3/types.html#mapping-types

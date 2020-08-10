@@ -10,3 +10,5 @@
 
 - Explanation final assignment / examination. // TODO
 - Grading Matrix //TODO
+
+## Schedule

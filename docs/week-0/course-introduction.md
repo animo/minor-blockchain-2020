@@ -19,3 +19,16 @@ Your grade for this course will be determined by an assignment which you can fin
 The assignment deadline is **deadline** and **insert handing in method**.
 
 Whether you keep up with the CryptoZombie material will not be checked. CryptoZobie has a hit-system and you can check all the answers yourself. However we do strongly recommend following along with the Crypto lessons. Most of what you need to learn for your final assignment can be learned in those lessons.
+
+## Schedule
+
+| Week | Topic                                             | CryptoZombie Lesson              | Date |
+| ---- | ------------------------------------------------- | -------------------------------- | ---- |
+| 1    | The Basics Of Smart Contracts                     | -                                | tbd  |
+| 2    | Storage And Getting Into Functions                | 1 - Making The Zombie Factory    | tbd  |
+| 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | tbd  |
+| 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | tbd  |
+| 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | tbd  |
+| 6    | Tokens And Gamification                           | 5 - ERC721 & Crypto-Collectibles | tbd  |
+| 7    | Deploying Your Smart Contract                     | -                                | tbd  |
+|      | Deadline Final Assignment                         |                                  | tbd  |

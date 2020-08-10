@@ -3,8 +3,8 @@
 ## Smart Contracts
 
 - cryptocurrency // TODO
-- wallet applications //TODO
-- setup MetaMask wallet // TODO
+- wallet applications
+- setup MetaMask wallet
 
 ## Ethereum
 

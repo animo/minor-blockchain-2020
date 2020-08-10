@@ -1,4 +1,4 @@
-# Week 3: Security And Saving Gas
+# Week 4: Security And Saving Gas
 
 ## Smart Contracts
 
@@ -57,7 +57,7 @@ contract MemberList is Ownable {
 }
 ```
 
-It has come up a lot that the code of a smart contract cannot change (remember immutablity). It _is_ possible however for smart contract to contain functions that, when called, change certain information within the contract.
+It has come up a lot that the code of a smart contract cannot change (remember immutability). It _is_ possible however for smart contract to contain functions that, when called, change certain information within the contract.
 
 An example for this is the owner of a contract. If you want to change the owner, you do not want to make and deploy a new smart contract. Instead you can create a function that can change who the owner is.
 
@@ -75,7 +75,7 @@ An example for this is the owner of a contract. If you want to change the owner,
 
 Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. Visibility modifiers and state modifiers have been discussed already. It is also possible to define a custom modifier with custom logic.
 
-In the previouw 'owning a contract' section, the 'onlyOwner' modifier was used. This modifier is created to enforce the restriction that the person who calls the function needs to be the owner of the contract.
+In the previous 'owning a contract' section, the 'onlyOwner' modifier was used. This modifier is created to enforce the restriction that the person who calls the function needs to be the owner of the contract.
 
 ```solidity
 modifier onlyOwner () {
@@ -109,8 +109,6 @@ In previous lessons memory and storage where mentioned briefly. Any variable sav
 
 The way we can mostly tell the difference is that storage variables are defined outside of functions, while memory variables are defined within functions.
 
-Whether a variable should be saved in storage or memory can also be explicitely mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
+Whether a variable should be saved in storage or memory can also be explicitly mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
 
 // TODO expand
-
-<!-- variables, types, functions (visibility), events --

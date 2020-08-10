@@ -1,15 +1,14 @@
-# Week 5: Wallets And Financial Transactions
+# Week 5: Wallets And Moving Money
 
 ## Smart Contracts
 
 - Cryptocurrencies //TODO
-- Metamask //TODO
 
 ## Ethereum
 
 On Ethereum there are different types of account. Externally owned accounts (EOAs) for users of the network and contract accounts for smart contracts. Both these types of account can store money in the form of the Ethereum cryptocurrency **Ether** (ETH).
 
-Previously we've discussed how ETH is used to pay for Gas to execute operations. Since ETH is a cryptocurrency it can also be transferred as a form of payment seperate from the payment needed for miners to validate the network. When a money transfer is a part of a smart contract use case, sending and receiving ETH between accounts is a way to implement this.
+Previously we've discussed how ETH is used to pay for Gas to execute operations. Since ETH is a cryptocurrency it can also be transferred as a form of payment separate from the payment needed for miners to validate the network. When a money transfer is a part of a smart contract use case, sending and receiving ETH between accounts is a way to implement this.
 
 Although an account can store some ETH on its own most EOA and smart contract accounts use a **wallet**. A wallet is a type of smart contract specifically for receiving, storing and spending money. It has its own address and keys and needs to be deployed to the ethereum network by an account.
 
@@ -37,7 +36,7 @@ Once you are done with all the steps you’ll be able to see the details of your
 
 ![New Account](assets/new-account.png)
 
-> Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example).
+> Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example). Later on we'll get some Gas and learn how to deploy a contract.
 
 ## Solidity
 
@@ -67,11 +66,11 @@ contract BettingContract {
 
 #### Payable Addresses
 
+[Solidity Docs - Address](https://solidity.readthedocs.io/en/develop/types.html#address)
+
 An address with the payable modifier is the same as the address type we learned about earlier. The only difference is that a payable address can be sent Ether, and a regular address cannot. A regular address can be converted to a payable address.
 
 To enable Ether payment, the payable address has extra functions available.
-
-[Solidity Docs - Address](https://solidity.readthedocs.io/en/develop/types.html#address)
 
 ##### address.transfer(amount)
 
@@ -108,8 +107,41 @@ uint256 amountOfWei = anAddress.balance
 
 #### Using patterns
 
-Implementing code to send money yourself can be a risk. That is why money transfer is often done using the 'withdrawal' pattern.
+Implementing code to send money yourself can be a risk. That is why money transfer is often done using the 'withdrawal' pattern. A pattern is an often reused way of doing something in code.
 
-A pattern is an often reused way of doing something in code. In the Withdrawal pattern. With this pattern you don't use the transfer function directly.
+```solidity
+pragma solidity ^0.5.0;
 
-// TODO expand
+contract WithdrawalContract {
+    address public richest;
+    uint public mostSent;
+
+    mapping (address => uint) pendingWithdrawals;
+
+    constructor() public payable {
+        richest = msg.sender;
+        mostSent = msg.value;
+    }
+
+    function becomeRichest() public payable returns (bool) {
+        if (msg.value > mostSent) {
+            pendingWithdrawals[richest] += msg.value;
+            richest = msg.sender;
+            mostSent = msg.value;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function withdraw() public {
+        uint amount = pendingWithdrawals[msg.sender];
+        // Remember to zero the pending refund before
+        // sending to prevent re-entrancy attacks
+        pendingWithdrawals[msg.sender] = 0;
+        msg.sender.transfer(amount);
+    }
+}
+```
+
+Read about the withdrawal pattern and other common patterns in the [documentation](https://solidity.readthedocs.io/en/v0.5.3/common-patterns.html#common-patterns)

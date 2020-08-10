@@ -1,4 +1,4 @@
-# Week 2: Storage and Functions
+# Week 2: Storage And Getting Into Functions
 
 ## Smart contracts
 

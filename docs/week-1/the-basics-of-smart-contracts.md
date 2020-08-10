@@ -148,7 +148,14 @@ contract Cake {
     flavor = _flavor;
   }
 
+  // this function is not a constructor and therefore can be called more than once
+  // more about functions later
+  function setFlavor(string memory _flavor) public {
+     flavor = _flavor;
+  }
+
   // function that returns the flavor of the cake when called
+  // more about functions later
   function getFlavor() public view returns (string memory _flavor) {
     return flavor;
   }
@@ -245,22 +252,24 @@ Reference types are special types where you have to explicitly mention where the
 
 [Solidity Docs - Struct]
 
-Structs are for when you need to make your own type that groups multiple variables. The struct cookie groups flavor, price and availability.
+Structs are for when you need to make your own type that groups multiple variables. The struct Cookie groups flavor, price and availability. After you have defined what the struct looks like you can create instances of the struct. To get one of the attributes from the struct you simply use `.<attribute>`.
 
 ```solidity
-// example with assigned variables
-struct Gift {
-    uint price = 30;
-    uint grams = 500;
-    string birthdayGreeting = "Enjoy this gift, happy birthday dad!";
+// struct cookie with attributes flavor, price and available.
+struct Cookie{
+    string flavor;
+    uint price;
+    bool available;
 }
 
-// example with unassigned variables
-struct Cookie{
-        string flavor;
-        uint price;
-        bool available;
-    }
+// create specific cookies
+Cookie c1 = Cookie("oat", 2, true);
+Cookie c2 = Cookie("double chocolate chip", 4, false);
+
+// get specific cookie attributes
+c1.available // returns true
+c1.flavor // returns "oat"
+c2.price // returns 4
 ```
 
 #### Array
