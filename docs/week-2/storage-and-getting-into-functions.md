@@ -8,9 +8,9 @@ Smart contracts are pieces of code that are deployed on a blockchain network and
 
 ## Ethereum: Storage
 
-// How does 'storing' code and values on ethereum work.
+Previously we briefly mentioned how contract code is stored on the Ethereum network. Smart contracts, once put on the Ethereum network have an address, which is used to find the correct smart contract and send the required information.
 
-network
+When we say the code is stored on the network, we mean it is stored on the decentalized open source blockchain. ...
 
 ## Solidity: The Basics
 

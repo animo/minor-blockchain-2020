@@ -2,7 +2,7 @@
 
 ## Smart Contracts
 
-It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent. To change a smart contract a new smart contract needs to be created. This means that the code needs to be foolproof before it is deployed to the blockchain.
+It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent. To change a smart contract a new smart contract needs to be created. This means that if there is a security weakness it is very difficult to fix, especially because everyone can see the code and can therefore take advantage of the weakness before it is fixed. This means that the code needs to be foolproof before it is deployed to the blockchain.
 
 //TODO extend
 
@@ -10,9 +10,21 @@ It is important to stress how purely functional a smart contract is. The code, o
 
 ### Security
 
-The Ethereum network learned why security is important in smart contracts the hard way.
+There are several big security stories in the history of the Ethereum network, but the most famous is The DAO Hack that happened in June 2016.
 
-//TODO DAO Hack
+A decentralized autonomous organization (DAO) is an organization that functions in a decentralized way. The organization itself is run by smart contract code. Initially the DAO is funded by people who buy shares in the organization in the form of **tokens** (more on tokens later). During this funding round a lot of money can be put into the DAO. The DAO itself is not _owned_ by anyone, but people who own shares have voting power.
+
+A decentralized autonomous organization called 'The DAO' had a very big crowdfunding round. They raised 150 million dollar to fund this project in a period of 28 days. The project was a smart contract that allowed funding of proposals. Once the funding period was over, people who owned shares would be able to vote on proposals. The proposals that win the voting are then funded by the money that was raised.
+
+Vulnerabilities in the smart contracts code were discovered early on, but fixing these vulnerabilities was delayed until after funding. While a team was working on fixing the bug, a hacker took advantage and was able to transfer over 50 million dollar to another smart contract.
+
+The interesting thing about this is that code on the Ethereum network is transparent, as are transactions. So the amount of money in The DAO contract and in the hackers smart contract was visible. The world was waiting to see what would happen to the money in both The DAO and the hackers smart contract. It was stuck in a way. Kind of like a bank robber hiding the money and then having to find a way to return. Meanwhile the Ethereum Foundation was working on a way to fix this.
+
+Two fixes were proposed. The 'soft fork' fix proposed to make a change in the network that any code that tries to access The DAO contract or the hackers contract is invalid and does not work. The Ethereum Foundation could not just implement this fix because blockchain is decentralized. To implement this, the network needed 51% of nodes to agree to this new truth, whereas the whole foundation of blockchain is that this does **not** happen. The 'hard fork' fix proposed a refund system where people who lost money could request it back from The DAO contract. A vote was held and the hard fork solution won.
+
+As a result of this plan the Ethereum network was split, the original blockchain was named Ethereum Classic and Ethereum continued.
+
+The weakness that allowed the DAO hack to happen was **not** an Ethereum weakness. It was a weakness in the smart contract code written for The DAO application. This is one way in which the immutability of blockchain and smart contract code can work against usability.
 
 ### Saving Gas
 
@@ -114,3 +126,8 @@ The way we can mostly tell the difference is that storage variables are defined 
 Whether a variable should be saved in storage or memory can also be explicitly mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
 
 // TODO expand
+
+### Additional reading / watching
+
+[Understanding The DAO Attack](https://www.coindesk.com/understanding-dao-hack-journalists)
+[The Dao: The Hack, The Soft Fork and The Hard Fork](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)
