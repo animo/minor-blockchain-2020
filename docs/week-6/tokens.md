@@ -13,11 +13,11 @@ Cryptocurrency coins are usually only used for payments. Tokens can be used for 
 > From basicattentiontoken.org: \
 > "The Basic Attention Token can be used to obtain a variety of advertising and attention-based services on the BAT platform, as it is exchanged between publishers, advertisers, and users. The token’s utility is derived from, or denominated by, user attention."
 
-Tokens can be **fungible** or **non-fungible**. A fungible token is exchangable. If you have one share in a company it doesn't matter which specific share you have. Cryptocurrency coins and money in general is also fungible. It does not matter which specific euro you have, only that you have one euro.
+Tokens can be **fungible** or **non-fungible**. A fungible token is exchangeable. If you have one share in a company it doesn't matter which specific share you have. Cryptocurrency coins and money in general is also fungible. It does not matter which specific euro you have, only that you have one euro.
 
-With non-fungible tokens it _does_ matter which specific token you have. They are not interchangable. One plane ticket is not the same as another plane ticket, although they might look the same.
+With non-fungible tokens it _does_ matter which specific token you have. They are not interchangeable. One plane ticket is not the same as another plane ticket, although they might look the same.
 
-Non-fungible tokens are used for any case where you might need collectibles. For gameification for example. CryptoKitties is the most known example of this. They created unique cats with a unique gigital genetic code, these cats can be bought and traded but they are non-fungible. If you trade one cat for one cat they are different cats with differen information and worth. Some CryptoKitties are very rare. Baseball cards (a classic real-world trading example) have also been deployed via blockchain by MLB Crypto Baseball.
+Non-fungible tokens are used for any case where you might need collectibles. For gamification for example. CryptoKitties is the most known example of this. They created unique cats with a unique digital genetic code, these cats can be bought and traded but they are non-fungible. If you trade one cat for one cat they are different cats with different information and worth. Some CryptoKitties are very rare. Baseball cards (a classic real-world trading example) have also been deployed via blockchain by MLB Crypto Baseball.
 
 ## Ethereum
 

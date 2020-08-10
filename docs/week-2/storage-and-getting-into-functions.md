@@ -43,7 +43,7 @@ contract CookieStorage {
 
     // function to get how many cookies are on the tray
     function getCookieCount() public view returns (uint _cookieCount){
-        // using .length() for the lenght of the array
+        // using .length() for the length of the array
         return trayOfCookies.length;
     }
 }

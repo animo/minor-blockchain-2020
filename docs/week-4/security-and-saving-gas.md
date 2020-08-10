@@ -18,7 +18,7 @@ The Ethereum network learned why security is important in smart contracts the ha
 
 The previous week we learned that executing smart contracts is not free. Every operation involved in the process has some amount of computational effort involves (measured in Gas). To make this effort miners need to be payed in Ether. Because every operation costs money, it is important to be aware of cost efficient strategies when making smart contracts.
 
-<!-- what costs a lot, what doesnt -->
+<!-- what costs a lot, what doesn't -->
 
 There are multiple strategies to save on operation costs, using uint subtypes inside of structs, ...., .....
 
@@ -100,6 +100,8 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
 ### Time
 
 TODO: Optional.... lesson 3 chapter 5, 6
+
+TODO: RECURRING CONTRACT
 
 ### Storage pointers
 

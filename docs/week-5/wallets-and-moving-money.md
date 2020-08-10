@@ -50,7 +50,7 @@ The payable modifier allows functions or addresses to receive Ether.
 
 If we think back to the betting example, a payable function could be used to collect a certain amount of money for participants to be allowed to participate.
 
-A function can simply be payable without additional context. But often it is combined with requirements, checks or restrictions. For example the execution of a payable function can be dependent on payement. To do this you can use the require function to require a certain value to be sent with the activating call. So far we have mostly used the call data to check the msg.sender, but there is a lot of other available information.
+A function can simply be payable without additional context. But often it is combined with requirements, checks or restrictions. For example the execution of a payable function can be dependent on payment. To do this you can use the require function to require a certain value to be sent with the activating call. So far we have mostly used the call data to check the msg.sender, but there is a lot of other available information.
 
 ```solidity
 contract BettingContract {
