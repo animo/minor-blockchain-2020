@@ -1,3 +1,5 @@
+<!-- Current at: 11-08-2020 14:13 -->
+
 # Decentralized development: course manual
 
 - [Decentralized development: course manual](#decentralized-development-course-manual)
