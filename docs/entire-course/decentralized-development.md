@@ -1,8 +1,7 @@
-<!-- Current at: 11-08-2020 14:13 -->
-
 # Decentralized development: course manual
 
 - [Decentralized development: course manual](#decentralized-development-course-manual)
+  - [Course Introduction](#course-introduction)
   - [Grading](#grading)
   - [Schedule](#schedule)
 - [Week 1: The Basics Of Smart Contracts](#week-1-the-basics-of-smart-contracts)
@@ -30,6 +29,7 @@
     - [Basic Contract Structure](#basic-contract-structure-1)
   - [Additional reading / watching](#additional-reading--watching)
 - [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
+  - [Smart Contracts: Immutability](#smart-contracts-immutability)
   - [Ethereum: Storage](#ethereum-storage)
   - [Solidity: The Basics](#solidity-the-basics-1)
     - [Functions](#functions-1)
@@ -102,10 +102,12 @@
     - [Counters](#counters)
   - [Additional Reading / Watching](#additional-reading--watching-5)
 - [Week 7: Deploying to Ethereum Testnet](#week-7-deploying-to-ethereum-testnet)
-  - [Ethereum](#ethereum-3)
+  - [Ethereum: Testnet vs. Mainnet](#ethereum-testnet-vs-mainnet)
   - [Deployment tutorial](#deployment-tutorial)
     - [Remix IDE](#remix-ide)
-    - [MetaMask](#metamask-1)
+    - [Connecting MetaMask](#connecting-metamask)
+
+## Course Introduction
 
 In this course you will learn about decentralized development hands on. Through a combination of theory and practical application you will learn how to program code that is deployed on a blockchain through smart contracts.
 
@@ -603,16 +605,27 @@ contract CookieStorage {
 
 # Week 2: Storage And Getting Into Functions
 
+## Smart Contracts: Immutability
+
+A lot of the benefits and challenges of smart contracts result from one key concept: **immutability**. Once the smart contract code is done and agreed on it can not be changed by any party involved (some ifs and buts for this will come up later in the material). The result of the code is therefore also unchangeable, the same input under the same conditions will result in the same output.
+
+> A popular phrase that comes from immutability of smart contracts is **code is law**. Code is law implies that whatever is in the code will and should happen. There are varying extremes of this. Some developers believe that even if there is an unintended bug in the code, once it is deployed, code is law.
+
+The main benefit of immutability however is that it guarantees trust. Sometimes critics of blockchain can be cynical about the implication that we live in a world where there is no trust between parties. Advocates of blockchain however, often feel that especially because the trust is guaranteed, it allows parties to work more closely together and frees valuable time and resources otherwise spent on complicated trust constructions. The other aspect that guarantees trust is the **transparency** involved. Every smart contract comes from a point of agreement about the rules of a process.
+
 ## Ethereum: Storage
 
 Smart contracts are pieces of code that are deployed on a blockchain network and that automatically enforce their content.
 
 Previously we briefly mentioned how contract code is stored on the Ethereum network. Smart contracts, once put on the Ethereum network have an address, which is used to find the correct smart contract and send the required information to.
 
-When we say the code is stored on the network, we mean it is stored on the decentralized open source blockchain....
-//TODO
+When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
 
-Generally blockchain solutions are bad at storing large quantities of data. You want to use blockchain to only store things that are necessary to store in an immutable way. Blockchain can be combined with other storage methods if there is a need to store large quantities of data (see week 6: ipfs).
+![Transactions](./asssets/transaction.jpeg)
+
+[Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
+
+Generally blockchain solutions are bad at storing large quantities of data. You want to use blockchain to only store things that are necessary to store in an immutable way. Blockchain can be combined with other storage methods if there is a need to store large quantities of data (see week 6: off-chain storage).
 
 ## Solidity: The Basics
 
@@ -928,6 +941,8 @@ Events are the way the frontend is notified for things that are happening in the
 
 ## Additional reading / watching
 
+[Blockchain Transactions in Depth](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
+
 <!-- Internal Links -->
 
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
@@ -1089,7 +1104,9 @@ contract CookieStorage {
 
 #### For loops
 
-For loops are another general coding principle. They are used to execute something in a loop. They can be very simple or complex depending on desired functionality.
+For loops are another general coding principle. They are used to execute something in a loop. They can be very simple or complex depending on desired functionality. For loops often use a counter, which can look complicated at first.
+
+A for loop has a beginning, a condition and an incrementing step in the form of: `for (beginning; condition; step)`. The beginning is where to begin with counting, often this is initialized at 0 with `uint i=0`. The condition is what the function checks each step. If it is true the loop continues. For example `for(uint i=0; i < 10; step)` will continue as long as the condition `i < 10` (i is smaller then 10) is true. The increment is how we change the beginning each time. If we want i to increase with 1 every loop (until the condition is no longer true) we make the increment `i++`. A for loop that loops 9 times therefore looks like this `for(uint i=0; i <10; i++)`.
 
 ```solidity
 // array of ages
@@ -1100,7 +1117,11 @@ uint arrayLength = addressIndices.length;
 
 // the information behind the for is the counter
 for (uint i=0; i<arrayLength, i++){
-    // dosomething
+    // dosomething as much times as the array is long
+}
+
+for (uint i=0; i < 100; i++){
+    // dosomething until i < 100 is no longer true
 }
 ```
 
@@ -1436,7 +1457,7 @@ A wallet has certain functionalities that are necessary or useful. A wallet shou
 
 ## MetaMask
 
-MetaMask is a browser extension wallet that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It is easy to use and convenient for testing, as it is able to connect to a variety of Ethereum nodes and test blockchains. MetaMask is a web-based wallet. Eventually we are going to use MetaMask to deploy and call our contracts (in week 7), it is our gateway to the Ethereum network. For now however, we are setting up a wallet.
+MetaMask is a browser extension wallet that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It is easy to use and convenient for testing, as it is able to connect to a variety of Ethereum nodes and test blockchains. MetaMask is a web-based wallet. Eventually we are going to use MetaMask to deploy and call our contracts (in week 7), it is our gateway to the Ethereum network. For now however, we are just setting up a wallet.
 
 > During the setup you will be presented with a "Secret Backup Phrase". This phrase consists of twelve words and allows you to recover your account when you lost your password or want to use the same account on a different computer. Your secret backup phrase makes it easy to back up and restore your account. Be sure to write it down and store it in a secure place. If your backup phrase gets compromised your account is compromised forever, no way back.
 
@@ -1678,9 +1699,21 @@ contract Bus {
 
 # Week 7: Deploying to Ethereum Testnet
 
-## Ethereum
+## Ethereum: Testnet vs. Mainnet
 
-Main net vs. testnet
+As you might be sick of hearing right now smart contract code, once deployed, can not be changed. In week 2 the benefits of this were discussed, in week 4 the security risks and costs involved and now, in week 7, we are almost at a point where you will deploy your own smart contract code.
+
+As many other dApp developers before you, you might be hesitant about doing this. If deploying smart contract code is such a big deal, maybe imperfect code shouldn't be deployed without thoroughly testing it.
+
+For this exact reason testnets exist. Testnets are copies of the Ethereum blockchain that are identical in almost every way. The Ether in these networks however is worthless. This makes them ideal for testing out your imperfect code before deploying to mainnet Ethereum.
+
+If you're working on some top-secret billion dollar idea you might use a **private test network**. This network is basically your own personal blockchain that you can use to test smart contract code and interact with wallets and transactions. If keeping things private is not a major concern you can also use a **public test network**. These are available to anything and everyone. You might remember from week 5 that you created a MetaMask wallet account, which you put 1 Ether on. The "Ropsten Test Network" that you used to do this is a public test network.
+
+> The only real difference between the Ropsten Test Network and the Ethereum Main Network is the _agreement_ that its Ether is worthless.
+
+Although Ether is worthless in test networks, it still needs to exist. To try out transactions from a wallet to your code you will need to pay for those transactions. The way test networks solve this is through faucets. The Ropsten Faucet 'drips' 1 Ether every 5 seconds, you can request this Ether by giving you testnet account address.
+
+To test your smart contract code you will need to have a wallet to send transactions. Your MetaMask wallet is excellently suited for this purpose.
 
 ## Deployment tutorial
 
@@ -1688,12 +1721,14 @@ Main net vs. testnet
 
 So far we have used Remix IDE in class to show examples of smart contract code and to check for errors. However, Remix IDE is useful for a lot more than just checking your code. You can use it to deploy the contracts you've written.
 
-### MetaMask
+### Connecting MetaMask
 
-In week 5 you made a MetaMask wallet account and received 1 Ether.
+In week 5 you made a MetaMask wallet account and received 1 Ether. This week we are using MetaMask to interact with smart contract code.
 
-[...............]
+Navigate to your MetaMask account (or redo the steps from week 5 to make a new one).
 
 > As you can see on the MetaMask account page, you can choose between multiple Ethereum networks. By default, MetaMask will try to connect to the main network. The other choices are public testnets, any Ethereum node of your choice, or nodes running private blockchains on your own computer.
 
 > We are going to use the "Ropsten Test Network". The ropsten network is almost the same as the main network, except that it is meant for testing. In the ropsten network Ether has no value and there's no guarantee your data will stay on the network.
+
+// TODO continue
