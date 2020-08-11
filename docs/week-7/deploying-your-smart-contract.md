@@ -12,11 +12,9 @@ So far we have used Remix IDE in class to show examples of smart contract code a
 
 ### MetaMask
 
-In week 5....
+In week 5 you made a MetaMask wallet account and received 1 Ether.
 
-#### Switching networks and getting some test Ether
-
-Switch to the "Ropsten Test Network", go to https://faucet.metamask.io and click on the "request 1 ether from faucet" button to request 1 ether. You will now have 1 Ether to spend on the Ropsten test network.
+[...............]
 
 > As you can see on the MetaMask account page, you can choose between multiple Ethereum networks. By default, MetaMask will try to connect to the main network. The other choices are public testnets, any Ethereum node of your choice, or nodes running private blockchains on your own computer.
 
