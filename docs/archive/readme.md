@@ -1,3 +1,5 @@
+Archive is unorganized, contains some stuff from first draft.
+
 # Week 1
 
 In the first week we are going to introduce you to some basic concepts of Solidity.
