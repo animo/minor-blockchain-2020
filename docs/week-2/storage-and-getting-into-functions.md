@@ -353,6 +353,8 @@ Events are the way the frontend is notified for things that are happening in the
 
 ## Additional reading / watching
 
+[Blockchain Transactions in Depth](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
+
 <!-- Internal Links -->
 
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
