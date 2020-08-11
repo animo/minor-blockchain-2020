@@ -29,6 +29,6 @@ Whether you keep up with the CryptoZombie material will not be checked. CryptoZo
 | 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | tbd  |
 | 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | tbd  |
 | 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | tbd  |
-| 6    | Tokens And IPFS                                   | 5 - ERC721 & Crypto-Collectibles | tbd  |
+| 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | tbd  |
 | 7    | Deploying Your Smart Contract                     | -                                | tbd  |
 |      | Deadline Final Assignment                         |                                  | tbd  |

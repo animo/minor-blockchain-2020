@@ -1,4 +1,4 @@
-# Week 6: Tokens And IPFS
+# Week 6: Tokens And Off-Chain Storage
 
 ## Smart Contracts
 
@@ -64,7 +64,13 @@ pragma solidity ^0.4.20;
          }
 ```
 
-## IPFS
+As previously discussed, a well designed interface allows you to implement these exact functions in your own smart contract code.
+
+## Off-Chain Storage
+
+As mentioned often, determining what should and should not be stored on a blockchain is very important. Only things that need to be immutable need to be stored on-chain. In a lot of use cases there is still a need for data storage however. Some interesting decentralized ways of doing this are discussed.
+
+### IPFS
 
 The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
 
@@ -72,7 +78,11 @@ The InterPlanetary File System (IPFS) is a network for storing and sharing data.
 
 [IPFS](https://ipfs.io/#how)
 
-## Swarm
+### Swarm
+
+Swarm is also a peer-to-peer distributed storage platform, it is a layer on Ethereum that allows users to store and share data in a decentralized way. Remix IDE has built in functionality to publish on Swarm.
+
+[Swarm](https://ethersphere.github.io/swarm-home/)
 
 ## Solidity
 

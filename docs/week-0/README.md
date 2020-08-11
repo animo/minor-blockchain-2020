@@ -12,3 +12,5 @@
 - Grading Matrix //TODO
 
 ## Schedule
+
+- week by week schedule

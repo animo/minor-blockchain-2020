@@ -1,14 +1,5 @@
 # Week 3: Interacting With Other Contracts And Transactions
 
-## Decentralized Development: Examples
-
-Previously we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss some popular dApps.
-
-TODO: Add some real world use cases
-
-- ethereia?
-- gnosis?
-
 ## Ethereum: Accounts, Gas And Ether
 
 A smart contract is a piece of code running on a blockchain network. The code contains variables and functions to allow it to execute its predetermined goal. Once the smart contract is deployed the code cannot change, this is called **immutability**, the only way to change a smart contract is to deploy a new one.
