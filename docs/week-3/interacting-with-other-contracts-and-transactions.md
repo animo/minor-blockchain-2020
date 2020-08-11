@@ -171,7 +171,9 @@ contract CookieStorage {
 
 #### For loops
 
-For loops are another general coding principle. They are used to execute something in a loop. They can be very simple or complex depending on desired functionality.
+For loops are another general coding principle. They are used to execute something in a loop. They can be very simple or complex depending on desired functionality. For loops often use a counter, which can look complicated at first.
+
+A for loop has a beginning, a condition and an incrementing step in the form of: `for (beginning; condition; step)`. The beginning is where to begin with counting, often this is initialized at 0 with `uint i=0`. The condition is what the function checks each step. If it is true the loop continues. For example `for(uint i=0; i < 10; step)` will continue as long as the condition `i < 10` (i is smaller then 10) is true. The increment is how we change the beginning each time. If we want i to increase with 1 every loop (until the condition is no longer true) we make the increment `i++`. A for loop that loops 9 times therefore looks like this `for(uint i=0; i <10; i++)`.
 
 ```solidity
 // array of ages
@@ -182,7 +184,11 @@ uint arrayLength = addressIndices.length;
 
 // the information behind the for is the counter
 for (uint i=0; i<arrayLength, i++){
-    // dosomething
+    // dosomething as much times as the array is long
+}
+
+for (uint i=0; i < 100; i++){
+    // dosomething until i < 100 is no longer true
 }
 ```
 
