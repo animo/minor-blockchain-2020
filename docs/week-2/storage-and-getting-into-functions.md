@@ -21,6 +21,8 @@
 
 A lot of the benefits and challenges of smart contracts result from one key concept: **immutability**. Once the smart contract code is done and agreed on it can not be changed by any party involved (some ifs and buts for this will come up later in the material). The result of the code is therefore also unchangeable, the same input under the same conditions will result in the same output.
 
+> A popular phrase that comes from immutability of smart contracts is **code is law**. Code is law implies that whatever is in the code will and should happen. There are varying extremes of this. Some developers believe that even if there is an unintended bug in the code, once it is deployed, code is law.
+
 The main benefit of immutability however is that it guarantees trust. Sometimes critics of blockchain can be cynical about the implication that we live in a world where there is no trust between parties. Advocates of blockchain however, often feel that especially because the trust is guaranteed, it allows parties to work more closely together and frees valuable time and resources otherwise spent on complicated trust constructions. The other aspect that guarantees trust is the **transparency** involved. Every smart contract comes from a point of agreement about the rules of a process.
 
 ## Ethereum: Storage
@@ -29,8 +31,11 @@ Smart contracts are pieces of code that are deployed on a blockchain network and
 
 Previously we briefly mentioned how contract code is stored on the Ethereum network. Smart contracts, once put on the Ethereum network have an address, which is used to find the correct smart contract and send the required information to.
 
-When we say the code is stored on the network, we mean it is stored on the decentralized open source blockchain....
-//TODO
+When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
+
+![Transactions](./asssets/transaction.jpeg)
+
+[Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
 Generally blockchain solutions are bad at storing large quantities of data. You want to use blockchain to only store things that are necessary to store in an immutable way. Blockchain can be combined with other storage methods if there is a need to store large quantities of data (see week 6: off-chain storage).
 
