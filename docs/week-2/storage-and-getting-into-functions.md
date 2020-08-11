@@ -1,6 +1,7 @@
 # Week 2: Storage And Getting Into Functions
 
 - [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
+  - [Smart Contracts: Immutability](#smart-contracts-immutability)
   - [Ethereum: Storage](#ethereum-storage)
   - [Solidity: The Basics](#solidity-the-basics)
     - [Functions](#functions)
@@ -16,6 +17,12 @@
     - [Events](#events)
   - [Additional reading / watching](#additional-reading--watching)
 
+## Smart Contracts: Immutability
+
+A lot of the benefits and challenges of smart contracts result from one key concept: **immutability**. Once the smart contract code is done and agreed on it can not be changed by any party involved (some ifs and buts for this will come up later in the material). The result of the code is therefore also unchangeable, the same input under the same conditions will result in the same output.
+
+The main benefit of immutability however is that it guarantees trust. Sometimes critics of blockchain can be cynical about the implication that we live in a world where there is no trust between parties. Advocates of blockchain however, often feel that especially because the trust is guaranteed, it allows parties to work more closely together and frees valuable time and resources otherwise spent on complicated trust constructions. The other aspect that guarantees trust is the **transparency** involved. Every smart contract comes from a point of agreement about the rules of a process.
+
 ## Ethereum: Storage
 
 Smart contracts are pieces of code that are deployed on a blockchain network and that automatically enforce their content.
@@ -25,7 +32,7 @@ Previously we briefly mentioned how contract code is stored on the Ethereum netw
 When we say the code is stored on the network, we mean it is stored on the decentralized open source blockchain....
 //TODO
 
-Generally blockchain solutions are bad at storing large quantities of data. You want to use blockchain to only store things that are necessary to store in an immutable way. Blockchain can be combined with other storage methods if there is a need to store large quantities of data (see week 6: ipfs).
+Generally blockchain solutions are bad at storing large quantities of data. You want to use blockchain to only store things that are necessary to store in an immutable way. Blockchain can be combined with other storage methods if there is a need to store large quantities of data (see week 6: off-chain storage).
 
 ## Solidity: The Basics
 
