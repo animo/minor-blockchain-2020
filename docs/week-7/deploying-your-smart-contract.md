@@ -1,5 +1,11 @@
 # Week 7: Deploying to Ethereum Testnet
 
+- [Week 7: Deploying to Ethereum Testnet](#week-7-deploying-to-ethereum-testnet)
+  - [Ethereum: Testnet vs. Mainnet](#ethereum-testnet-vs-mainnet)
+  - [Deployment tutorial](#deployment-tutorial)
+    - [Remix IDE](#remix-ide)
+    - [Connecting MetaMask](#connecting-metamask)
+
 ## Ethereum: Testnet vs. Mainnet
 
 As you might be sick of hearing right now smart contract code, once deployed, can not be changed. In week 2 the benefits of this were discussed, in week 4 the security risks and costs involved and now, in week 7, we are almost at a point where you will deploy your own smart contract code.

@@ -1,5 +1,30 @@
 # Week 1: The Basics Of Smart Contracts
 
+- [Week 1: The Basics Of Smart Contracts](#week-1-the-basics-of-smart-contracts)
+  - [Decentralized Development](#decentralized-development)
+  - [Smart Contracts: The Basics](#smart-contracts-the-basics)
+  - [Ethereum: The Basics](#ethereum-the-basics)
+  - [Solidity: The Basics](#solidity-the-basics)
+    - [Basic Contract Structure](#basic-contract-structure)
+    - [Comments](#comments)
+      - [Compiler Version](#compiler-version)
+      - [Contract Declaration](#contract-declaration)
+    - [Constructor (optional)](#constructor-optional)
+    - [Variables](#variables)
+      - [Value Types](#value-types)
+        - [Boolean](#boolean)
+        - [Integer](#integer)
+        - [String](#string)
+      - [Reference Types](#reference-types)
+        - [Struct](#struct)
+      - [Array](#array)
+      - [Operators](#operators)
+        - [Exponential](#exponential)
+        - [Modulo](#modulo)
+    - [Functions](#functions)
+    - [Basic Contract Structure](#basic-contract-structure-1)
+  - [Additional reading / watching](#additional-reading--watching)
+
 ## Decentralized Development
 
 Development of applications generally consists of two parts, front-end development and back-end development. The front-end is what the user sees and interacts with, the back-end contains all the business logic and data storage.

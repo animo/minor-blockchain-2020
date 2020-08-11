@@ -1,5 +1,15 @@
 # Week 6: Tokens And Off-Chain Storage
 
+- [Week 6: Tokens And Off-Chain Storage](#week-6-tokens-and-off-chain-storage)
+  - [Smart Contracts](#smart-contracts)
+  - [Ethereum](#ethereum)
+  - [Off-Chain Storage](#off-chain-storage)
+    - [IPFS](#ipfs)
+    - [Swarm](#swarm)
+  - [Solidity](#solidity)
+    - [Counters](#counters)
+  - [Additional Reading / Watching](#additional-reading--watching)
+
 ## Smart Contracts
 
 Generally a token is a representation of something. If you receive a voucher for a free hamburger at MCDonalds that voucher represents the free burger. Your diploma is a representation of the education you've received an you often collect tokens in games as a representation of how well you are doing.

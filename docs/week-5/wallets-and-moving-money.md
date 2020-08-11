@@ -1,5 +1,19 @@
 # Week 5: Wallets And Moving Money
 
+- [Week 5: Wallets And Moving Money](#week-5-wallets-and-moving-money)
+  - [Cryptocurrency](#cryptocurrency)
+  - [Ethereum](#ethereum)
+  - [MetaMask](#metamask)
+    - [Getting started with MetaMask](#getting-started-with-metamask)
+  - [Solidity](#solidity)
+    - [Payable Modifier](#payable-modifier)
+      - [Payable Functions](#payable-functions)
+      - [Payable Addresses](#payable-addresses)
+        - [address.transfer(amount)](#addresstransferamount)
+        - [address.balance](#addressbalance)
+      - [Using patterns](#using-patterns)
+  - [Additional reading / watching](#additional-reading--watching)
+
 ## Cryptocurrency
 
 // TODO
@@ -20,7 +34,7 @@ A wallet has certain functionalities that are necessary or useful. A wallet shou
 
 ## MetaMask
 
-MetaMask is a browser extension wallet that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It is easy to use and convenient for testing, as it is able to connect to a variety of Ethereum nodes and test blockchains. MetaMask is a web-based wallet. Eventually we are going to use MetaMask to deploy and call our contracts (in week 7), it is our gateway to the Ethereum network. For now however, we are setting up a wallet.
+MetaMask is a browser extension wallet that runs in your browser (Chrome, Firefox, Opera, or Brave Browser). It is easy to use and convenient for testing, as it is able to connect to a variety of Ethereum nodes and test blockchains. MetaMask is a web-based wallet. Eventually we are going to use MetaMask to deploy and call our contracts (in week 7), it is our gateway to the Ethereum network. For now however, we are just setting up a wallet.
 
 > During the setup you will be presented with a "Secret Backup Phrase". This phrase consists of twelve words and allows you to recover your account when you lost your password or want to use the same account on a different computer. Your secret backup phrase makes it easy to back up and restore your account. Be sure to write it down and store it in a secure place. If your backup phrase gets compromised your account is compromised forever, no way back.
 

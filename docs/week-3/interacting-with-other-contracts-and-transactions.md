@@ -1,5 +1,28 @@
 # Week 3: Interacting With Other Contracts And Transactions
 
+- [Week 3: Interacting With Other Contracts And Transactions](#week-3-interacting-with-other-contracts-and-transactions)
+  - [Ethereum: Accounts, Gas And Ether](#ethereum-accounts-gas-and-ether)
+  - [Solidity: Interaction With Other Contracts And Blockchain](#solidity-interaction-with-other-contracts-and-blockchain)
+    - [Special variables](#special-variables)
+      - [msg.data](#msgdata)
+      - [msg.sender](#msgsender)
+      - [tx.gasprice](#txgasprice)
+      - [gasleft](#gasleft)
+    - [Types](#types)
+      - [Address](#address)
+      - [Mapping](#mapping)
+    - [Functions](#functions)
+      - [Multiple return variables](#multiple-return-variables)
+      - [If-Else statements](#if-else-statements)
+      - [For loops](#for-loops)
+      - [Require](#require)
+    - [Inheritance](#inheritance)
+      - [Visibility Modifiers](#visibility-modifiers)
+        - [Internal](#internal)
+        - [External](#external)
+    - [Interface](#interface)
+  - [Additional reading / watching](#additional-reading--watching)
+
 ## Ethereum: Accounts, Gas And Ether
 
 A smart contract is a piece of code running on a blockchain network. The code contains variables and functions to allow it to execute its predetermined goal. Once the smart contract is deployed the code cannot change, this is called **immutability**, the only way to change a smart contract is to deploy a new one.

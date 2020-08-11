@@ -1,5 +1,19 @@
 # Week 4: Security And Saving Gas
 
+- [Week 4: Security And Saving Gas](#week-4-security-and-saving-gas)
+  - [Smart Contracts](#smart-contracts)
+  - [Ethereum](#ethereum)
+    - [Security](#security)
+    - [Saving Gas](#saving-gas)
+  - [Deleting Smart Contracts](#deleting-smart-contracts)
+  - [Solidity](#solidity)
+    - [Owning a contract](#owning-a-contract)
+    - [Functions](#functions)
+      - [Custom Modifiers](#custom-modifiers)
+    - [Time](#time)
+    - [Storage pointers](#storage-pointers)
+  - [Additional reading / watching](#additional-reading--watching)
+
 ## Smart Contracts
 
 It is important to stress how purely functional a smart contract is. The code, once deployed, cannot be changed. Additionally the smart contract only acts when called by a transaction from a user and will always execute in the same way when the same actions and/or data are presented (it is **deterministic**). It is not flexible and it is not independent.

@@ -1,5 +1,21 @@
 # Week 2: Storage And Getting Into Functions
 
+- [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
+  - [Ethereum: Storage](#ethereum-storage)
+  - [Solidity: The Basics](#solidity-the-basics)
+    - [Functions](#functions)
+      - [Parameters](#parameters)
+      - [Storage and memory](#storage-and-memory)
+      - [Visibility Modifiers](#visibility-modifiers)
+        - [Public](#public)
+        - [Private](#private)
+      - [Return Variables](#return-variables)
+      - [State Modifiers](#state-modifiers)
+        - [Pure](#pure)
+        - [View](#view)
+    - [Events](#events)
+  - [Additional reading / watching](#additional-reading--watching)
+
 ## Ethereum: Storage
 
 Smart contracts are pieces of code that are deployed on a blockchain network and that automatically enforce their content.
