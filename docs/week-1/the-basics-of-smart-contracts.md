@@ -59,6 +59,8 @@ pragma solidity ^0.5.2;
 
 // contract declaration
 contract CookieStorage {
+    // state variable of reference type int
+    int private storeProfit;
     // state variable
     struct Cookie{
         string flavor;
@@ -405,6 +407,8 @@ pragma solidity ^0.5.2;
 
 // contract declaration
 contract CookieStorage {
+    // state variable of reference type int
+    int private storeProfit;
     // state variable of reference type struct
     struct Cookie{
         string flavor;

@@ -34,16 +34,15 @@ Blockchain offers pro's and con's in terms of its immutability vs. flexibility. 
 
 ### Saving Gas
 
-The previous week we learned that executing smart contracts is not free. Every operation involved in the process has some amount of computational effort involves (measured in Gas). To make this effort miners need to be payed in Ether. Because every operation costs money, it is important to be aware of cost efficient strategies when making smart contracts.
+The previous week we learned that executing smart contracts is not free. Every operation involved in the process has some amount of computational effort involves (measured in Gas). To make this effort miners need to be payed in Ether. Because every operation costs money, it is important to be aware of cost efficient strategies when making smart contracts. They need to be **optimized**.
 
-<!-- what costs a lot, what doesn't -->
+There are multiple strategies to save on operation costs. These strategies are based on the cost of certain actions on the Ethereum network. Changing something or adding (storing) something costs gas, while simply viewing information often does not. So every storage space and call should be optimized. There are other cost elements, like how mappings are often cheaper than arrays and if your function is external it is better to use the modifier external than public based on cost. There are refunds for freeing up storage space, so the less room on the blockchain your code takes up the better.
 
-There are multiple strategies to save on operation costs, using uint subtypes inside of structs, ...., .....
+## Deleting Smart Contracts
 
-<!-- 2. Gas & gas cost & saving gas (view functions, structs, storage) -->
+A smart contracts code can not be changed once it is deployed. However, a smart contract can be deleted. Deleting a smart contract removes everything from the address. After it is deleted all transactions that are sent to the address are not executed. Because the blockchain is immutable, the history of the contract is never deleted and will always stay on the blockchain.
 
-"As mentioned previously, it is important to remember that a contract’s code cannot be changed. However, a contract can be “deleted,” removing the code and its internal state (storage) from its address, leaving a blank account. Any transactions sent to that account address after the contract has been deleted do not result in any code execution, because there is no longer any code there to execute. To delete a contract, you execute an EVM opcode called SELFDESTRUCT (previously called SUICIDE). That operation costs “negative gas,” a gas refund, thereby incentivizing the release of network client resources from the deletion of stored state. Deleting a contract in this way does not remove the transaction history (past) of the contract, since the blockchain itself is immutable. It is also important to note that the SELFDESTRUCT capability will only be available if the contract author programmed the smart contract to have that functionality. If the contract’s code does not have a SELFDESTRUCT opcode, or it is inaccessible, the smart contract cannot be deleted."
-https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract
+The way to delete a smart contract starts with the fact that the code cannot be changed. The developer of the smart contract needs to have built in the possibility do delete it. This is done through a function called selfdestruct. The operation selfdestruct also enables a gas refund (by making the transaction cost negative gas) so any stored money or other resources can be 'freed' from the contract.
 
 ## Solidity
 
@@ -114,8 +113,6 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
         require(userLevel[_userAddress] > _level)
     }
 
-    function getCoolStuff() //TODO
-
 ```
 
 ### Time
@@ -126,17 +123,14 @@ TODO: RECURRING CONTRACT
 
 ### Storage pointers
 
-<!-- Storage pointers? Memory and storage, calldata -->
-
 In previous lessons memory and storage where mentioned briefly. Any variable saved in storage is saved permanently on the blockchain, while anything saved in memory is saved temporarily and forgotten after the action that needs it is finished.
 
-The way we can mostly tell the difference is that storage variables are defined outside of functions, while memory variables are defined within functions.
+The way we can mostly tell the difference is that storage variables are defined outside of functions, while memory variables are defined within functions. When these are mentioned explicitly we speak about storage pointers.
 
 Whether a variable should be saved in storage or memory can also be explicitly mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
-
-// TODO expand
 
 ### Additional reading / watching
 
 [Understanding The DAO Attack](https://www.coindesk.com/understanding-dao-hack-journalists)
 [The Dao: The Hack, The Soft Fork and The Hard Fork](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)
+[Storage Pointers in Solidity](https://blog.b9lab.com/storage-pointers-in-solidity-7dcfaa536089)

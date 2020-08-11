@@ -1,16 +1,12 @@
 # Week 2: Storage And Getting Into Functions
 
-## Smart contracts
-
-// immutability explained further
+## Ethereum: Storage
 
 Smart contracts are pieces of code that are deployed on a blockchain network and that automatically enforce their content.
 
-## Ethereum: Storage
-
 Previously we briefly mentioned how contract code is stored on the Ethereum network. Smart contracts, once put on the Ethereum network have an address, which is used to find the correct smart contract and send the required information.
 
-When we say the code is stored on the network, we mean it is stored on the decentalized open source blockchain. ...
+When we say the code is stored on the network, we mean it is stored on the decentralized open source blockchain....
 
 ## Solidity: The Basics
 
@@ -22,6 +18,8 @@ pragma solidity ^0.5.2;
 
 // contract declaration
 contract CookieStorage {
+    // state variable of reference type int
+    int private storeProfit;
     // state variable of reference type struct
     struct Cookie{
         string flavor;
@@ -31,7 +29,6 @@ contract CookieStorage {
 
     // array of structs
     Cookie[] public trayOfCookies;
-
 
     // function to add a cookie to the array
     function addCookie(string memory _flavor, uint _price, bool _available) public {
@@ -158,9 +155,8 @@ contract Cake {
   // state variable gets saved in storage
   string flavor;
 
-  function newAge(uint _age) public pure returns (uint){
-
-      //the variable _year is stored in memory, it is used and forgotten as soon as the function is over
+  function birthdayCandle(uint _age) public pure returns (uint){
+      //the variables _year and _age are stored in memory, it is used and forgotten as soon as the function is over
       uint _year = 1;
 
       return _age + _year;
@@ -203,6 +199,8 @@ Public functions and state variables are the most open visibility type. The func
 For public state variables, an automatic **getter function** is generated. A getter function is a function that simply returns the value of a variable. For the public `age` variable in the example below an `age()` function is generated that will return the value of `age`. This way we don't have to define the function to get the value of `age` ourselves.
 
 ```solidity
+pragma solidity ^0.5.2;
+
 contract AgeStorage {
     uint public age;
 
@@ -216,6 +214,8 @@ contract AgeStorage {
 
 ![Visibility Public](./assets/visibility-public.gif)
 
+In the `CookieStorage` contract everything is public and can be accessed from inside and outside of the contract except for the variable storeProfit.
+
 ##### Private
 
 Private is the most closed visibility type. Functions or variables with this visibility can only be accessed from other functions inside of the contract. It is generally recommended to keep functions private unless more visibility is needed.
@@ -226,14 +226,17 @@ contract AgeStorage {
     // age can only be accessed from within the AgeStorage contract
     uint private age;
 
-    function set(uint newAge) private {
-        age = newAge;
+    // age can not be set from outside of the contract, only internally in the smart contract code
+    function set(uint _newAge) private {
+        age = _newAge;
     }
 
 }
 ```
 
 ![Visibility Private](./assets/visibility-private.png)
+
+In the `CookieStorage` contract the variable storeProfit is private. It cannot be accessed by functions outside of the contract. So other smart contracts cannot check the store profit. In the `CookieStorage` contract there is (at the moment) no way to set or get the storeProfit. The variable is pretty useless without interaction within the code.
 
 #### Return Variables
 
@@ -265,8 +268,8 @@ Function modifiers are used to modify the behavior of functions. They create add
 Sometimes a function does not change any data or even use any data from the contract. For example if you have written a function to add two numbers that you give it as parameters and return the result. This is called a **pure** function.
 
 ```solidity
-function sum(uint val1, uint val2) public pure returns (uint) {
-    return val1 + val2;
+function sum(uint _val1, uint _val2) public pure returns (uint) {
+    return _val1 + _val2;
 }
 ```
 
@@ -279,8 +282,8 @@ If the function does not change anything, but does read data from the contract, 
 ```solidity
 uint age = 17;
 
-function doubleTheAge(uint memory age) public view returns (uint) {
-    return age * 2
+function doubleTheAge() public view returns (uint) {
+    return age * 2;
 }
 ```
 
@@ -303,16 +306,17 @@ Everything that we have been coding so far in solidity has been 'back-end' mater
 Events are the way the frontend is notified for things that are happening in the smart contract. Events are 'fired' in the back-end code and can be 'listened' for in the front-end code. This is how communication between the two works.
 
 ```solidity
-contract Result {
+
    // create the event
-   event WinnerKnown(address winner, uint amount);
+   event CookiesDone(Cookie typeOfCookie, uint amount);
 
-   function determineWinner(address[] memory participants) public  {
-       // code to determine the winner from the participants
+   function bakingCookie(Cookie typeOfCookie) public {
 
-       // fire the event
-          emit Deposit(winner, 100000);
-   }
+       uint roomInOven = 100
+        // baking timer code
+        // fire the event
+          emit CookiesDone(typeOfCookie, roomInOven);
+
 }
 ```
 

@@ -1,8 +1,6 @@
-# Week 6: Tokens
+# Week 6: Tokens And IPFS
 
 ## Smart Contracts
-
-- Gamification Use case// TODO
 
 Generally a token is a representation of something. If you receive a voucher for a free hamburger at MCDonalds that voucher represents the free burger. Your diploma is a representation of the education you've received an you often collect tokens in games as a representation of how well you are doing.
 
@@ -66,11 +64,11 @@ pragma solidity ^0.4.20;
          }
 ```
 
+## IPFS
+
+The InterPlanetary File System.....
+
 ## Solidity
-
-### Interface
-
-//TODO
 
 ### Counters
 

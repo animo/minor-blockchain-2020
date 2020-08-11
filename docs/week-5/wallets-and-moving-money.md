@@ -1,8 +1,8 @@
 # Week 5: Wallets And Moving Money
 
-## Smart Contracts
+## Cryptocurrency
 
-- Cryptocurrencies //TODO
+// TODO
 
 ## Ethereum
 
@@ -12,15 +12,11 @@ Previously we've discussed how ETH is used to pay for Gas to execute operations.
 
 Although an account can store some ETH on its own most EOA and smart contract accounts use a **wallet**. A wallet is a type of smart contract specifically for receiving, storing and spending money. It has its own address and keys and needs to be deployed to the ethereum network by an account.
 
-Just like other smart contracts it costs Gas to create a wallet (as it costs Gas to deploy a smart contract). The owner of the wallet then uses it to store their ETH and, when needed, spend or receive it.
+Just like other smart contracts it costs Gas to create a wallet (as it costs Gas to deploy a smart contract). The owner of the wallet then uses it to store their ETH and, when needed, spend or receive it. The wallet is a way to interact with the blockchain using a private and public key.
 
 > Remember, a wallet _is_ a smart contract but can also be _used_ by other smart contracts.
 
-A wallet works largely the same for EOAs as it does for smart contracts. Although smart contract wallets often have more functionality.
-
-TODO: Software, hardware wallet https://blog.gnosis.pm/breaking-down-ethereum-wallets-options-2162b41477d7
-
-TODO: Keys and wallets, restoring, etc.
+A wallet has certain functionalities that are necessary or useful. A wallet should allow someone to view their balance for example, and send or receive money, sign transactions etc. Both software wallets (connected to the internet, think mobile, desktop or web wallets) and hardware wallets (on a device not connected to the internet) exist. Hardware wallets, also called cold wallets or cold storage, are much more secure but less accessible. There are many wallet providers that offer wallets for users, often offering the usability that blockchain apps so often lack.
 
 ## MetaMask
 
@@ -145,3 +141,7 @@ contract WithdrawalContract {
 ```
 
 Read about the withdrawal pattern and other common patterns in the [documentation](https://solidity.readthedocs.io/en/v0.5.3/common-patterns.html#common-patterns)
+
+### Additional reading / watching
+
+[Crypto Wallet Types Explained](https://academy.binance.com/blockchain/crypto-wallet-types-explained)

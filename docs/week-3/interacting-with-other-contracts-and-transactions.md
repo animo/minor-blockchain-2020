@@ -2,9 +2,7 @@
 
 ## Decentralized Development: Examples
 
-Some popular dApps....
-
-Previously we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss several use cases.
+Previously we considered the basic uses of smart contracts and mentioned the potential they have in the real world. To build on that, this week we'll discuss some popular dApps.
 
 TODO: Add some real world use cases
 
@@ -94,10 +92,10 @@ contract SomeGame {
     // creating a mapping between user address and user level
     mapping(address => uint) public userLevel;
 
-    function currentLevel(address userAddress) public view returns (uint) {
+    function currentLevel(address _userAddress) public view returns (uint) {
     // returning the user level that belongs to the given user address
     // using the generated getter for the mapping
-     return userLevel[userAddress];
+     return userLevel[_userAddress];
 }
 }
 ```
@@ -115,8 +113,8 @@ A function can execute an operation and optionally return a value when called th
 An if-else statement is a general coding principle that is used to implement conditional logic. It is used most often within functions. It can also be used without the else statement or chain multiple if-else conditions.
 
 ```solidity
-function buyDessert(int memory age) public {
-    if (age < 12) {
+function buyDessert(int _age) public {
+    if (_age < 12) {
         buyCupcake();
     }else {
         buyCake();
@@ -200,24 +198,37 @@ Inheritance is a coding principle that is not specific to blockchain, ethereum o
 
 ```solidity
 
-contract Animal {
+contract Cake {
+  // state variable
+  string flavor;
+  bool decoration;
 
-    //TODO add something
+  constructor() public {
+      flavor = "chocolate";
+      decoration = false;
+   }
 
+  function setFlavor(string memory _flavor) public {
+     flavor = _flavor;
+  }
+
+  function setDecoration(bool _decoration_) public {
+     flavor = _decoration;
+  }
 }
 
 ```
 
 ```solidity
-import "./animal.sol";
+import "./cake.sol";
 
-contract Cow is Animal {
-    //TODO add something
+contract CupCake is Cake {
 
+// TODO
 }
 ```
 
-When there are multiple smart contracts (like the parent and the child) these each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./animal.sol";` line does in the previous example.
+When there are multiple smart contracts (like the parent and the child) these each have their own .sol file. When there are multiple files of code that need to know about each other this is done by importing the code from one smart contract into the other. This is what the `import "./cake.sol";` line does in the previous example.
 
 > Inheritance can be at its most useful when inheriting from contracts previously defined by other programmers. There are a lot of contracts out there that already offer functions you want in your code.
 
@@ -230,19 +241,12 @@ We already discussed private and public visibility. Once we are using inheritanc
 Previously, with the private visibility modifier, a function or variable can only be called from within the contract it is defined in. With internal visibility it can be called from the contract it is defined in **and** contracts that inherit it.
 
 ```solidity
+contract AgeStorage {
+    uint internal age;
 
-contract Animal {
-
-    //TODO add function with internal visibility
-
-}
-```
-
-```solidity
-import "./animal.sol";
-
-contract Cow is Animal {
-    //TODO call function with internal visibility
+    function set(uint newAge) internal {
+        age = newAge;
+    }
 }
 ```
 
@@ -250,10 +254,9 @@ contract Cow is Animal {
 
 ##### External
 
-A function with external visibility can only be called from a separate third party contract. It can not be called from the contract it is defined in and it is can not be called from derived contracts.
+A function with external visibility can only be called from a separate third party contract. It can not be called from the contract it is defined in and it is can not be called from contracts that inherit the contract it is defined in.
 
 ```solidity
-TODO fix example
 contract AgeStorage {
     // Not allowed
     // uint external age;
@@ -329,6 +332,10 @@ All functions in an interface can only have visibility external, so they can onl
 
 Of course you can also use interfaces to interact with your own contracts, or use them in other ways. What's important is that an interface for contract A contains _unimplemented_ functions that contract B calls to use the _implemented_ functions in contract A. More on interfaces later in the material.
 
+### Additional reading / watching
+
+[Function Visibility Summary](https://bitsofco.de/solidity-function-visibility-explained/)
+
 <!-- Internal links -->
 
 [solidity docs - address]: https://solidity.readthedocs.io/en/latest/types.html#address
@@ -337,7 +344,3 @@ Of course you can also use interfaces to interact with your own contracts, or us
 [solidity docs - inheritance]: https://solidity.readthedocs.io/en/develop/contracts.html#inheritance
 [solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces
 [solidity docs - mapping]: https://solidity.readthedocs.io/en/v0.5.3/types.html#mapping-types
-
-```
-
-```

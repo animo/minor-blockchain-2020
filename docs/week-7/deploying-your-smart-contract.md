@@ -1,12 +1,20 @@
 # Week 7: Deploying to Ethereum Testnet
 
-blabla
+## Ethereum
 
-## MetaMask
+Main net vs. testnet
+
+## Deployment tutorial
+
+### Remix IDE
+
+So far we have used Remix IDE in class to show examples of smart contract code and to check for errors. However, Remix IDE is useful for a lot more than just checking your code. You can use it to deploy the contracts you've written.
+
+### MetaMask
 
 In week 5....
 
-### Switching networks and getting some test Ether
+#### Switching networks and getting some test Ether
 
 Switch to the "Ropsten Test Network", go to https://faucet.metamask.io and click on the "request 1 ether from faucet" button to request 1 ether. You will now have 1 Ether to spend on the Ropsten test network.
 
