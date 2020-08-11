@@ -1,5 +1,7 @@
 # Decentralized development: course manual
 
+<!-- Table of Contents current as of 11-07-2020 15:50 -->
+
 - [Decentralized development: course manual](#decentralized-development-course-manual)
   - [Course Introduction](#course-introduction)
   - [Grading](#grading)
