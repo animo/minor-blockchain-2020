@@ -4,7 +4,7 @@
 
 - immutability
 
-## Ethereum: Storage
+## Ethereum
 
 - storage
 
@@ -18,4 +18,4 @@
 - modifiers
 - events
 
-CryptoZombie lesson 1 (during class hours)
+CryptoZombie lesson 1

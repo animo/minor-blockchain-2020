@@ -3,7 +3,6 @@
 ## Smart Contracts
 
 - Introduction to decentralized development
-
 - Introduction to smart contracts
 
 ## Ethereum
