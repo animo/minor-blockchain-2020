@@ -439,7 +439,7 @@ contract CookieStorage {
 }
 ```
 
-### Additional reading / watching
+## Additional reading / watching
 
 [Smart Contracts by Simply Explained on YouTube]
 

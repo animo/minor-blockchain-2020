@@ -332,7 +332,7 @@ All functions in an interface can only have visibility external, so they can onl
 
 Of course you can also use interfaces to interact with your own contracts, or use them in other ways. What's important is that an interface for contract A contains _unimplemented_ functions that contract B calls to use the _implemented_ functions in contract A. More on interfaces later in the material.
 
-### Additional reading / watching
+## Additional reading / watching
 
 [Function Visibility Summary](https://bitsofco.de/solidity-function-visibility-explained/)
 

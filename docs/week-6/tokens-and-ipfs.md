@@ -8,7 +8,7 @@ In blockchain a token means the same thing. A representation of something else. 
 
 Cryptocurrency coins are usually only used for payments. Tokens can be used for payments but also for other things. Security tokens are used to represent shares in a company for example and asset tokens are used to represent real world assets like houses.
 
-> From basicattentiontoken.org: \
+> From basicattentiontoken.org:
 > "The Basic Attention Token can be used to obtain a variety of advertising and attention-based services on the BAT platform, as it is exchanged between publishers, advertisers, and users. The token’s utility is derived from, or denominated by, user attention."
 
 Tokens can be **fungible** or **non-fungible**. A fungible token is exchangeable. If you have one share in a company it doesn't matter which specific share you have. Cryptocurrency coins and money in general is also fungible. It does not matter which specific euro you have, only that you have one euro.
@@ -66,7 +66,13 @@ pragma solidity ^0.4.20;
 
 ## IPFS
 
-The InterPlanetary File System.....
+The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
+
+![IPFS Workings](assets/ipfs-woorking.png)
+
+[IPFS](https://ipfs.io/#how)
+
+## Swarm
 
 ## Solidity
 
@@ -89,3 +95,7 @@ contract Bus {
     }
 }
 ```
+
+## Additional Reading / Watching
+
+[Ethereum and IPFS](https://medium.com/pinata/ethereum-and-ipfs-e816e12a3c59)

@@ -129,7 +129,7 @@ The way we can mostly tell the difference is that storage variables are defined 
 
 Whether a variable should be saved in storage or memory can also be explicitly mentioned. This comes into play when we are trying to save Gas (remember, storage is more expensive than memory).
 
-### Additional reading / watching
+## Additional reading / watching
 
 [Understanding The DAO Attack](https://www.coindesk.com/understanding-dao-hack-journalists)
 [The Dao: The Hack, The Soft Fork and The Hard Fork](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)

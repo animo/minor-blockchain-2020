@@ -142,6 +142,6 @@ contract WithdrawalContract {
 
 Read about the withdrawal pattern and other common patterns in the [documentation](https://solidity.readthedocs.io/en/v0.5.3/common-patterns.html#common-patterns)
 
-### Additional reading / watching
+## Additional reading / watching
 
 [Crypto Wallet Types Explained](https://academy.binance.com/blockchain/crypto-wallet-types-explained)

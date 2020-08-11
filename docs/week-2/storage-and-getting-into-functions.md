@@ -320,7 +320,7 @@ Events are the way the frontend is notified for things that are happening in the
 }
 ```
 
-### Additional reading / watching
+## Additional reading / watching
 
 <!-- Internal Links -->
 
