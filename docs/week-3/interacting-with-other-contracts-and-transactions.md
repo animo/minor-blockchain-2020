@@ -1,4 +1,4 @@
-# Week 3: Expanding By Interacting With Other Contracts And Blockchains
+# Week 3: Interacting With Other Contracts And Transactions
 
 ## Decentralized Development: Examples
 
@@ -221,13 +221,13 @@ When there are multiple smart contracts (like the parent and the child) these ea
 
 > Inheritance can be at its most useful when inheriting from contracts previously defined by other programmers. There are a lot of contracts out there that already offer functions you want in your code.
 
-#### Visibility
+#### Visibility Modifiers
 
 We already discussed private and public visibility. Once we are using inheritance and interacting with other contracts there are other types of visibility that become important. Internal and external visibility.
 
 ##### Internal
 
-With private visibility, a function or variable can only be called from within the contract it is defined in. With internal visibility it can be called from the contract it is defined in **and** contracts that inherit it.
+Previously, with the private visibility modifier, a function or variable can only be called from within the contract it is defined in. With internal visibility it can be called from the contract it is defined in **and** contracts that inherit it.
 
 ```solidity
 
@@ -267,18 +267,67 @@ contract AgeStorage {
 
 ### Interface
 
-One place the external visibility is relevant is in interfaces. An interface looks like a smart contract with no details, just the basic structure. There are no implemented functions and no defined variables.
+[Solidity Docs - Interfaces]
+
+One place the external visibility is relevant is in interfaces. An interface looks like a smart contract with no details, just the basic structure. There are no implemented functions and no assigned variables.
+
+Interfaces make it possible to communicate with another existing contract on the blockchain. They create a bridge between contracts. By making an interface for a contract your code will know what functions that contract has, what to send to them and what to expect back.
 
 ```solidity
-TODO Add code example
+pragma solidity ^0.5.0;
 
+//contract that we want to access
+contract Level{
+
+    // mapping of user addresses to their levels
+    mapping(address => uint) userLevels;
+
+    // function to get the level from a user
+    function getUserLevel(address _userAddress) public view returns (uint) {
+        return userLevels[_userAddress];
+    }
+
+}
 ```
 
-All functions in an interface can only be of type external, so they can only be accessed from a separate contract.
+```solidity
+pragma solidity ^0.5.0;
 
-TODO EXPLAIN WHY INTERFACES
+// our interface
+interface LevelInterface {
+    function getUserLevel(address _userAddress) external view returns (uint);
+}
+```
 
-- [Solidity Docs - Interfaces]
+```solidity
+pragma solidity ^0.5.0;
+
+// using our interface
+contract MyGameExtension {
+
+    // instance of the interface, more about this later
+    LevelInterface levelInterface;
+
+    function deservesReward() public {
+        // here we use the function that we get through the interface in our own function
+        uint level = levelInterface.getUserLevel(msg.sender);
+        if (level > 10){
+            sendReward(msg.sender);
+        }
+    }
+
+    function sendReward(address _userAddress) public {
+        // execute code
+    }
+
+}
+```
+
+All functions in an interface can only have visibility external, so they can only be accessed from outside of the interface. The interface is like a static piece of information about the functions that can be called from the other contract. So an interface tells your contract code what to expect from a different contract so you can use the functions in it.
+
+> In an interface **none** of the functions have implementations. A similar concept is an abstract contract where at least one function does not have an implementation.
+
+Of course you can also use interfaces to interact with your own contracts, or use them in other ways. What's important is that an interface for contract A contains _unimplemented_ functions that contract B calls to use the _implemented_ functions in contract A. More on interfaces later in the material.
 
 <!-- Internal links -->
 
@@ -288,3 +337,7 @@ TODO EXPLAIN WHY INTERFACES
 [solidity docs - inheritance]: https://solidity.readthedocs.io/en/develop/contracts.html#inheritance
 [solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces
 [solidity docs - mapping]: https://solidity.readthedocs.io/en/v0.5.3/types.html#mapping-types
+
+```
+
+```

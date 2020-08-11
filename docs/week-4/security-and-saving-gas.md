@@ -110,9 +110,12 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
     // creating the mapping
     mapping(address => uint) public userLevel;
 
-    modifier higherThan(uint level, address userAddress){
-        require(userLevel[userAddress] > level)
+    modifier higherThan(uint _level, address _userAddress){
+        require(userLevel[_userAddress] > _level)
     }
+
+    function getCoolStuff() //TODO
+
 ```
 
 ### Time
