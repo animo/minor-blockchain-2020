@@ -636,7 +636,7 @@ Previously we briefly mentioned how contract code is stored on the Ethereum netw
 
 When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
 
-![Transactions](./asssets/transaction.jpeg)
+![Transactions](./assets/transaction.jpeg)
 
 [Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
@@ -1482,7 +1482,7 @@ Download and install the MetaMask extension from the Chrome webstore [here](http
 
 Once you are done with all the steps you’ll be able to see the details of your Ethereum account, as shown in the image below. Congratulations! You have set up your first Ethereum wallet.
 
-![New Account](assets/new-account.png)
+![New Account](./assets/new-account.png)
 
 > Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example). Later on we'll get some Gas and learn how to deploy a contract.
 
@@ -1676,7 +1676,7 @@ As mentioned often, determining what should and should not be stored on a blockc
 
 The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
 
-![IPFS Workings](assets/ipfs-woorking.png)
+![IPFS Workings](./assets/ipfs-working.png)
 
 [IPFS](https://ipfs.io/#how)
 

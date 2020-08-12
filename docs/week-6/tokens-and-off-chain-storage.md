@@ -84,7 +84,7 @@ As mentioned often, determining what should and should not be stored on a blockc
 
 The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
 
-![IPFS Workings](assets/ipfs-woorking.png)
+![IPFS Workings](./assets/ipfs-working.png)
 
 [IPFS](https://ipfs.io/#how)
 
