@@ -18,10 +18,6 @@ Because they are planning on this being a long term game (the odds of winning ar
 
 The contract needs to have an owner and measures need to implemented to change ownership and change the betting amount.
 
-Extra credit (probably not possible, maybe remove or just add?):
-
-- Implement an emergency exit. In case everyone of the friend group agrees, the lottery stops and all the money that's currently in the smart contract gets split evenly.
-
 ## Point distribution
 
 - Correct contract structure and compiles without errors: 5 points
