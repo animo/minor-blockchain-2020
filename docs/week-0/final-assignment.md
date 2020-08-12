@@ -1,38 +1,34 @@
-# The Big Betting Contract
+# The Big Bet: A Smart Contract Based Closed Lottery
 
 For this final assignment you will create a contract to implement the following.
 
-A group of friends have decided to set up their own personal lottery.
+A group of five friends have decided to set up their own personal lottery. They see this as a fun long term experiment where they might at any point get lucky and win some money. They've tried it for a while with cash and a changing appointed 'lottery boss' but it got messy quickly so now they've decided on a decentralized app.
 
-Each month (???) a betting round takes place where they.....
-If the bet is not won by anyone, the money put in stays in the smart contract account for the next round.
+The front end is taken care of, they just need a solidity developer to build the back end for them.
 
-The friends are planning on this being a long term game and they want to keep track of the rounds they've already played. The rounds played need to be kept track of, anyone (inside or outside of the friend group) should be able to request the round number if they want to check it.
+Desired functionality:
+Every month, on the first day, each of them picks a number between 1 - 1000 (including 1 and 1000) and sends it with 0.1 Ether to the lottery.
+The money is added to the pot so if no one wins the amount just keeps growing every month.
+The way a winner is determined is that the application randomly chooses a number between 1 - 1000 each month. If one of the numbers matches we have a winner! If none of the numbers match the money gets added to the pot and everything starts up again with new numbers the following month. In both cases the participant is notified of the results through an event.
 
-Each participant can transfer money...
+The winner receives the entire pot of money. If multiple people choose the same number _and_ that number wins, the money is split evenly between them, they are all winners.
 
-...
+Because they are planning on this being a long term game (the odds of winning are pretty small) they want to keep track of the rounds they've already played. Anyone (inside or outside of the friend group) should be able to check the current pot and the current round.
 
-Several options: loser, winner, avg.
-
-There are some emergency precautions....
-
-Multiple contract files.
-.....
-
-The owner of the contract can:
-
-- change ownership
-- change the bet amount
-- change the amount of participants
-
-Participants can:
-
--
-
-- ether transfer
-- ether withdraw
+Security measures:
+The contract needs to have an owner and measures need to implemented to change ownership and change the betting amount.
 
 Extra credit:
 
-Implement an emergency exit. In case everyone of the friend group agrees, the lottery stops and all the money that's currently in the smart contract gets split evenly.
+- Implement an emergency exit. In case everyone of the friend group agrees, the lottery stops and all the money that's currently in the smart contract gets split evenly.
+
+Topics from the course
+
+- ownership
+- counters
+- random number
+- sending money (pay out)
+- receiving money (payable)
+- require
+- functions
+- events
