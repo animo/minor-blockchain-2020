@@ -1,4 +1,4 @@
-# Decentralized development: course manual
+# Decentralized Development Course Manual
 
 <!-- Table of Contents current as of 12-07-2020 13:40 -->
 
