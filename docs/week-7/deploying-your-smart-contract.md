@@ -1,6 +1,6 @@
-# Week 7: Deploying to Ethereum Testnet
+# Deploying to Ethereum Testnet
 
-- [Week 7: Deploying to Ethereum Testnet](#week-7-deploying-to-ethereum-testnet)
+- [Deploying to Ethereum Testnet](#deploying-to-ethereum-testnet)
   - [Ethereum: Testnet vs. Mainnet](#ethereum-testnet-vs-mainnet)
   - [Deployment tutorial](#deployment-tutorial)
     - [Remix IDE](#remix-ide)

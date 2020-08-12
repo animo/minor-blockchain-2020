@@ -1,6 +1,6 @@
-# Week 5: Wallets And Moving Money
+# Wallets And Moving Money
 
-- [Week 5: Wallets And Moving Money](#week-5-wallets-and-moving-money)
+- [Wallets And Moving Money](#wallets-and-moving-money)
   - [Cryptocurrency](#cryptocurrency)
   - [Ethereum](#ethereum)
   - [MetaMask](#metamask)

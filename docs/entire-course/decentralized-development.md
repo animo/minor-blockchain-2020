@@ -2,114 +2,6 @@
 
 <!-- Table of Contents current as of 12-07-2020 13:40 -->
 
-- [Decentralized development: course manual](#decentralized-development-course-manual)
-  - [Course Introduction](#course-introduction)
-  - [Grading](#grading)
-  - [Student goals](#student-goals)
-  - [Schedule](#schedule)
-- [Week 1: The Basics Of Smart Contracts](#week-1-the-basics-of-smart-contracts)
-  - [Decentralized Development](#decentralized-development)
-  - [Smart Contracts: The Basics](#smart-contracts-the-basics)
-  - [Ethereum: The Basics](#ethereum-the-basics)
-  - [Solidity: The Basics](#solidity-the-basics)
-    - [Basic Contract Structure](#basic-contract-structure)
-    - [Comments](#comments)
-      - [Compiler Version](#compiler-version)
-      - [Contract Declaration](#contract-declaration)
-    - [Constructor (optional)](#constructor-optional)
-    - [Variables](#variables)
-      - [Value Types](#value-types)
-        - [Boolean](#boolean)
-        - [Integer](#integer)
-        - [String](#string)
-      - [Reference Types](#reference-types)
-        - [Struct](#struct)
-      - [Array](#array)
-      - [Operators](#operators)
-        - [Exponential](#exponential)
-        - [Modulo](#modulo)
-    - [Functions](#functions)
-    - [Basic Contract Structure](#basic-contract-structure-1)
-  - [Additional reading / watching](#additional-reading--watching)
-- [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
-  - [Smart Contracts: Immutability](#smart-contracts-immutability)
-  - [Ethereum: Storage](#ethereum-storage)
-  - [Solidity: The Basics](#solidity-the-basics-1)
-    - [Functions](#functions-1)
-      - [Parameters](#parameters)
-      - [Storage and memory](#storage-and-memory)
-      - [Visibility Modifiers](#visibility-modifiers)
-        - [Public](#public)
-        - [Private](#private)
-      - [Return Variables](#return-variables)
-      - [State Modifiers](#state-modifiers)
-        - [Pure](#pure)
-        - [View](#view)
-    - [Events](#events)
-  - [Additional reading / watching](#additional-reading--watching-1)
-- [Week 3: Interacting With Other Contracts And Transactions](#week-3-interacting-with-other-contracts-and-transactions)
-  - [Ethereum: Accounts, Gas And Ether](#ethereum-accounts-gas-and-ether)
-  - [Solidity: Interaction With Other Contracts And Blockchain](#solidity-interaction-with-other-contracts-and-blockchain)
-    - [Special variables](#special-variables)
-      - [msg.data](#msgdata)
-      - [msg.sender](#msgsender)
-      - [tx.gasprice](#txgasprice)
-      - [gasleft](#gasleft)
-    - [Types](#types)
-      - [Address](#address)
-      - [Mapping](#mapping)
-    - [Functions](#functions-2)
-      - [Multiple return variables](#multiple-return-variables)
-      - [If-Else statements](#if-else-statements)
-      - [For loops](#for-loops)
-      - [Require](#require)
-    - [Inheritance](#inheritance)
-      - [Visibility Modifiers](#visibility-modifiers-1)
-        - [Internal](#internal)
-        - [External](#external)
-    - [Interface](#interface)
-  - [Additional reading / watching](#additional-reading--watching-2)
-- [Week 4: Security And Saving Gas](#week-4-security-and-saving-gas)
-  - [Smart Contracts](#smart-contracts)
-  - [Ethereum](#ethereum)
-    - [Security](#security)
-    - [Saving Gas](#saving-gas)
-  - [Deleting Smart Contracts](#deleting-smart-contracts)
-  - [Solidity](#solidity)
-    - [Owning a contract](#owning-a-contract)
-    - [Functions](#functions-3)
-      - [Custom Modifiers](#custom-modifiers)
-    - [Time](#time)
-    - [Storage pointers](#storage-pointers)
-  - [Additional reading / watching](#additional-reading--watching-3)
-- [Week 5: Wallets And Moving Money](#week-5-wallets-and-moving-money)
-  - [Cryptocurrency](#cryptocurrency)
-  - [Ethereum](#ethereum-1)
-  - [MetaMask](#metamask)
-    - [Getting started with MetaMask](#getting-started-with-metamask)
-  - [Solidity](#solidity-1)
-    - [Payable Modifier](#payable-modifier)
-      - [Payable Functions](#payable-functions)
-      - [Payable Addresses](#payable-addresses)
-        - [address.transfer(amount)](#addresstransferamount)
-        - [address.balance](#addressbalance)
-      - [Using patterns](#using-patterns)
-  - [Additional reading / watching](#additional-reading--watching-4)
-- [Week 6: Tokens And Off-Chain Storage](#week-6-tokens-and-off-chain-storage)
-  - [Smart Contracts](#smart-contracts-1)
-  - [Ethereum](#ethereum-2)
-  - [Off-Chain Storage](#off-chain-storage)
-    - [IPFS](#ipfs)
-    - [Swarm](#swarm)
-  - [Solidity](#solidity-2)
-    - [Counters](#counters)
-  - [Additional Reading / Watching](#additional-reading--watching-5)
-- [Week 7: Deploying to Ethereum Testnet](#week-7-deploying-to-ethereum-testnet)
-  - [Ethereum: Testnet vs. Mainnet](#ethereum-testnet-vs-mainnet)
-  - [Deployment tutorial](#deployment-tutorial)
-    - [Remix IDE](#remix-ide)
-    - [Connecting MetaMask](#connecting-metamask)
-
 ## Course Introduction
 
 In this course you will learn about decentralized development hands on. Through a combination of theory and practical application you will learn how to program code that is deployed on a blockchain through smart contracts.
@@ -155,7 +47,7 @@ After this course:
 | 7    | Deploying Your Smart Contract                     | -                                | tbd  |
 |      | Deadline Final Assignment                         |                                  | tbd  |
 
-# Week 1: The Basics Of Smart Contracts
+# The Basics Of Smart Contracts
 
 ## Decentralized Development
 
@@ -618,7 +510,7 @@ contract CookieStorage {
 [get started with ethereum]: https://ethereum.org/en/what-is-ethereum/
 [smart contract explained]: https://quantummile.com/service/smart-contracts/
 
-# Week 2: Storage And Getting Into Functions
+# Storage And Getting Into Functions
 
 ## Smart Contracts: Immutability
 
@@ -969,7 +861,7 @@ Events are the way the frontend is notified for things that are happening in the
 [solidity docs - pure functions]: https://solidity.readthedocs.io/en/latest/contracts.html#pure-functions
 [solidity docs - events]: https://solidity.readthedocs.io/en/develop/contracts.html#events
 
-# Week 3: Interacting With Other Contracts And Transactions
+# Interacting With Other Contracts And Transactions
 
 ## Ethereum: Accounts, Gas And Ether
 
@@ -1313,7 +1205,7 @@ Of course you can also use interfaces to interact with your own contracts, or us
 [solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces
 [solidity docs - mapping]: https://solidity.readthedocs.io/en/v0.5.3/types.html#mapping-types
 
-# Week 4: Security And Saving Gas
+# Security And Saving Gas
 
 ## Smart Contracts
 
@@ -1450,7 +1342,7 @@ Whether a variable should be saved in storage or memory can also be explicitly m
 [The Dao: The Hack, The Soft Fork and The Hard Fork](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)
 [Storage Pointers in Solidity](https://blog.b9lab.com/storage-pointers-in-solidity-7dcfaa536089)
 
-# Week 5: Wallets And Moving Money
+# Wallets And Moving Money
 
 ## Cryptocurrency
 
@@ -1600,7 +1492,7 @@ Read about the withdrawal pattern and other common patterns in the [documentatio
 
 [Crypto Wallet Types Explained](https://academy.binance.com/blockchain/crypto-wallet-types-explained)
 
-# Week 6: Tokens And Off-Chain Storage
+# Tokens And Off-Chain Storage
 
 ## Smart Contracts
 
@@ -1712,7 +1604,7 @@ contract Bus {
 
 [Ethereum and IPFS](https://medium.com/pinata/ethereum-and-ipfs-e816e12a3c59)
 
-# Week 7: Deploying to Ethereum Testnet
+# Deploying to Ethereum Testnet
 
 ## Ethereum: Testnet vs. Mainnet
 

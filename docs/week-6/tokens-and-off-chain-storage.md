@@ -1,6 +1,6 @@
-# Week 6: Tokens And Off-Chain Storage
+# Tokens And Off-Chain Storage
 
-- [Week 6: Tokens And Off-Chain Storage](#week-6-tokens-and-off-chain-storage)
+- [Tokens And Off-Chain Storage](#tokens-and-off-chain-storage)
   - [Smart Contracts](#smart-contracts)
   - [Ethereum](#ethereum)
   - [Off-Chain Storage](#off-chain-storage)

@@ -1,6 +1,6 @@
-# Week 2: Storage And Getting Into Functions
+# Storage And Getting Into Functions
 
-- [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
+- [Storage And Getting Into Functions](#storage-and-getting-into-functions)
   - [Smart Contracts: Immutability](#smart-contracts-immutability)
   - [Ethereum: Storage](#ethereum-storage)
   - [Solidity: The Basics](#solidity-the-basics)
