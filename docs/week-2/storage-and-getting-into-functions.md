@@ -1,6 +1,6 @@
-# Week 2: Storage And Getting Into Functions
+# Storage And Getting Into Functions
 
-- [Week 2: Storage And Getting Into Functions](#week-2-storage-and-getting-into-functions)
+- [Storage And Getting Into Functions](#storage-and-getting-into-functions)
   - [Smart Contracts: Immutability](#smart-contracts-immutability)
   - [Ethereum: Storage](#ethereum-storage)
   - [Solidity: The Basics](#solidity-the-basics)
@@ -33,7 +33,7 @@ Previously we briefly mentioned how contract code is stored on the Ethereum netw
 
 When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
 
-![Transactions](./asssets/transaction.jpeg)
+![Transactions](./assets/transaction.jpeg)
 
 [Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 

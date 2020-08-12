@@ -1,6 +1,6 @@
-# Week 3: Interacting With Other Contracts And Transactions
+# Interacting With Other Contracts And Transactions
 
-- [Week 3: Interacting With Other Contracts And Transactions](#week-3-interacting-with-other-contracts-and-transactions)
+- [Interacting With Other Contracts And Transactions](#interacting-with-other-contracts-and-transactions)
   - [Ethereum: Accounts, Gas And Ether](#ethereum-accounts-gas-and-ether)
   - [Solidity: Interaction With Other Contracts And Blockchain](#solidity-interaction-with-other-contracts-and-blockchain)
     - [Special variables](#special-variables)

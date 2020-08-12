@@ -1,6 +1,6 @@
-# Decentralized development: course manual
+# Decentralized Development Course Manual
 
-<!-- Table of Contents current as of 11-07-2020 15:50 -->
+<!-- Table of Contents current as of 12-07-2020 13:40 -->
 
 ## Course Introduction
 
@@ -8,7 +8,7 @@ In this course you will learn about decentralized development hands on. Through 
 
 A basic knowledge about blockchain is assumed. Programming experience is not required.
 
-At the end of this course you will have gained insight into the potential of smart contracts and several related blockchain subjects. You will be able to program smart contracts in Solidity and know about key concepts to make them work.
+At the end of this course you will have gained insight into the potential of smart contracts and several related blockchain subjects. You will be able to program smart contracts in Solidity and know about key concepts to make them work (see: [student goals](#student-goals)).
 
 During the course we will use [CryptoZombies](https://cryptozombies.io/en/solidity) lessons 'Solidity Path: Beginner to Intermediate Smart Contracts'. Each week (with exception of week 1) we will discuss relevant concepts to the CryptoZobies lesson in class. These coding concepts will be explained using live coding examples in remix ide. In class more general concepts surrounding smart contracts will also be discussed.
 
@@ -21,6 +21,18 @@ Your grade for this course will be determined by an assignment which you can fin
 The assignment deadline is **deadline** and **insert handing in method**.
 
 Whether you keep up with the CryptoZombie material will not be checked. CryptoZobie has a hit-system and you can check all the answers yourself. However we do strongly recommend following along with the Crypto lessons. Most of what you need to learn for your final assignment can be learned in those lessons.
+
+## Student goals
+
+After this course:
+
+- The student is able to write Solidity smart contracts and knows how to use concepts like typed variables, functions, events, arrays & mapping, modifiers, etc.
+- The student is able to describe security risks and precautions that can be taken with programming smart contract code.
+- The student is able to use inheritance and interfaces and is able to describe the purpose of these concepts.
+- The student is able to work with the Remix IDE. This includes writing, testing and deploying smart contracts from within Remix.
+- The student is able to write and deploy Solidity smart contracts on the Ethereum (test) network.
+- The student is able to connect the Remix IDE to Metamask and manage transactions via Metamask.
+- The student is able to describe what Ethereum, Solidity, Remix IDE, MetaMask, InterPlanetary File System (IPFS) and Swarm are.
 
 ## Schedule
 
@@ -35,7 +47,7 @@ Whether you keep up with the CryptoZombie material will not be checked. CryptoZo
 | 7    | Deploying Your Smart Contract                     | -                                | tbd  |
 |      | Deadline Final Assignment                         |                                  | tbd  |
 
-# Week 1: The Basics Of Smart Contracts
+# The Basics Of Smart Contracts
 
 ## Decentralized Development
 
@@ -498,7 +510,7 @@ contract CookieStorage {
 [get started with ethereum]: https://ethereum.org/en/what-is-ethereum/
 [smart contract explained]: https://quantummile.com/service/smart-contracts/
 
-# Week 2: Storage And Getting Into Functions
+# Storage And Getting Into Functions
 
 ## Smart Contracts: Immutability
 
@@ -516,7 +528,7 @@ Previously we briefly mentioned how contract code is stored on the Ethereum netw
 
 When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
 
-![Transactions](./asssets/transaction.jpeg)
+![Transactions](./assets/transaction.jpeg)
 
 [Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
@@ -849,7 +861,7 @@ Events are the way the frontend is notified for things that are happening in the
 [solidity docs - pure functions]: https://solidity.readthedocs.io/en/latest/contracts.html#pure-functions
 [solidity docs - events]: https://solidity.readthedocs.io/en/develop/contracts.html#events
 
-# Week 3: Interacting With Other Contracts And Transactions
+# Interacting With Other Contracts And Transactions
 
 ## Ethereum: Accounts, Gas And Ether
 
@@ -1193,7 +1205,7 @@ Of course you can also use interfaces to interact with your own contracts, or us
 [solidity docs - interfaces]: https://solidity.readthedocs.io/en/develop/contracts.html#interfaces
 [solidity docs - mapping]: https://solidity.readthedocs.io/en/v0.5.3/types.html#mapping-types
 
-# Week 4: Security And Saving Gas
+# Security And Saving Gas
 
 ## Smart Contracts
 
@@ -1330,7 +1342,7 @@ Whether a variable should be saved in storage or memory can also be explicitly m
 [The Dao: The Hack, The Soft Fork and The Hard Fork](https://www.cryptocompare.com/coins/guides/the-dao-the-hack-the-soft-fork-and-the-hard-fork/)
 [Storage Pointers in Solidity](https://blog.b9lab.com/storage-pointers-in-solidity-7dcfaa536089)
 
-# Week 5: Wallets And Moving Money
+# Wallets And Moving Money
 
 ## Cryptocurrency
 
@@ -1362,7 +1374,7 @@ Download and install the MetaMask extension from the Chrome webstore [here](http
 
 Once you are done with all the steps you’ll be able to see the details of your Ethereum account, as shown in the image below. Congratulations! You have set up your first Ethereum wallet.
 
-![New Account](assets/new-account.png)
+![New Account](./assets/new-account.png)
 
 > Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example). Later on we'll get some Gas and learn how to deploy a contract.
 
@@ -1480,7 +1492,7 @@ Read about the withdrawal pattern and other common patterns in the [documentatio
 
 [Crypto Wallet Types Explained](https://academy.binance.com/blockchain/crypto-wallet-types-explained)
 
-# Week 6: Tokens And Off-Chain Storage
+# Tokens And Off-Chain Storage
 
 ## Smart Contracts
 
@@ -1556,7 +1568,7 @@ As mentioned often, determining what should and should not be stored on a blockc
 
 The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
 
-![IPFS Workings](assets/ipfs-woorking.png)
+![IPFS Workings](./assets/ipfs-working.png)
 
 [IPFS](https://ipfs.io/#how)
 
@@ -1592,7 +1604,7 @@ contract Bus {
 
 [Ethereum and IPFS](https://medium.com/pinata/ethereum-and-ipfs-e816e12a3c59)
 
-# Week 7: Deploying to Ethereum Testnet
+# Deploying to Ethereum Testnet
 
 ## Ethereum: Testnet vs. Mainnet
 

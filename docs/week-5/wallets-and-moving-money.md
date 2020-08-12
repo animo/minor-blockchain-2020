@@ -1,6 +1,6 @@
-# Week 5: Wallets And Moving Money
+# Wallets And Moving Money
 
-- [Week 5: Wallets And Moving Money](#week-5-wallets-and-moving-money)
+- [Wallets And Moving Money](#wallets-and-moving-money)
   - [Cryptocurrency](#cryptocurrency)
   - [Ethereum](#ethereum)
   - [MetaMask](#metamask)
@@ -44,7 +44,7 @@ Download and install the MetaMask extension from the Chrome webstore [here](http
 
 Once you are done with all the steps you’ll be able to see the details of your Ethereum account, as shown in the image below. Congratulations! You have set up your first Ethereum wallet.
 
-![New Account](assets/new-account.png)
+![New Account](./assets/new-account.png)
 
 > Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example). Later on we'll get some Gas and learn how to deploy a contract.
 

@@ -1,6 +1,6 @@
-# Week 4: Security And Saving Gas
+# Security And Saving Gas
 
-- [Week 4: Security And Saving Gas](#week-4-security-and-saving-gas)
+- [Security And Saving Gas](#security-and-saving-gas)
   - [Smart Contracts](#smart-contracts)
   - [Ethereum](#ethereum)
     - [Security](#security)
