@@ -11,7 +11,7 @@
         - [Public](#public)
         - [Private](#private)
       - [Return Variables](#return-variables)
-      - [State Modifiers](#state-modifiers)
+      - [Function Type Modifiers](#function-type-modifiers)
         - [Pure](#pure)
         - [View](#view)
     - [Events](#events)
@@ -286,11 +286,11 @@ contract MyContract {
 }
 ```
 
-#### State Modifiers
+#### Function Type Modifiers
 
 [Solidity Docs - Function Modifiers]
 
-Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. State modifiers say something about how the function interacts with the blockchain.
+Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. Function type modifiers say something about how the function interacts with the blockchain.
 
 ##### Pure
 

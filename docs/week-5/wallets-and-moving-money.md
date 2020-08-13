@@ -56,7 +56,7 @@ To move around money using smart contracts the smart contracts themselves need t
 
 ### Payable Modifier
 
-The payable modifier allows functions or addresses to receive Ether.
+The payable modifier allows functions or addresses to receive Ether. Payable is a function type modifiers, like `view` and `pure`.
 
 #### Payable Functions
 

@@ -15,9 +15,10 @@
         - [Boolean](#boolean)
         - [Integer](#integer)
         - [String](#string)
+        - [Summary](#summary)
       - [Reference Types](#reference-types)
         - [Struct](#struct)
-      - [Array](#array)
+        - [Array](#array)
       - [Operators](#operators)
         - [Exponential](#exponential)
         - [Modulo](#modulo)
@@ -237,6 +238,9 @@ The boolean type can be used to store exactly two kind of values, `true` and `fa
 bool isDelicious = true;
 bool hasChocolateChips = false;
 bool available = true;
+
+// an unassigned boolean has the value false
+bool isDeluxe; // false
 ```
 
 ##### Integer
@@ -253,6 +257,10 @@ int degreesCelsius = -5;
 
 // Unsigned Integer, can only be positive
 uint price = 5;
+
+// an unassigned int or uint has value 0
+uint amount; // 0
+int amount; // 0
 ```
 
 > Integers can also have specific sizes. The type uint256 is an unsigned integer that is 256 bits in size
@@ -269,7 +277,24 @@ string flavor = "vanilla";
 
 // you can assign any character as a string by using double quotes.
 string price = "1"
+
+// an unassigned string is empty
+string message; // ""
 ```
+
+##### Summary
+
+| Value Types      |                                             |                                              |
+| ---------------- | ------------------------------------------- | -------------------------------------------- |
+| Type             |                                             | Example                                      |
+| Boolean          | Contains value true or false.               | `bool isEmpty; // false`                     |
+|                  |                                             | `bool isEmpty = false; // false`             |
+| Signed integer   | Contains positive or negative whole number. | `int degrees = 113;`                         |
+|                  |                                             | `int degrees = -20;`                         |
+| Unsigned integer | Contains positive whole number              | `int age = 24;`                              |
+|                  |                                             | `int age;`                                   |
+| String           | Contains text                               | `string message = "Hello World"`             |
+|                  |                                             | `string number = "1234" // still text value` |
 
 #### Reference Types
 
@@ -299,7 +324,7 @@ c1.flavor // returns "oat"
 c2.price // returns 4
 ```
 
-#### Array
+##### Array
 
 [Solidity Docs - Array]
 
