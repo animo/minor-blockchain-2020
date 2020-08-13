@@ -1,8 +1,8 @@
 # Decentralized Development Course Manual
 
 <!-- Table of Contents current as of 12-07-2020 13:40 -->
-
-## Course Introduction
+<!-- This overview was created to generate a pdf, is now commented to prevent errors / fixes in several places -->
+<!-- ## Course Introduction
 
 In this course you will learn about decentralized development hands on. Through a combination of theory and practical application you will learn how to program code that is deployed on a blockchain through smart contracts.
 
@@ -323,7 +323,7 @@ c1.flavor // returns "oat"
 c2.price // returns 4
 ```
 
-#### Array
+##### Array
 
 [Solidity Docs - Array]
 
@@ -1638,4 +1638,4 @@ Navigate to your MetaMask account (or redo the steps from week 5 to make a new o
 
 > We are going to use the "Ropsten Test Network". The ropsten network is almost the same as the main network, except that it is meant for testing. In the ropsten network Ether has no value and there's no guarantee your data will stay on the network.
 
-// TODO continue
+// TODO continue-->
