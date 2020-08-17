@@ -1639,3 +1639,86 @@ Navigate to your MetaMask account (or redo the steps from week 5 to make a new o
 > We are going to use the "Ropsten Test Network". The ropsten network is almost the same as the main network, except that it is meant for testing. In the ropsten network Ether has no value and there's no guarantee your data will stay on the network.
 
 // TODO continue-->
+
+# The Big Bet: A Smart Contract Based Closed Lottery
+
+For this final assignment you will create a contract to implement a closed lottery system. If all functionality and requirements are met you will be able to receive 100 points.
+
+## Assignment
+
+A group of five friends have decided to set up their own personal lottery. They see this as a fun long term experiment where they might at any point get lucky and win some money. They've tried it for a while with cash and a changing appointed 'lottery boss' but it got messy quickly so now they've decided on a decentralized app.
+
+The front end is taken care of, they just need a solidity developer to build the back end for them. That's you!
+
+Every month, on the first day, each of them picks a number between 1 - 1000 (including 1 and 1000) and sends it with 0.1 Ether to the lottery.
+The money is added to the pot so if no one wins the amount just keeps growing every month.
+The way a winner is determined is that the application randomly chooses a number between 1 - 1000 each month. If one of the numbers matches we have a winner! If none of the numbers match the money gets added to the pot and everything starts up again with new numbers the following month. In both cases the participant is notified of the results through an event.
+
+The winner receives the entire pot of money. If multiple people choose the same number _and_ that number wins, the money is split evenly between them, they are all winners.
+
+Because they are planning on this being a long term game (the odds of winning are pretty small) they want to keep track of the rounds they've already played. Anyone (inside or outside of the friend group) should be able to check the current pot and the current round.
+
+The contract needs to have an owner and measures need to implemented to change ownership and change the betting amount.
+
+## Point distribution
+
+- Correct contract structure and compiles without errors: 5 points
+- Rounds are tracked and can be retrieved by anyone: 5 points
+- Basic functionality is implemented (no winners: money gets added to pot, 1 winner: winner gets sent money): 30 points
+- Functionality for edge case multiple winners is implemented: 15 points
+- Owner can change owner and can change betting amount: 10 points
+- Random number picker is implemented: 10 points
+- Events are implemented correctly: 10 points
+- Correct use of visibility modifiers: 5 points
+- Inheritance is used: 5 points
+- Only participants can participate: 5 points
+
+# Summary
+
+This summary bundles some of the material that is spread out over several lessons.
+
+## Types Overview
+
+### Value Types
+
+| Value Types      |                                             |                                                                                                  |
+| ---------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Type             |                                             | Example                                                                                          |
+| Boolean          | Contains value true or false.               | `bool isEmpty; // false`                                                                         |
+|                  |                                             | `bool isEmpty = false; // false`                                                                 |
+| Signed integer   | Contains positive or negative whole number. | `int degrees = 113;`                                                                             |
+|                  |                                             | `int degrees = -20;`                                                                             |
+| Unsigned integer | Contains positive whole number              | `int age = 24;`                                                                                  |
+|                  |                                             | `int age;`                                                                                       |
+| String           | Contains text                               | `string message = "Hello World"`                                                                 |
+|                  |                                             | `string number = "1234" // still text value`                                                     |
+| Address          | Contains an account address                 | `address myAddress = 0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCC`         |
+|                  |                                             | `address payable myAddress = 0x111122223333444455556666777788889999AAAABBBBCCCCDDDDEEEEFFFFCCCC` |
+
+### Reference Types
+
+| Reference Types |                                                    |                                             |
+| --------------- | -------------------------------------------------- | ------------------------------------------- |
+| Type            |                                                    | Example                                     |
+| Struct          | Contains custom type that groups variables         | `struct Person { uint age; string name; }`  |
+| Array           | Contains other variables, is typed same as content | `int[] ages; // array of int`               |
+|                 |                                                    | `Person[] people // array of struct Person` |
+
+## Visibility
+
+| Visibility Modifiers |                                                                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Type                 |                                                                                                                                       |
+| Public               | Function and variable can be called from all potential parties. Is default.                                                           |
+| Private              | Function and variable can be called only from within the contract it is defined in.                                                   |
+| Internal             | Function can be called from within the contract it is defined in AND from within derived contracts (which inherit the main contract). |
+| External             | Function can only be called from a third party. Not from the main contract and not from a derived contract.                           |
+
+## Function Type Modifiers
+
+| Function Type Modifiers |                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| Type                    |                                                                                  |
+| Pure                    | Indicates that function does not change or use any data from the contract.       |
+| View                    | Indicates that function does not change but **does** use data from the contract. |
+| Payable                 | Indicates that the function can receive Ether.                                   |

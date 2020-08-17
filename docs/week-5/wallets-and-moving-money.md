@@ -16,7 +16,11 @@
 
 ## Cryptocurrency
 
-// TODO
+Cryptocurrencies are probably the most famous application of blockchain technology. Few people have not heard of BitCoin at this point. A cryptocurrency is a digital currency that solves the long existing 'double-spending' problem (where a party is not able to spend the same currency twice) using blockchain instead of a trusted third party like a bank.
+
+Cryptocurrencies are exchanged through transactions. In fact cryptocurrencies are, in a way, the transactions themselves as there is no actual storage of a separate entity, only agreement on the transactions.
+
+//TODO extend
 
 ## Ethereum
 
