@@ -44,3 +44,11 @@ After this course:
 | 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | tbd  |
 | 7    | Deploying Your Smart Contract                     | -                                | tbd  |
 |      | Deadline Final Assignment                         |                                  | tbd  |
+
+## Other resources
+
+There's no use reinventing the wheel, especially when dealing with open standards, open source and decentralized control. Here are other resources that cover some  of the same topics or offer additional information.
+
+- [Very extensive covering of topics and interactive examples](http://web3examples.com/ethereum/)
+- [Mastering Ethereum Book](https://github.com/ethereumbook/ethereumbook)
+- 
