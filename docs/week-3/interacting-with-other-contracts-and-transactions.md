@@ -244,7 +244,7 @@ import "./cake.sol";
 
 contract CupCake is Cake {
 
-// TODO
+// TODO: create good example
 }
 ```
 

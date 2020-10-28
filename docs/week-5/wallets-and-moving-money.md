@@ -54,6 +54,8 @@ Once you are done with all the steps you’ll be able to see the details of your
 
 Switch to the "Ropsten Test Network", go to https://faucet.metamask.io and click on the "request 1 ether from faucet" button to request 1 ether. You will now have 1 Ether to spend on the Ropsten test network!
 
+<!-- TODO: In this week they will learn about random numbers and their vulnerabilities in cryptozombies. Also explain something about this in syllabus/lessons. See https://cryptozombies.io/en/lesson/4/chapter/4 -->
+
 ## Solidity
 
 To move around money using smart contracts the smart contracts themselves need to be created for this purpose. There need to be functions to pay, check and withdraw money from a contract. There are default aspects of solidity to assist with this.

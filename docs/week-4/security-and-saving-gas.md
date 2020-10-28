@@ -131,7 +131,7 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
 
 ### Time
 
-TODO: Optional.... lesson 3 chapter 5, 6
+TODO: Optional.... lesson 3 chapter 5, 6 in cryptozombies
 
 TODO: RECURRING CONTRACT
 

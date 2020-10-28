@@ -494,7 +494,7 @@ contract CookieStorage {
 
 [Get Started With Ethereum]
 
-<!-- Internal links -->
+<!-- Internal links
 
 [solidity documentation]: https://solidity.readthedocs.io/
 [solidity docs - version pragma]: https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#version-pragma
@@ -850,7 +850,7 @@ Events are the way the frontend is notified for things that are happening in the
 
 [Blockchain Transactions in Depth](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
-<!-- Internal Links -->
+<!-- Internal Links
 
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
 [solidity docs - function parameters]: https://solidity.readthedocs.io/en/latest/contracts.html#function-parameters
@@ -1196,7 +1196,7 @@ Of course you can also use interfaces to interact with your own contracts, or us
 
 [Function Visibility Summary](https://bitsofco.de/solidity-function-visibility-explained/)
 
-<!-- Internal links -->
+<!-- Internal links
 
 [solidity docs - address]: https://solidity.readthedocs.io/en/latest/types.html#address
 [ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
@@ -1324,9 +1324,9 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
 
 ### Time
 
-TODO: Optional.... lesson 3 chapter 5, 6
+TODO: Optional.... lesson 3 chapter 5, 6 in cryptozombies
 
-TODO: RECURRING CONTRACT
+TODO: RECURRING CONTRACT?
 
 ### Storage pointers
 
@@ -1638,7 +1638,7 @@ Navigate to your MetaMask account (or redo the steps from week 5 to make a new o
 
 > We are going to use the "Ropsten Test Network". The ropsten network is almost the same as the main network, except that it is meant for testing. In the ropsten network Ether has no value and there's no guarantee your data will stay on the network.
 
-// TODO continue-->
+// TODO continue
 
 # The Big Bet: A Smart Contract Based Closed Lottery
 
@@ -1722,3 +1722,5 @@ This summary bundles some of the material that is spread out over several lesson
 | Pure                    | Indicates that function does not change or use any data from the contract.       |
 | View                    | Indicates that function does not change but **does** use data from the contract. |
 | Payable                 | Indicates that the function can receive Ether.                                   |
+
+-->

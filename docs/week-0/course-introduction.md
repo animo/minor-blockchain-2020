@@ -34,6 +34,8 @@ After this course:
 
 ## Schedule
 
+<!-- TODO update with dates -->
+
 | Week | Topic                                             | CryptoZombie Lesson              | Date |
 | ---- | ------------------------------------------------- | -------------------------------- | ---- |
 | 1    | The Basics Of Smart Contracts                     | -                                | tbd  |
@@ -47,8 +49,8 @@ After this course:
 
 ## Other resources
 
-There's no use reinventing the wheel, especially when dealing with open standards, open source and decentralized control. Here are other resources that cover some  of the same topics or offer additional information.
+There's no use reinventing the wheel, especially when dealing with open standards, open source and decentralized control. Here are other resources that cover some of the same topics or offer additional information.
 
 - [Very extensive covering of topics and interactive examples](http://web3examples.com/ethereum/)
 - [Mastering Ethereum Book](https://github.com/ethereumbook/ethereumbook)
-- 
+-
