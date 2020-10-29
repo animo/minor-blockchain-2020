@@ -34,18 +34,16 @@ After this course:
 
 ## Schedule
 
-<!-- TODO update with dates -->
-
-| Week | Topic                                             | CryptoZombie Lesson              | Date |
-| ---- | ------------------------------------------------- | -------------------------------- | ---- |
-| 1    | The Basics Of Smart Contracts                     | -                                | tbd  |
-| 2    | Storage And Getting Into Functions                | 1 - Making The Zombie Factory    | tbd  |
-| 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | tbd  |
-| 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | tbd  |
-| 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | tbd  |
-| 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | tbd  |
-| 7    | Deploying Your Smart Contract                     | -                                | tbd  |
-|      | Deadline Final Assignment                         |                                  | tbd  |
+| Week | Topic                                             | CryptoZombie Lesson              | Date       |
+| ---- | ------------------------------------------------- | -------------------------------- | ---------- |
+| 1    | The Basics Of Smart Contracts                     | -                                | 13-11-2020 |
+| 2    | Storage And Getting Into Functions                | 1 - Making The Zombie Factory    | 20-11-2020 |
+| 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | 27-11-2020 |
+| 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | 04-12-2020 |
+| 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | 11-12-2020 |
+| 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | 18-12-2020 |
+| 7    | Deploying Your Smart Contract                     | -                                | 08-01-2021 |
+|      | Deadline Final Assignment                         |                                  | tbd        |
 
 ## Other resources
 

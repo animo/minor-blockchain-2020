@@ -1,8 +1,10 @@
-# Decentralized Development Course Manual
+# Decentralized Development: Course Manual
 
-<!-- Table of Contents current as of 12-07-2020 13:40 -->
-<!-- This overview was created to generate a pdf, is now commented to prevent errors / fixes in several places -->
-<!-- ## Course Introduction
+<!-- last updated 29-10-2020 -->
+
+<!-- to print images, pandoc needs path relative to working directory (in this case docs) -->
+
+## Course Introduction
 
 In this course you will learn about decentralized development hands on. Through a combination of theory and practical application you will learn how to program code that is deployed on a blockchain through smart contracts.
 
@@ -36,16 +38,23 @@ After this course:
 
 ## Schedule
 
-| Week | Topic                                             | CryptoZombie Lesson              | Date |
-| ---- | ------------------------------------------------- | -------------------------------- | ---- |
-| 1    | The Basics Of Smart Contracts                     | -                                | tbd  |
-| 2    | Storage And Getting Into Functions                | 1 - Making The Zombie Factory    | tbd  |
-| 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | tbd  |
-| 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | tbd  |
-| 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | tbd  |
-| 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | tbd  |
-| 7    | Deploying Your Smart Contract                     | -                                | tbd  |
-|      | Deadline Final Assignment                         |                                  | tbd  |
+| Week | Topic                                             | CryptoZombie Lesson              | Date       |
+| ---- | ------------------------------------------------- | -------------------------------- | ---------- |
+| 1    | The Basics Of Smart Contracts                     | -                                | 13-11-2020 |
+| 2    | Storage And Getting Into Functions                | 1 - Making The Zombie Factory    | 20-11-2020 |
+| 3    | Interacting With Other Contracts And Transactions | 2 - Zombies Attack Their Victims | 27-11-2020 |
+| 4    | Security And Saving Gas                           | 3 - Advanced Solidity Concepts   | 04-12-2020 |
+| 5    | Wallets And Moving Money                          | 4 - Zombie Battle System         | 11-12-2020 |
+| 6    | Tokens And Off-Chain Storage                      | 5 - ERC721 & Crypto-Collectibles | 18-12-2020 |
+| 7    | Deploying Your Smart Contract                     | -                                | 08-01-2021 |
+|      | Deadline Final Assignment                         |                                  | tbd        |
+
+## Other resources
+
+There's no use reinventing the wheel, especially when dealing with open standards, open source and decentralized control. Here are other resources that cover some of the same topics or offer additional information.
+
+- [Very extensive covering of topics and interactive examples](http://web3examples.com/ethereum/)
+- [Mastering Ethereum Book](https://github.com/ethereumbook/ethereumbook)
 
 # The Basics Of Smart Contracts
 
@@ -75,7 +84,7 @@ Smart contracts have many practical uses. They can be made for any agreement tha
 
 So smart contracts are pieces of executable code on a blockchain network. What does that mean? In the next section we'll examine where the code 'lives' and how the actual process of triggering the smart contract works.
 
-![Smart Contracts Explained](./assets/smart-contracts-explained.png)
+![Smart Contracts Explained](docs/entire-course/assets/smart-contracts-explained.png)
 [Smart Contract Explained]
 
 ## Ethereum: The Basics
@@ -90,7 +99,7 @@ Smart contracts, once put on the Ethereum network have an address. This address 
 
 Solidity is a programming language for writing smart contracts on Ethereum and other blockchain platforms. It is what we'll be learning during this course. This material starts with the basics and works its way up. If at any point you want to try out some code at home or in class you can navigate to [Remix IDE](https://remix.ethereum.org/). Create a new file and give it a name to get started. Remix IDE allows you to write code in your browser, it gives you error messages and feedback about your smart contract code.
 
-![Remix IDE](./assets/remix-example.png)
+![Remix IDE](docs/entire-course/assets/remix-example.png)
 
 If you have never programmed before it can be intimidating to get started. Solidity has excellent [documentation](https://solidity.readthedocs.io/) but the documentation assumes you have some basic programming experience. In this course manual the main concepts will be explained for people completely new to programming, with references to the original documentation for additional information.
 
@@ -261,6 +270,9 @@ The boolean type can be used to store exactly two kind of values, `true` and `fa
 bool isDelicious = true;
 bool hasChocolateChips = false;
 bool available = true;
+
+// an unassigned boolean has the value false
+bool isDeluxe; // false
 ```
 
 ##### Integer
@@ -277,6 +289,10 @@ int degreesCelsius = -5;
 
 // Unsigned Integer, can only be positive
 uint price = 5;
+
+// an unassigned int or uint has value 0
+uint amount; // 0
+int amount; // 0
 ```
 
 > Integers can also have specific sizes. The type uint256 is an unsigned integer that is 256 bits in size
@@ -293,7 +309,24 @@ string flavor = "vanilla";
 
 // you can assign any character as a string by using double quotes.
 string price = "1"
+
+// an unassigned string is empty
+string message; // ""
 ```
+
+##### Summary
+
+| Value Types      |                                             |                                              |
+| ---------------- | ------------------------------------------- | -------------------------------------------- |
+| Type             |                                             | Example                                      |
+| Boolean          | Contains value true or false.               | `bool isEmpty; // false`                     |
+|                  |                                             | `bool isEmpty = false; // false`             |
+| Signed integer   | Contains positive or negative whole number. | `int degrees = 113;`                         |
+|                  |                                             | `int degrees = -20;`                         |
+| Unsigned integer | Contains positive whole number              | `int age = 24;`                              |
+|                  |                                             | `int age;`                                   |
+| String           | Contains text                               | `string message = "Hello World"`             |
+|                  |                                             | `string number = "1234" // still text value` |
 
 #### Reference Types
 
@@ -494,7 +527,7 @@ contract CookieStorage {
 
 [Get Started With Ethereum]
 
-<!-- Internal links
+<!-- Internal links -->
 
 [solidity documentation]: https://solidity.readthedocs.io/
 [solidity docs - version pragma]: https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#version-pragma
@@ -528,7 +561,7 @@ Previously we briefly mentioned how contract code is stored on the Ethereum netw
 
 When we say the code is stored on the network, we mean the code is stored on the blockchain. Messages are sent to the blockchain and responses are listened to from the blockchain. When a smart contract is deployed it is 'sent' to the blockchain within a message. The smart contract code includes storage of information. Transactions can change this information depending on the rules that are in the code.
 
-![Transactions](./assets/transaction.jpeg)
+![Transactions](docs/entire-course/assets/transaction.jpeg)
 
 [Transaction from ITNext](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
@@ -738,7 +771,7 @@ contract AgeStorage {
 }
 ```
 
-![Visibility Public](./assets/visibility-public.gif)
+![Visibility Public](docs/entire-course/assets/visibility-public.gif)
 
 In the `CookieStorage` contract everything is public and can be accessed from inside and outside of the contract except for the variable storeProfit.
 
@@ -760,7 +793,7 @@ contract AgeStorage {
 }
 ```
 
-![Visibility Private](./assets/visibility-private.png)
+![Visibility Private](docs/entire-course/assets/visibility-private.png)
 
 In the `CookieStorage` contract the variable storeProfit is private. It cannot be accessed by functions outside of the contract. So other smart contracts cannot check the store profit. In the `CookieStorage` contract there is (at the moment) no way to set or get the storeProfit. The variable is pretty useless without interaction within the code.
 
@@ -781,11 +814,11 @@ contract MyContract {
 }
 ```
 
-#### State Modifiers
+#### Function Type Modifiers
 
 [Solidity Docs - Function Modifiers]
 
-Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. State modifiers say something about how the function interacts with the blockchain.
+Function modifiers are used to modify the behavior of functions. They create additional features or make sure there are restrictions on a function. Function type modifiers say something about how the function interacts with the blockchain.
 
 ##### Pure
 
@@ -850,7 +883,7 @@ Events are the way the frontend is notified for things that are happening in the
 
 [Blockchain Transactions in Depth](https://itnext.io/pulling-the-blockchain-apart-the-transaction-life-cycle-381b76842c6)
 
-<!-- Internal Links
+<!-- Internal Links -->
 
 [solidity docs - functions]: https://solidity.readthedocs.io/en/latest/contracts.html#functions
 [solidity docs - function parameters]: https://solidity.readthedocs.io/en/latest/contracts.html#function-parameters
@@ -881,7 +914,7 @@ Miners do not make the effort (measured in amount of Gas) just to participate in
 
 So to execute a smart contract, or a part of it, there needs to be a **transaction** that is sent to the smart contract's address to start it, and there needs to be payment included in this transaction. Externally owned accounts (EOAs) have their own ether balance and are able to send transactions. The transaction needs to specify what it wants to happen. So if you want to set the age variable from 17 to 21 the transaction needs to include that it wants the smart contract on address X to execute the setAge function with the data variable 21 and it needs to include the gas that the smart contract will need to execute that specific operation. The smart contract then receives the transaction and uses the gas to activate the specific function.
 
-![Transaction example](./assets/transaction-example.png)
+![Transaction example](docs/entire-course/assets/transaction-example.png)
 
 This is how interaction happens with smart contracts. If there is no activation, the smart contract code would simply sit idle without ever executing. Once the 'first' smart contract is activated by a transaction from an EOA, it can then activate different smart contracts to execute the desired operation.
 
@@ -1084,7 +1117,7 @@ import "./cake.sol";
 
 contract CupCake is Cake {
 
-// TODO
+// TODO: create good example
 }
 ```
 
@@ -1110,7 +1143,7 @@ contract AgeStorage {
 }
 ```
 
-![Visibility Internal](./assets/visibility-internal.png)
+![Visibility Internal](docs/entire-course/assets/visibility-internal.png)
 
 ##### External
 
@@ -1126,7 +1159,7 @@ contract AgeStorage {
 }
 ```
 
-![Visibility External](./assets/visibility-external.gif)
+![Visibility External](docs/entire-course/assets/visibility-external.gif)
 
 ### Interface
 
@@ -1196,7 +1229,7 @@ Of course you can also use interfaces to interact with your own contracts, or us
 
 [Function Visibility Summary](https://bitsofco.de/solidity-function-visibility-explained/)
 
-<!-- Internal links
+<!-- Internal links -->
 
 [solidity docs - address]: https://solidity.readthedocs.io/en/latest/types.html#address
 [ethereum account types]: https://ethereum.gitbooks.io/frontier-guide/account_types.html
@@ -1324,9 +1357,9 @@ Modifiers can be simple (like onlyOwner) or complex depending on what you need t
 
 ### Time
 
-TODO: Optional.... lesson 3 chapter 5, 6 in cryptozombies
+<!-- TODO: Optional.... lesson 3 chapter 5, 6 in cryptozombies -->
 
-TODO: RECURRING CONTRACT?
+<!-- TODO: RECURRING CONTRACT -->
 
 ### Storage pointers
 
@@ -1346,7 +1379,11 @@ Whether a variable should be saved in storage or memory can also be explicitly m
 
 ## Cryptocurrency
 
-// TODO
+Cryptocurrencies are probably the most famous application of blockchain technology. Few people have not heard of BitCoin at this point. A cryptocurrency is a digital currency that solves the long existing 'double-spending' problem (where a party is not able to spend the same currency twice) using blockchain instead of a trusted third party like a bank.
+
+Cryptocurrencies are exchanged through transactions. In fact cryptocurrencies are, in a way, the transactions themselves as there is no actual storage of a separate entity, only agreement on the transactions.
+
+//TODO extend
 
 ## Ethereum
 
@@ -1374,11 +1411,13 @@ Download and install the MetaMask extension from the Chrome webstore [here](http
 
 Once you are done with all the steps you’ll be able to see the details of your Ethereum account, as shown in the image below. Congratulations! You have set up your first Ethereum wallet.
 
-![New Account](./assets/new-account.png)
+![New Account](docs/entire-course/assets/new-account.png)
 
 > Your account page shows the name of your account ("Account 1" by default), an Ethereum address (0x93F4...4BfC in the example), and a colorful icon to help you visually distinguish this account from other accounts. At the top of the account page, you can see which Ethereum network you are currently working on ("Main Ethereum Network" in the example). Later on we'll get some Gas and learn how to deploy a contract.
 
 Switch to the "Ropsten Test Network", go to https://faucet.metamask.io and click on the "request 1 ether from faucet" button to request 1 ether. You will now have 1 Ether to spend on the Ropsten test network!
+
+<!-- TODO: In this week they will learn about random numbers and their vulnerabilities in cryptozombies. Also explain something about this in syllabus/lessons. See https://cryptozombies.io/en/lesson/4/chapter/4 -->
 
 ## Solidity
 
@@ -1386,7 +1425,7 @@ To move around money using smart contracts the smart contracts themselves need t
 
 ### Payable Modifier
 
-The payable modifier allows functions or addresses to receive Ether.
+The payable modifier allows functions or addresses to receive Ether. Payable is a function type modifiers, like `view` and `pure`.
 
 #### Payable Functions
 
@@ -1568,7 +1607,7 @@ As mentioned often, determining what should and should not be stored on a blockc
 
 The InterPlanetary File System (IPFS) is a network for storing and sharing data. It is very similar to BitTorrent as it consists of a decentralized peer-to-peer system. Users can upload and download content. DApps combining Ethereum and IPFS can solve a lot of problems that blockchain has re. storing data. The actual data is stored on IPFS, while hashes of the data are stored on Ethereum to provide immutability. Remix IDE even has built in functionality to publish on IPFS.
 
-![IPFS Workings](./assets/ipfs-working.png)
+![IPFS Workings](docs/entire-course/assets/ipfs-working.png)
 
 [IPFS](https://ipfs.io/#how)
 
@@ -1606,6 +1645,12 @@ contract Bus {
 
 # Deploying to Ethereum Testnet
 
+- [Deploying to Ethereum Testnet](#deploying-to-ethereum-testnet)
+  - [Ethereum: Testnet vs. Mainnet](#ethereum-testnet-vs-mainnet)
+  - [Deployment tutorial](#deployment-tutorial)
+    - [Remix IDE](#remix-ide)
+    - [Connecting MetaMask](#connecting-metamask)
+
 ## Ethereum: Testnet vs. Mainnet
 
 As you might be sick of hearing right now smart contract code, once deployed, can not be changed. In week 2 the benefits of this were discussed, in week 4 the security risks and costs involved and now, in week 7, we are almost at a point where you will deploy your own smart contract code.
@@ -1638,7 +1683,7 @@ Navigate to your MetaMask account (or redo the steps from week 5 to make a new o
 
 > We are going to use the "Ropsten Test Network". The ropsten network is almost the same as the main network, except that it is meant for testing. In the ropsten network Ether has no value and there's no guarantee your data will stay on the network.
 
-// TODO continue
+<!-- TODO continue final week tutorial -->
 
 # The Big Bet: A Smart Contract Based Closed Lottery
 
@@ -1722,5 +1767,3 @@ This summary bundles some of the material that is spread out over several lesson
 | Pure                    | Indicates that function does not change or use any data from the contract.       |
 | View                    | Indicates that function does not change but **does** use data from the contract. |
 | Payable                 | Indicates that the function can receive Ether.                                   |
-
--->
