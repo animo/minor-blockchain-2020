@@ -1,3 +1,7 @@
+---
+marp: false
+---
+
 # Decentralized Development: Course Manual
 
 <!-- last updated 29-10-2020 -->
