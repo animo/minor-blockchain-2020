@@ -79,7 +79,7 @@ If you have never programmed before it can be intimidating to get started. Solid
 
 Below an example is given of a simple Solidity smart contract. Although this contract does not have a lot of practical value, it covers a lot of the core concepts of a contract written in Solidity. Let's go over it together.
 
-```solidity
+```
 // compiler version
 pragma solidity ^0.5.2;
 

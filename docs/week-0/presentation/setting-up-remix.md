@@ -40,10 +40,12 @@ Getting Started with Remix IDE and Solidity
   - Other processes
 
 ---
+# Solidity documentation
+https://solidity.readthedocs.io/
+
+---
 # What is Remix IDE?
 A browser-based compiler and IDE that enables users to build Ethereum contracts with Solidity language and to debug transactions.
-
-
 
 > Created by Ethereum
 
@@ -57,3 +59,4 @@ A browser-based compiler and IDE that enables users to build Ethereum contracts 
 <!-- _class: invert -->
 # Let's take a look
 remix.ethereum.org
+

@@ -49,7 +49,7 @@ Course Introduction
 --- 
 # Course material
 - [CryptoZombies](https://cryptozombies.io/en/solidity)
-- [Syllabus]()
+- [Syllabus](https://canvas.hu.nl/courses/18442/files/folder/smart%20contracts?preview=1371750)
 ##### Additional resources
 - [Very extensive covering of topics and interactive examples](http://web3examples.com/ethereum/)
 - [Mastering Ethereum Book](https://github.com/ethereumbook/ethereumbook)
