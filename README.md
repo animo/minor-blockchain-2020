@@ -14,3 +14,7 @@ This repository contains material for the course 'Decentralized Development' at 
 - [Week 6](./docs/week-6/tokens-and-off-chain-storage.md)
 - [Week 7](./docs/week-7/deploying-your-smart-contract.md)
 - [Archive Files](./docs/archive/readme.md)
+
+## Course Fixes
+
+- [ ] The syllabus states that a `string` is a value type. However, a `string` is a `byte array` and thus is a reference type.

@@ -273,7 +273,7 @@ In the `CookieStorage` contract the variable storeProfit is private. It cannot b
 
 [Solidity Docs - Return Variables]
 
-Functions can be used to execute an operation without changing anything. However functions are often used to return some information through return variables. The function needs to announce beforehand that it returns something as well as the type of what it returns. The function will then return what comes after the **return** keyword.
+Functions can be used to execute an operation without changing anything. However functions are often used to return some information through return variables. The function needs to announce beforehand that it returns something as well as the type of what it returns. The function will then return what comes after the **returns* keyword.
 
 ```solidity
 contract MyContract {

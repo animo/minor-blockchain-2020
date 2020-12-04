@@ -5,9 +5,12 @@
     "QUICKSTART",
     "Setup"
   ],
-  "spellright.language": [],
+  "spellright.language": [
+    "en_GB"
+  ],
   "spellright.documentTypes": [
     "latex",
-    "plaintext"
+    "plaintext",
+    "markdown"
   ]
 }

@@ -180,7 +180,7 @@ A for loop has a beginning, a condition and an incrementing step in the form of:
 uint[] public ages;
 
 // length of the array
-uint arrayLength = addressIndices.length;
+uint arrayLength = ages.length;
 
 // the information behind the for is the counter
 for (uint i=0; i<arrayLength, i++){
